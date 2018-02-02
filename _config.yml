@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 name: Dongda Li
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+=======
+theme: jekyll-theme-slate
+>>>>>>> 5b33ee5c5aaf2960457bf3b15b66979bfaf26706
