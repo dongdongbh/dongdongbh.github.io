@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dongdongbh, git tutorial "
+title: "git tutorial "
 date: 2018-02-01
 ---
 [a simple tutorial link](http://rogerdudler.github.io/git-guide/index.zh.html)
@@ -133,6 +133,6 @@ git rebase another_branch           //re-base current branch to another branch
 git checkout another_branch                 
 git merge rebased_branch            //merge re-based branch (fast forward). to achieve a clear history
 ```
-![command list](https://github.com/dongdongbh/Tips/blob/master/test-git/git%20cmd.png "command list")
+![command list](https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png "command list")
 ## copy right
 tutorial write by Dongda. All rights reserved.

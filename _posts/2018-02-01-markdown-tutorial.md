@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dongdongbh, Markdown tutorial"
+title: "Markdown tutorial"
 date: 2018-02-01
 ---
 # Basic note
