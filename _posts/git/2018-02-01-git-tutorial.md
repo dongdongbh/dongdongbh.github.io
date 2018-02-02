@@ -134,4 +134,4 @@ git merge rebased_branch            //merge re-based branch (fast forward). to a
 ```
 ![command list](https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png "command list")
 ## copy right
-tutorial write by Dongda. All rights reserved.
+Tutorial wrote by Dongda. All rights reserved.
