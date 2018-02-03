@@ -5,12 +5,12 @@ var store = [{
         "url": "http://localhost:4000/markup/markup-html-tags-and-formatting/",
         "teaser":"http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"},{
         "title": "Dongdongbh, Launches Site",
-        "excerpt":"Well. Finally got around to putting this old website together. Neat thing about it - powered by Jekyll and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/dongdong-site-launched/",
+        "excerpt":"Well. Finally got around to putting this old website together. Neat thing about it - powered by Jekyll and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.","categories": ["test"],
+        "tags": ["content"],
+        "url": "http://localhost:4000/test/dongdong-site-launched/",
         "teaser":null},{
         "title": "git tutorial ",
-        "excerpt":"a simple tutorial linkTable of contents setup git config basic command work with remote branch merge UNDO merge and rebase subtreegithub add keyadd your github key file(id_rsa) to ~/.ssh/, then run following cmd in terminal:chmod 400 ~/.ssh/id_rsagit configglobal configgit config --global core.editor \"subl -n -w\" //change vi to sublgit config...","categories": [],
-        "tags": [],
+        "excerpt":"a simple tutorial linkTable of contents setup git config basic command work with github branch merge UNDO merge and rebase subtreegithub add keyadd your github key file(id_rsa) to ~/.ssh/, then run following cmd in terminal:chmod 400 ~/.ssh/id_rsagit configglobal configgit config --global core.editor \"subl -n -w\" //change vi to sublgit config...","categories": [],
+        "tags": ["git","github"],
         "url": "http://localhost:4000/git-tutorial/",
         "teaser":null},]

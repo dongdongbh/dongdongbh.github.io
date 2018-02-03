@@ -1,19 +1,25 @@
 ---
 title: "git tutorial "
 date: 2018-02-01
+
+layout: splash
+tags:
+  - git
+  - github
+toc: true
 ---
 [a simple tutorial link](http://rogerdudler.github.io/git-guide/index.zh.html)
 ----------------------------------------------------------------------
 ## Table of contents
-* [setup](git-tutorial#github-add-key)
-* [git config](git-tutorial#git-config)
-* [basic command](git-tutorial#basic-command)
-* [work with remote](git-tutorial#work-with-remote)
-* [branch](git-tutorial#branch)
-* [merge](git-tutorial#merge)
-* [UNDO](git-tutorial#UNDO)
-* [merge and rebase](git-tutorial#merge-and-rebase)
-* [subtree](git-tutorial#subtree)
+* [setup](#github-add-key)
+* [git config](#git-config)
+* [basic command](#basic-command)
+* [work with github](#work-with-github)
+* [branch](#branch)
+* [merge](#merge)
+* [UNDO](#UNDO)
+* [merge and rebase](#merge-and-rebase)
+* [subtree](#subtree)
 
 
 
@@ -59,7 +65,7 @@ git log --oneline -5                //view recent 5 commit massage
 git log --pretty=oneline            //show the vision ID
 git log --file-name             //show commits about file
 ```
-## work with remote repository
+## work with github
 ```
 git clone                       //clone others git repository
 git clone -b <branch> <remote_repo>         //clone a single branch
@@ -134,4 +140,4 @@ git merge rebased_branch            //merge re-based branch (fast forward). to a
 ```
 ![command list](https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png "command list")
 ## copy right
-Tutorial wrote by Dongda. All rights reserved.
+The document is wrote by Dongda. All rights reserved.

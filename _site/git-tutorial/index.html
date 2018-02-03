@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>git tutorial  - Dongda’s homepage</title>
-<meta name="description" content="a simple tutorial linkTable of contents  setup  git config  basic command  work with remote  branch  merge  UNDO  merge and rebase  subtree">
+<meta name="description" content="a simple tutorial linkTable of contents  setup  git config  basic command  work with github  branch  merge  UNDO  merge and rebase  subtree">
 
 
 
@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://localhost:4000/git-tutorial/">
 
 
-  <meta property="og:description" content="a simple tutorial linkTable of contents  setup  git config  basic command  work with remote  branch  merge  UNDO  merge and rebase  subtree">
+  <meta property="og:description" content="a simple tutorial linkTable of contents  setup  git config  basic command  work with github  branch  merge  UNDO  merge and rebase  subtree">
 
 
 
@@ -104,7 +104,7 @@
 <!-- end custom head snippets -->
   </head>
 
-  <body class="layout--single">
+  <body class="layout--splash">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -158,159 +158,26 @@
     <div class="initial-content">
       
 
-
-
 <div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="http://schema.org/Person">
-
-  
-
-  <div class="author__content">
-    
-      <h3 class="author__name" itemprop="name">Dongda Li</h3>
-    
-    
-      <p class="author__bio" itemprop="description">
-        Hello world!
-      </p>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Hongkong, China</span>
-        </li>
-      
-
-      
-
-      
-        <li>
-          <a href="mailto:dongdongbhbh@gmail.com">
-            <meta itemprop="email" content="dongdongbhbh@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-        <li>
-          <a href="https://github.com/dongdongbh" itemprop="sameAs">
-            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-        <li>
-          <a href="https://www.weibo.com/http://weibo.com/513485234" itemprop="sameAs">
-            <i class="fab fa-fw fa-weibo" aria-hidden="true"></i> Weibo
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
-
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="git tutorial">
-    <meta itemprop="description" content="a simple tutorial linkTable of contents  setup  git config  basic command  work with remote  branch  merge  UNDO  merge and rebase  subtree">
+    <meta itemprop="description" content="a simple tutorial linkTable of contents  setup  git config  basic command  work with github  branch  merge  UNDO  merge and rebase  subtree">
     <meta itemprop="datePublished" content="February 01, 2018">
     
 
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 class="page__title" itemprop="headline">git tutorial
-</h1>
-          
-            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-          
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <h2 id="a-simple-tutorial-link"><a href="http://rogerdudler.github.io/git-guide/index.zh.html">a simple tutorial link</a></h2>
+    <section class="page__content" itemprop="text">
+      <h2 id="a-simple-tutorial-link"><a href="http://rogerdudler.github.io/git-guide/index.zh.html">a simple tutorial link</a></h2>
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
-  <li><a href="git-tutorial#github-add-key">setup</a></li>
-  <li><a href="git-tutorial#git-config">git config</a></li>
-  <li><a href="git-tutorial#basic-command">basic command</a></li>
-  <li><a href="git-tutorial#work-with-remote">work with remote</a></li>
-  <li><a href="git-tutorial#branch">branch</a></li>
-  <li><a href="git-tutorial#merge">merge</a></li>
-  <li><a href="git-tutorial#UNDO">UNDO</a></li>
-  <li><a href="git-tutorial#merge-and-rebase">merge and rebase</a></li>
-  <li><a href="git-tutorial#subtree">subtree</a></li>
+  <li><a href="#github-add-key">setup</a></li>
+  <li><a href="#git-config">git config</a></li>
+  <li><a href="#basic-command">basic command</a></li>
+  <li><a href="#work-with-github">work with github</a></li>
+  <li><a href="#branch">branch</a></li>
+  <li><a href="#merge">merge</a></li>
+  <li><a href="#UNDO">UNDO</a></li>
+  <li><a href="#merge-and-rebase">merge and rebase</a></li>
+  <li><a href="#subtree">subtree</a></li>
 </ul>
 
 <h2 id="github-add-key">github add key</h2>
@@ -350,7 +217,7 @@ git log --oneline -5                //view recent 5 commit massage
 git log --pretty=oneline            //show the vision ID
 git log --file-name             //show commits about file
 </code></pre></div></div>
-<h2 id="work-with-remote-repository">work with remote repository</h2>
+<h2 id="work-with-github">work with github</h2>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone                       //clone others git repository
 git clone -b &lt;branch&gt; &lt;remote_repo&gt;         //clone a single branch
 
@@ -419,124 +286,11 @@ git merge rebased_branch            //merge re-based branch (fast forward). to a
 </code></pre></div></div>
 <p><img src="https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png" alt="command list" title="command list" /></p>
 <h2 id="copy-right">copy right</h2>
-<p>Tutorial wrote by Dongda. All rights reserved.</p>
+<p>The document is wrote by Dongda. All rights reserved.</p>
 
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-01T00:00:00+08:00">February 01, 2018</time></p>
-        
-      </footer>
-
-      <section class="page__share">
-  
-
-  <a href="https://twitter.com/intent/tweet?text=git+tutorial+%20http%3A%2F%2Flocalhost%3A4000%2Fgit-tutorial%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgit-tutorial%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fgit-tutorial%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgit-tutorial%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
-
-      
-  <nav class="pagination">
-    
-      <a href="http://localhost:4000/dongdong-site-launched/" class="pagination--pager" title="Dongdongbh, Launches Site
-">Previous</a>
-    
-    
-      <a href="#" class="pagination--pager disabled">Next</a>
-    
-  </nav>
-
-    </div>
-
-    
-  </article>
-
-  
-  
-    <div class="page__related">
-      <h4 class="page__related-title">You May Also Enjoy</h4>
-      <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/dongdong-site-launched/" rel="permalink">Dongdongbh, Launches Site
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Well. Finally got around to putting this old website together. Neat thing about it - powered by Jekyll and I can use Markdown to author my posts. It actually...</p>
+    </section>
   </article>
 </div>
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/markup/markup-html-tags-and-formatting/" rel="permalink">Markup: HTML Tags and Formatting
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">A variety of common markup showing how the theme styles them.
-
-</p>
-  </article>
-</div>
-        
-      </div>
-    </div>
-  
-  
-</div>
-
     </div>
 
     
