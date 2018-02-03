@@ -1,124 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-03T19:56:52+08:00</updated><id>http://localhost:4000/</id><title type="html">Dongda’s homepage</title><subtitle>An amazing website.</subtitle><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><entry><title type="html">git tutorial</title><link href="http://localhost:4000/git-tutorial/" rel="alternate" type="text/html" title="git tutorial " /><published>2018-02-01T00:00:00+08:00</published><updated>2018-02-01T00:00:00+08:00</updated><id>http://localhost:4000/git-tutorial</id><content type="html" xml:base="http://localhost:4000/git-tutorial/">&lt;h2 id=&quot;a-simple-tutorial-link&quot;&gt;&lt;a href=&quot;http://rogerdudler.github.io/git-guide/index.zh.html&quot;&gt;a simple tutorial link&lt;/a&gt;&lt;/h2&gt;
-&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of contents&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#github-add-key&quot;&gt;setup&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#git-config&quot;&gt;git config&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#basic-command&quot;&gt;basic command&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#work-with-github&quot;&gt;work with github&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#branch&quot;&gt;branch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#merge&quot;&gt;merge&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#UNDO&quot;&gt;UNDO&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#merge-and-rebase&quot;&gt;merge and rebase&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#subtree&quot;&gt;subtree&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;github-add-key&quot;&gt;github add key&lt;/h2&gt;
-&lt;p&gt;add your github key file(id_rsa) to ~/.ssh/, then run following cmd in terminal:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;chmod 400 ~/.ssh/id_rsa&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;git-config&quot;&gt;git config&lt;/h2&gt;
-
-&lt;h3 id=&quot;global-config&quot;&gt;global config&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global core.editor &quot;subl -n -w&quot;            //change vi to subl
-git config --global user.name &quot;dongdongbh&quot;
-git config --global user.email &quot;18310682633@163.com&quot;
-alias graph=&quot;git log --all --decorate --oneline --graph&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;windows-merge-tool-config&quot;&gt;windows merge tool config&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global --add merge.tool kdiff3                                             //need to install kdiff3
-git config --global --add mergetool.kdiff3.path &quot;C:/Program Files/KDiff3/kdiff3.exe&quot;        
-git config --global --add mergetool.kdiff3.trustExitCode false
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;ubuntu-merge-tool-config&quot;&gt;ubuntu merge tool config&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global diff.tool kdiff3
-git config --global merge.tool kdiff3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;revive-config&quot;&gt;revive config&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git-config --list
-git config --global --list
-git config --local  --list
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;basic-command&quot;&gt;basic command&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git init
-git add .                   //add all files to staging area
-git add file-name
-git rm file-name
-git commit -m &quot;init commit&quot;         //take a commit (snapshot)
-git status -s                   //show short status
-
-git log --oneline -5                //view recent 5 commit massage
-git log --pretty=oneline            //show the vision ID
-git log --file-name             //show commits about file
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;work-with-github&quot;&gt;work with github&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone                       //clone others git repository
-git clone -b &amp;lt;branch&amp;gt; &amp;lt;remote_repo&amp;gt;         //clone a single branch
-
-git remote add origin https://github.com/dongdongbh/Test.git
-git remote -v                       //look up remote repository
-git pull origin master --allow-unrelated-histories
-git push origin master
-
-git fetch --all
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;branch&quot;&gt;branch&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git branch local                    //add branch
-git checkout -b local_2                 //add branch and switch to it
-git branch                      //show branches
-
-git checkout local                  //switch to branch
-git commit -a -m 'branch update'            //commit all tracking file
-git push origin local                   //add local branch to remote server
-
-git fetch origin                //get remote branch(that exists only on the remote, but not locally)
-git checkout --track origin/&amp;lt;remote_branch_name&amp;gt;
-
-git push -d &amp;lt;remote_name&amp;gt; &amp;lt;branch_name&amp;gt;         //delete remote branch
-git branch —set-upstream-to=master origin/master    //tracking remote master
-git branch -vv                      //check remote master
-git branch -d local_2
-git push origin :Local                  //delete Local branch from remote server
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;merge&quot;&gt;merge&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff                    //diff between working tree and staging area
-git diff --staged               //diff between staging area and last commit
-git checkout master         
-git merge local_2
-
-git merge origin/master             //merge with remote branch
-git mergetool
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;undo&quot;&gt;UNDO&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout -- file-name               //reset file from stage area to working tree
-git checkout hash_id -- file            //reset file from specific commit to working tree and staging area
-git reset HEAD file-name            //reset file from commit to stage area
-
-git reset --hard HEAD^              //reset the last vision
-git reset --hard    ID          //ID is vision ID, and change to the vision     
-git reset --hard origin/master          //reset to remote master
-git reset --hard origin/master          //use this two command to replace the local by remote
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;subtree&quot;&gt;subtree&lt;/h2&gt;
-&lt;p&gt;set remote module repositoryS as a subtree of project repositoryA&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add xxx(remote submodule repositoryS) github_remote_address
-git subtree add --prefix=local_dir xxx master 
-git subtree pull --prefix=local_dir xxx master      //pull from remote module repositoryS
-git subtree push --prefix=local_dir xxx master      //push to remote module repositoryS
-git push origin master                  //push to the project repositoryA
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;merge-and-rebase&quot;&gt;merge and rebase&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git merge --squash another_branch       //merge anther branch but delete the commits on that branch
-git commit -m &quot;xxxxxx&quot;              //add commit to this merge work
-
-
-git rebase another_branch           //re-base current branch to another branch  
-git checkout another_branch                 
-git merge rebased_branch            //merge re-based branch (fast forward). to achieve a clear history
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png&quot; alt=&quot;command list&quot; title=&quot;command list&quot; /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;copy-right&quot;&gt;copy right&lt;/h2&gt;
-&lt;p&gt;The document is wrote by Dongda. All rights reserved.&lt;/p&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="git" /><category term="github" /><summary type="html">a simple tutorial link Table of contents setup git config basic command work with github branch merge UNDO merge and rebase subtree</summary></entry><entry><title type="html">Dongdongbh, Launches Site</title><link href="http://localhost:4000/test/dongdong-site-launched/" rel="alternate" type="text/html" title="Dongdongbh, Launches Site" /><published>2018-02-01T00:00:00+08:00</published><updated>2018-02-01T00:00:00+08:00</updated><id>http://localhost:4000/test/dongdong-site-launched</id><content type="html" xml:base="http://localhost:4000/test/dongdong-site-launched/">&lt;p&gt;Well. Finally got around to putting this old website together. Neat thing about it - powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.&lt;/p&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="content" /><summary type="html">Well. Finally got around to putting this old website together. Neat thing about it - powered by Jekyll and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.</summary></entry><entry><title type="html">Markup: HTML Tags and Formatting</title><link href="http://localhost:4000/markup/markup-html-tags-and-formatting/" rel="alternate" type="text/html" title="Markup: HTML Tags and Formatting" /><published>2013-01-11T00:00:00+08:00</published><updated>2013-01-11T00:00:00+08:00</updated><id>http://localhost:4000/markup/markup-html-tags-and-formatting</id><content type="html" xml:base="http://localhost:4000/markup/markup-html-tags-and-formatting/">&lt;p&gt;A variety of common markup showing how the theme styles them.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-03T20:46:26+08:00</updated><id>http://localhost:4000/</id><title type="html">Dongda’s homepage</title><subtitle>An amazing website.</subtitle><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><entry><title type="html">Markup: HTML Tags and Formatting</title><link href="http://localhost:4000/markup/markup-html-tags-and-formatting/" rel="alternate" type="text/html" title="Markup: HTML Tags and Formatting" /><published>2018-02-02T00:00:00+08:00</published><updated>2018-02-02T00:00:00+08:00</updated><id>http://localhost:4000/markup/markup-html-tags-and-formatting</id><content type="html" xml:base="http://localhost:4000/markup/markup-html-tags-and-formatting/">&lt;p&gt;A variety of common markup showing how the theme styles them.&lt;/p&gt;
 
 &lt;h2 id=&quot;header-two&quot;&gt;Header two&lt;/h2&gt;
 
@@ -414,4 +294,124 @@ git merge rebased_branch            //merge re-based branch (fast forward). to a
 
 &lt;h3 id=&quot;variable-tag&quot;&gt;Variable Tag&lt;/h3&gt;
 
-&lt;p&gt;This allows you to denote &lt;var&gt;variables&lt;/var&gt;.&lt;/p&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="content" /><category term="css" /><category term="formatting" /><category term="html" /><category term="markup" /><summary type="html">A variety of common markup showing how the theme styles them.</summary></entry></feed>
+&lt;p&gt;This allows you to denote &lt;var&gt;variables&lt;/var&gt;.&lt;/p&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="content" /><category term="css" /><category term="formatting" /><category term="html" /><category term="markup" /><summary type="html">A variety of common markup showing how the theme styles them.</summary></entry><entry><title type="html">git tutorial</title><link href="http://localhost:4000/git-tutorial/" rel="alternate" type="text/html" title="git tutorial " /><published>2018-02-01T00:00:00+08:00</published><updated>2018-02-01T00:00:00+08:00</updated><id>http://localhost:4000/git-tutorial</id><content type="html" xml:base="http://localhost:4000/git-tutorial/">&lt;h2 id=&quot;a-simple-tutorial-link&quot;&gt;&lt;a href=&quot;http://rogerdudler.github.io/git-guide/index.zh.html&quot;&gt;a simple tutorial link&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#github-add-key&quot;&gt;setup&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#git-config&quot;&gt;git config&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#basic-command&quot;&gt;basic command&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#work-with-github&quot;&gt;work with github&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#branch&quot;&gt;branch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#merge&quot;&gt;merge&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#UNDO&quot;&gt;UNDO&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#merge-and-rebase&quot;&gt;merge and rebase&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#subtree&quot;&gt;subtree&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;github-add-key&quot;&gt;github add key&lt;/h2&gt;
+&lt;p&gt;add your github key file(id_rsa) to ~/.ssh/, then run following cmd in terminal:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;chmod 400 ~/.ssh/id_rsa&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;git-config&quot;&gt;git config&lt;/h2&gt;
+
+&lt;h3 id=&quot;global-config&quot;&gt;global config&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global core.editor &quot;subl -n -w&quot;            //change vi to subl
+git config --global user.name &quot;dongdongbh&quot;
+git config --global user.email &quot;18310682633@163.com&quot;
+alias graph=&quot;git log --all --decorate --oneline --graph&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;windows-merge-tool-config&quot;&gt;windows merge tool config&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global --add merge.tool kdiff3                                             //need to install kdiff3
+git config --global --add mergetool.kdiff3.path &quot;C:/Program Files/KDiff3/kdiff3.exe&quot;        
+git config --global --add mergetool.kdiff3.trustExitCode false
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;ubuntu-merge-tool-config&quot;&gt;ubuntu merge tool config&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global diff.tool kdiff3
+git config --global merge.tool kdiff3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;revive-config&quot;&gt;revive config&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git-config --list
+git config --global --list
+git config --local  --list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;basic-command&quot;&gt;basic command&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git init
+git add .                   //add all files to staging area
+git add file-name
+git rm file-name
+git commit -m &quot;init commit&quot;         //take a commit (snapshot)
+git status -s                   //show short status
+
+git log --oneline -5                //view recent 5 commit massage
+git log --pretty=oneline            //show the vision ID
+git log --file-name             //show commits about file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;work-with-github&quot;&gt;work with github&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone                       //clone others git repository
+git clone -b &amp;lt;branch&amp;gt; &amp;lt;remote_repo&amp;gt;         //clone a single branch
+
+git remote add origin https://github.com/dongdongbh/Test.git
+git remote -v                       //look up remote repository
+git pull origin master --allow-unrelated-histories
+git push origin master
+
+git fetch --all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;branch&quot;&gt;branch&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git branch local                    //add branch
+git checkout -b local_2                 //add branch and switch to it
+git branch                      //show branches
+
+git checkout local                  //switch to branch
+git commit -a -m 'branch update'            //commit all tracking file
+git push origin local                   //add local branch to remote server
+
+git fetch origin                //get remote branch(that exists only on the remote, but not locally)
+git checkout --track origin/&amp;lt;remote_branch_name&amp;gt;
+
+git push -d &amp;lt;remote_name&amp;gt; &amp;lt;branch_name&amp;gt;         //delete remote branch
+git branch —set-upstream-to=master origin/master    //tracking remote master
+git branch -vv                      //check remote master
+git branch -d local_2
+git push origin :Local                  //delete Local branch from remote server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;merge&quot;&gt;merge&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff                    //diff between working tree and staging area
+git diff --staged               //diff between staging area and last commit
+git checkout master         
+git merge local_2
+
+git merge origin/master             //merge with remote branch
+git mergetool
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;undo&quot;&gt;UNDO&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout -- file-name               //reset file from stage area to working tree
+git checkout hash_id -- file            //reset file from specific commit to working tree and staging area
+git reset HEAD file-name            //reset file from commit to stage area
+
+git reset --hard HEAD^              //reset the last vision
+git reset --hard    ID          //ID is vision ID, and change to the vision     
+git reset --hard origin/master          //reset to remote master
+git reset --hard origin/master          //use this two command to replace the local by remote
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;subtree&quot;&gt;subtree&lt;/h2&gt;
+&lt;p&gt;set remote module repositoryS as a subtree of project repositoryA&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add xxx(remote submodule repositoryS) github_remote_address
+git subtree add --prefix=local_dir xxx master 
+git subtree pull --prefix=local_dir xxx master      //pull from remote module repositoryS
+git subtree push --prefix=local_dir xxx master      //push to remote module repositoryS
+git push origin master                  //push to the project repositoryA
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;merge-and-rebase&quot;&gt;merge and rebase&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git merge --squash another_branch       //merge anther branch but delete the commits on that branch
+git commit -m &quot;xxxxxx&quot;              //add commit to this merge work
+
+
+git rebase another_branch           //re-base current branch to another branch  
+git checkout another_branch                 
+git merge rebased_branch            //merge re-based branch (fast forward). to achieve a clear history
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png&quot; alt=&quot;command list&quot; title=&quot;command list&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;copy-right&quot;&gt;copy right&lt;/h2&gt;
+&lt;p&gt;The document is wrote by Dongda. All rights reserved.&lt;/p&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="git" /><category term="github" /><summary type="html">a simple tutorial link Table of contents setup git config basic command work with github branch merge UNDO merge and rebase subtree</summary></entry><entry><title type="html">Dongdongbh, Launches Site</title><link href="http://localhost:4000/test/dongdong-site-launched/" rel="alternate" type="text/html" title="Dongdongbh, Launches Site" /><published>2018-02-01T00:00:00+08:00</published><updated>2018-02-01T00:00:00+08:00</updated><id>http://localhost:4000/test/dongdong-site-launched</id><content type="html" xml:base="http://localhost:4000/test/dongdong-site-launched/">&lt;p&gt;Well. Finally got around to putting this old website together. Neat thing about it - powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.&lt;/p&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="content" /><summary type="html">Well. Finally got around to putting this old website together. Neat thing about it - powered by Jekyll and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.</summary></entry></feed>
