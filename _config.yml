@@ -20,7 +20,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : ture (default), "google-plus" # "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : ture, "staticman_v2" # "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -111,7 +111,7 @@ author:
   tumblr           :
   twitter          :
   vine             :
-  weibo            :
+  weibo            : "http://weibo.com/513485234"
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
@@ -238,6 +238,23 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+
+
+
+# Collections
+collections:
+  tech:
+    output: true
+    permalink: /:collection/:path/
+  research:
+    output: true
+    permalink: /:collection/:path/
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+
 
 
 # Defaults

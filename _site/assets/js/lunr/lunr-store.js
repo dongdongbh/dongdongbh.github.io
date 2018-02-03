@@ -13,4 +13,4 @@ var store = [{
         "excerpt":"a simple tutorial linkTable of contents setup git config basic command work with remote branch merge UNDO merge and rebase subtreegithub add keyadd your github key file(id_rsa) to ~/.ssh/, then run following cmd in terminal:chmod 400 ~/.ssh/id_rsagit configglobal configgit config --global core.editor \"subl -n -w\" //change vi to sublgit config...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/git-tutorial/",
-        "teaser":null}]
+        "teaser":null},]
