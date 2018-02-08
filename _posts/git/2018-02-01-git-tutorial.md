@@ -91,7 +91,7 @@ git fetch origin                //get remote branch(that exists only on the remo
 git checkout --track origin/<remote_branch_name>
 
 git push -d <remote_name> <branch_name>         //delete remote branch
-git branch —set-upstream-to=master origin/master    //tracking remote master
+git branch —set-upstream-to=origin/master master     //tracking remote master
 git branch -vv                      //check remote master
 git branch -d local_2
 git push origin :Local                  //delete Local branch from remote server
