@@ -1,6 +1,7 @@
 ---
 title: "git tutorial "
 date: 2018-02-01
+layout: splash
 tags:
   - git
   - github
