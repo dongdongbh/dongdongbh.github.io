@@ -7,7 +7,9 @@ tags:
   - github
 toc: true
 ---
-[a simple tutorial link](http://rogerdudler.github.io/git-guide/index.zh.html)
+* [a simple tutorial link](http://rogerdudler.github.io/git-guide/index.zh.html)
+* [git tutorial](https://www.atlassian.com/git/tutorials)
+* [Chinese version](https://github.com/geeeeeeeeek/git-recipes/wiki))
 ----------------------------------------------------------------------
 ## Table of contents
 * [setup](#github-add-key)
