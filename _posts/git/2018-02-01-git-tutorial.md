@@ -4,7 +4,7 @@ date: 2018-02-01
 layout: splash
 tags:
   - git
-  - github
+  - tutorial
 toc: true
 ---
 * [a simple tutorial link](http://rogerdudler.github.io/git-guide/index.zh.html)

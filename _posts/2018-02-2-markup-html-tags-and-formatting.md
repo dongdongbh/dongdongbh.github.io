@@ -6,7 +6,7 @@ categories:
   - Markup
 tags:
   - content
-  - css
+  - tutorial
   - formatting
   - html
   - markup
