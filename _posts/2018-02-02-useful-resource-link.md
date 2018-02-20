@@ -1,19 +1,13 @@
 ---
-title: "Markup: HTML Tags and Formatting"
+title: "Some useful resource links"
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
-  - Markup
+  - Resource
 tags:
-  - content
-  - css
-  - formatting
-  - html
-  - markup
+  - tutorial
 toc: true
 ---
-
-Some useful resouce link
 
 ## Tutorials set
 * [Ryan's Tutorials](https://ryanstutorials.net/)
