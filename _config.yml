@@ -12,10 +12,10 @@ locale                   : "en-HK"
 title                    : "Dongda's homepage"
 title_separator          : "-"
 name                     : "Dongda Li"
-description              : "An amazing website."
+description              : "Dongda's homepage, an amazing website."
 url                      : "https://dongdongbh.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "dongdongbh/dongdongbh.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : “NWO” # "dongdongbh/dongdongbh.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -63,9 +63,9 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : "dongdongbh"
 facebook:
-  username               :
+  username               : "dongdongbh"
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
