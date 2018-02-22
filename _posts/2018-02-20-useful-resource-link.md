@@ -21,7 +21,7 @@ toc: true
 * [Problem Solving Skills](https://ryanstutorials.net/problem-solving-skills/)
 * [Graphic Design Tutorial](https://ryanstutorials.net/graphic-design-tutorial/)
 
-## For intersting
+## For fun
 * [Rubik's Cube Tutorial](https://ryanstutorials.net/rubiks-cube-tutorial/)
 
 
