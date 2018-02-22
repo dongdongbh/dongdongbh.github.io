@@ -12,10 +12,17 @@ locale                   : "en-HK"
 title                    : "Dongda's homepage"
 title_separator          : "-"
 name                     : "Dongda Li"
+<<<<<<< HEAD
+description              : "An amazing website."
+url                      : "https://dongdongbh.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "dongdongbh/dongdongbh.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+=======
 description              : "Dongda's homepage, an amazing website."
 url                      : ""
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+baseurl                  : ""# the subpath of your site, e.g. "/blog"
 repository               : “dongdongbh.coding.me” # "dongdongbh/dongdongbh.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+>>>>>>> 9e3b1b2461b05d0280bce88506903bab91b29dbf
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -98,7 +105,7 @@ author:
   flickr           :
   facebook         : # "dongdongbh"
   foursquare       :
-  github           : "dongdongbh"
+#  github           : "dongdongbh"
   gitlab           :
   google_plus      :
   keybase          :
@@ -189,7 +196,7 @@ timezone: Asia/Shanghai # https://en.wikipedia.org/wiki/List_of_tz_database_time
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
+#  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -280,6 +287,6 @@ defaults:
       author_profile: true
 
 
-github: [metadata]
+#github: [metadata]
 
 remote_theme: "mmistakes/minimal-mistakes"
