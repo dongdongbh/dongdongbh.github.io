@@ -280,6 +280,6 @@ defaults:
       author_profile: true
 
 
-github: [metadata]
+#github: [metadata]
 
 remote_theme: "mmistakes/minimal-mistakes"
