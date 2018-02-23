@@ -115,6 +115,8 @@ git checkout -- file-name               //reset file from stage area to working 
 git checkout hash_id -- file            //reset file from specific commit to working tree and staging area
 git reset HEAD file-name            //reset file from commit to stage area
 
+git push -f origin master			//force push local to remote, some dangerous
+
 git reset --hard HEAD^              //reset the last vision
 git reset --hard    ID          //ID is vision ID, and change to the vision     
 git reset --hard origin/master          //reset to remote master
