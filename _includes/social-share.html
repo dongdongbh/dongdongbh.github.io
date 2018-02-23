@@ -11,6 +11,6 @@
 
 <!--   <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
   
-  <wb:share-button appkey="2832443974" title={{page.title}} addition="number" type="button"></wb:share-button>
+  <wb:share-button appkey="2832443974" title={{page.title | absolute_url | url_encode}} addition="number" type="button"></wb:share-button>
 
 </section>
