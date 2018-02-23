@@ -121,6 +121,8 @@ git reset --hard HEAD^              //reset the last vision
 git reset --hard    ID          //ID is vision ID, and change to the vision     
 git reset --hard origin/master          //reset to remote master
 git reset --hard origin/master          //use this two command to replace the local by remote
+
+git commit --amend 						//modify commit message
 ```
 ## subtree 
 set remote module repositoryS as a subtree of project repositoryA
