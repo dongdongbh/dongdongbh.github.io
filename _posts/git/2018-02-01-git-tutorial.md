@@ -79,6 +79,13 @@ git remote -v                       //look up remote repository
 git pull origin master --allow-unrelated-histories
 git push origin master
 
+//push to two repository
+$git remote add all git@git.coding.net:user/project.git
+$git remote set-url --add --push all git@git.coding.net:user/project.git
+$git remote set-url --add --push all git@github.com:user/repo.git
+git push all master
+
+
 git fetch --all
 ```
 ## branch
