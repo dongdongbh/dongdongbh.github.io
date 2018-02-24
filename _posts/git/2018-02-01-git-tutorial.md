@@ -35,7 +35,9 @@ add your github key file(id_rsa) to ~/.ssh/, then run following cmd in terminal:
 git config --global core.editor "subl -n -w"            //change vi to subl
 git config --global user.name "dongdongbh"
 git config --global user.email "18310682633@163.com"
-alias graph="git log --all --decorate --oneline --graph"
+
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+// set alias to 'git lg'
 ```
 ### windows merge tool config
 ```
