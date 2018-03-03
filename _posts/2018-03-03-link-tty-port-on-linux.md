@@ -10,7 +10,7 @@ tags:
   - tutorial
 toc: true
 ---
-
+### How to link node name with a custom name
 1. run next cmd to see the port device 
 ```
 $ udevadm info -a -n /dev/ttyUSB0  $(udevadm info -q path -n /dev/ttyUSB0)
