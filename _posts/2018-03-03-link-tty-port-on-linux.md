@@ -30,7 +30,7 @@ $ sudo service udev restart
 ```
 
 
-###so the step as follows:
+### so the step as follows:
 ```
 $ udevadm info -a -n /dev/ttyUSB0
 $ sudo subl /etc/udev/rules.d/serial-symlinks.rules
