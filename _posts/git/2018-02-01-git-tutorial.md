@@ -94,6 +94,8 @@ git branch local                    //add branch
 git checkout -b local_2                 //add branch and switch to it
 git branch                      //show branches
 
+git checkout --orphan <branchname>  //create a empty branch
+
 git checkout local                  //switch to branch
 git commit -a -m 'branch update'            //commit all tracking file
 git push origin local                   //add local branch to remote server
@@ -102,7 +104,7 @@ git fetch origin                //get remote branch(that exists only on the remo
 git checkout --track origin/<remote_branch_name>
 
 git push origin --delete {the_remote_branch}         //delete remote branch
-git branch —set-upstream-to=origin/master master     //tracking remote master
+git branch --set-upstream-to=origin/master master     //tracking remote master
 git branch -vv                      //check remote master
 git branch -d local_2
 git push origin :Local                  //delete Local branch from remote server
@@ -133,6 +135,17 @@ git reset --hard origin/master          //use this two command to replace the lo
 
 git commit --amend 						//modify commit message
 ```
+
+## diff
+```
+git diff [options] [<commit>] [--] [<path>…​]
+$ git diff            //diff not staged file with last commit
+$ git diff --cached   //diff for staged file with last commit
+
+$ git diff --name-only
+$ git diff --shortstat
+```
+
 ## subtree 
 set remote module repositoryS as a subtree of project repositoryA
 
@@ -154,5 +167,6 @@ git checkout another_branch
 git merge rebased_branch            //merge re-based branch (fast forward). to achieve a clear history
 ```
 ![command list](https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png "command list")
+![git transport](https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git-transport.png "git transport")
 ## copy right
 The document is wrote by Dongda. All rights reserved.
