@@ -11,6 +11,7 @@
 
 <!-- begin _includes/seo.html --><title>git tutorial  - Dongda’s homepage</title>
 <meta name="description" content="  a simple tutorial link  git tutorial  Chinese version">
+<meta name="keywords" content="  a simple tutorial link  git tutorial  Chinese version">
 
 
 
@@ -147,11 +148,6 @@
           
             
             <li class="masthead__menu-item">
-              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
-            </li>
-          
-            
-            <li class="masthead__menu-item">
               <a href="https://mmistakes.github.io/minimal-mistakes/about/" >About</a>
             </li>
           
@@ -266,6 +262,8 @@ git fetch --all
 git checkout -b local_2                 //add branch and switch to it
 git branch                      //show branches
 
+git checkout --orphan &lt;branchname&gt;  //create a empty branch
+
 git checkout local                  //switch to branch
 git commit -a -m 'branch update'            //commit all tracking file
 git push origin local                   //add local branch to remote server
@@ -274,7 +272,7 @@ git fetch origin                //get remote branch(that exists only on the remo
 git checkout --track origin/&lt;remote_branch_name&gt;
 
 git push origin --delete {the_remote_branch}         //delete remote branch
-git branch —set-upstream-to=origin/master master     //tracking remote master
+git branch --set-upstream-to=origin/master master     //tracking remote master
 git branch -vv                      //check remote master
 git branch -d local_2
 git push origin :Local                  //delete Local branch from remote server
@@ -303,6 +301,16 @@ git reset --hard origin/master          //use this two command to replace the lo
 
 git commit --amend 						//modify commit message
 </code></pre></div></div>
+
+<h2 id="diff">diff</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git diff [options] [&lt;commit&gt;] [--] [&lt;path&gt;…​]
+$ git diff            //diff not staged file with last commit
+$ git diff --cached   //diff for staged file with last commit
+
+$ git diff --name-only
+$ git diff --shortstat
+</code></pre></div></div>
+
 <h2 id="subtree">subtree</h2>
 <p>set remote module repositoryS as a subtree of project repositoryA</p>
 
@@ -321,7 +329,8 @@ git rebase another_branch           //re-base current branch to another branch
 git checkout another_branch                 
 git merge rebased_branch            //merge re-based branch (fast forward). to achieve a clear history
 </code></pre></div></div>
-<p><img src="https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png" alt="command list" title="command list" /></p>
+<p><img src="https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png" alt="command list" title="command list" />
+<img src="https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git-transport.png" alt="git transport" title="git transport" /></p>
 <h2 id="copy-right">copy right</h2>
 <p>The document is wrote by Dongda. All rights reserved.</p>
 

@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-01T20:24:34+08:00</updated><id>http://localhost:4000/</id><title type="html">Dongda’s homepage</title><subtitle>Dongda's homepage, an amazing website.</subtitle><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><entry><title type="html">Some useful resource links</title><link href="http://localhost:4000/resource/useful-resource-link/" rel="alternate" type="text/html" title="Some useful resource links" /><published>2018-02-20T00:00:00+08:00</published><updated>2018-02-20T00:00:00+08:00</updated><id>http://localhost:4000/resource/useful-resource-link</id><content type="html" xml:base="http://localhost:4000/resource/useful-resource-link/">&lt;h2 id=&quot;tutorials-set&quot;&gt;Tutorials set&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T16:42:31+08:00</updated><id>http://localhost:4000/</id><title type="html">Dongda’s homepage</title><subtitle>Dongda's homepage, an amazing website.</subtitle><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><entry><title type="html">link tty port on linux</title><link href="http://localhost:4000/markup/link-tty-port-on-linux/" rel="alternate" type="text/html" title="link tty port on linux" /><published>2018-03-03T00:00:00+08:00</published><updated>2018-03-03T00:00:00+08:00</updated><id>http://localhost:4000/markup/link-tty-port-on-linux</id><content type="html" xml:base="http://localhost:4000/markup/link-tty-port-on-linux/">&lt;h3 id=&quot;how-to-link-node-name-with-a-custom-name&quot;&gt;How to link node name with a custom name&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;run next cmd to see the port device
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ udevadm info -a -n /dev/ttyUSB0  $(udevadm info -q path -n /dev/ttyUSB0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Then open (or create) a file in /etc/udev/rules.d/ (named, for example, serial-symlinks.rules), and put the udev rule there.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo subl /etc/udev/rules.d/serial-symlinks.rules
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;…you can write this rule:
+    &lt;blockquote&gt;
+      &lt;p&gt;ACTION==”add”, ATTRS{idVendor}==”0403”, ATTRS{idProduct}==”6001”, SYMLINK+=”tty-xxx”    //some attrs to lock specific USB device&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;then your ttyUSB0 can using the new name “tty-xxx”&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;and restart udev using
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo service udev restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;so-the-step-as-follows&quot;&gt;so the step as follows:&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ udevadm info -a -n /dev/ttyUSB0
+$ sudo subl /etc/udev/rules.d/serial-symlinks.rules
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;modify the file&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo service udev restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;using following cmd check it&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ls /dev/tty*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="content" /><category term="tutorial" /><summary type="html">How to link node name with a custom name run next cmd to see the port device $ udevadm info -a -n /dev/ttyUSB0 $(udevadm info -q path -n /dev/ttyUSB0) Then open (or create) a file in /etc/udev/rules.d/ (named, for example, serial-symlinks.rules), and put the udev rule there. $ sudo subl /etc/udev/rules.d/serial-symlinks.rules …you can write this rule: ACTION==”add”, ATTRS{idVendor}==”0403”, ATTRS{idProduct}==”6001”, SYMLINK+=”tty-xxx” //some attrs to lock specific USB device</summary></entry><entry><title type="html">ssh connection</title><link href="http://localhost:4000/markup/ssh-usage/" rel="alternate" type="text/html" title="ssh connection" /><published>2018-03-02T00:00:00+08:00</published><updated>2018-03-02T00:00:00+08:00</updated><id>http://localhost:4000/markup/ssh-usage</id><content type="html" xml:base="http://localhost:4000/markup/ssh-usage/">&lt;h1 id=&quot;insatll-and-configuration&quot;&gt;Insatll and configuration&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ apt-get install openssh-server
+$ sudo subl /etc/ssh/sshd_config
+$ sudo service ssh restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;show-gui&quot;&gt;Show gui&lt;/h2&gt;
+&lt;h3 id=&quot;on-server&quot;&gt;On server&lt;/h3&gt;
+&lt;p&gt;config on /etc/ssh/sshd_config&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;X11Forwarding yes&lt;/li&gt;
+  &lt;li&gt;X11DisplayOffset 10&lt;/li&gt;
+  &lt;li&gt;X11UseLocalhost no&lt;/li&gt;
+  &lt;li&gt;ForwardAgent yes&lt;/li&gt;
+  &lt;li&gt;ForwardX11 yes&lt;/li&gt;
+  &lt;li&gt;ForwardX11Trusted yes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;on-client&quot;&gt;On client&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -X remote_host(ip)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;test&quot;&gt;test&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ssh -X user@host_ip
+$ xclock
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;file-transfer&quot;&gt;File transfer&lt;/h2&gt;
+&lt;p&gt;cmd:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ scp &amp;lt;file&amp;gt; &amp;lt;username&amp;gt;@&amp;lt;IP address or hostname&amp;gt;:&amp;lt;Destination&amp;gt;
+$ scp -r (recursive) username@server:(remote location) (local location)
+$ scp -r (local location) username@server:(remote location)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="content" /><category term="tutorial" /><summary type="html">Insatll and configuration $ apt-get install openssh-server $ sudo subl /etc/ssh/sshd_config $ sudo service ssh restart Show gui On server config on /etc/ssh/sshd_config X11Forwarding yes X11DisplayOffset 10 X11UseLocalhost no ForwardAgent yes ForwardX11 yes ForwardX11Trusted yes</summary></entry><entry><title type="html">Some useful resource links</title><link href="http://localhost:4000/resource/useful-resource-link/" rel="alternate" type="text/html" title="Some useful resource links" /><published>2018-02-20T00:00:00+08:00</published><updated>2018-02-20T00:00:00+08:00</updated><id>http://localhost:4000/resource/useful-resource-link</id><content type="html" xml:base="http://localhost:4000/resource/useful-resource-link/">&lt;h2 id=&quot;tutorials-set&quot;&gt;Tutorials set&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://ryanstutorials.net/&quot;&gt;Ryan’s Tutorials&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -397,6 +464,8 @@ git fetch --all
 git checkout -b local_2                 //add branch and switch to it
 git branch                      //show branches
 
+git checkout --orphan &amp;lt;branchname&amp;gt;  //create a empty branch
+
 git checkout local                  //switch to branch
 git commit -a -m 'branch update'            //commit all tracking file
 git push origin local                   //add local branch to remote server
@@ -405,7 +474,7 @@ git fetch origin                //get remote branch(that exists only on the remo
 git checkout --track origin/&amp;lt;remote_branch_name&amp;gt;
 
 git push origin --delete {the_remote_branch}         //delete remote branch
-git branch —set-upstream-to=origin/master master     //tracking remote master
+git branch --set-upstream-to=origin/master master     //tracking remote master
 git branch -vv                      //check remote master
 git branch -d local_2
 git push origin :Local                  //delete Local branch from remote server
@@ -434,6 +503,16 @@ git reset --hard origin/master          //use this two command to replace the lo
 
 git commit --amend 						//modify commit message
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;diff&quot;&gt;diff&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git diff [options] [&amp;lt;commit&amp;gt;] [--] [&amp;lt;path&amp;gt;…​]
+$ git diff            //diff not staged file with last commit
+$ git diff --cached   //diff for staged file with last commit
+
+$ git diff --name-only
+$ git diff --shortstat
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h2 id=&quot;subtree&quot;&gt;subtree&lt;/h2&gt;
 &lt;p&gt;set remote module repositoryS as a subtree of project repositoryA&lt;/p&gt;
 
@@ -452,6 +531,7 @@ git rebase another_branch           //re-base current branch to another branch
 git checkout another_branch                 
 git merge rebased_branch            //merge re-based branch (fast forward). to achieve a clear history
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png&quot; alt=&quot;command list&quot; title=&quot;command list&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git%20cmd.png&quot; alt=&quot;command list&quot; title=&quot;command list&quot; /&gt;
+&lt;img src=&quot;https://github.com/dongdongbh/dongdongbh.github.io/blob/master/_posts/git/git-transport.png&quot; alt=&quot;git transport&quot; title=&quot;git transport&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;copy-right&quot;&gt;copy right&lt;/h2&gt;
 &lt;p&gt;The document is wrote by Dongda. All rights reserved.&lt;/p&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="git" /><category term="tutorial" /><summary type="html">a simple tutorial link git tutorial Chinese version</summary></entry><entry><title type="html">Dongdongbh, Launches Site</title><link href="http://localhost:4000/test/dongdong-site-launched/" rel="alternate" type="text/html" title="Dongdongbh, Launches Site" /><published>2018-02-01T00:00:00+08:00</published><updated>2018-02-01T00:00:00+08:00</updated><id>http://localhost:4000/test/dongdong-site-launched</id><content type="html" xml:base="http://localhost:4000/test/dongdong-site-launched/">&lt;p&gt;Well. Finally got around to putting this old website together. Neat thing about it - powered by &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.&lt;/p&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="content" /><summary type="html">Well. Finally got around to putting this old website together. Neat thing about it - powered by Jekyll and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.</summary></entry></feed>

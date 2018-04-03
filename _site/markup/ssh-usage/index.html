@@ -9,30 +9,36 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Posts by Tag - Dongda’s homepage</title>
-<meta name="description" content="Dongda’s homepage, an amazing website.">
-<meta name="keywords" content="Dongda’s homepage, an amazing website.">
+<!-- begin _includes/seo.html --><title>ssh connection - Dongda’s homepage</title>
+<meta name="description" content="Insatll and configuration$ apt-get install openssh-server$ sudo subl /etc/ssh/sshd_config$ sudo service ssh restartShow guiOn serverconfig on /etc/ssh/sshd_config  X11Forwarding yes  X11DisplayOffset 10  X11UseLocalhost no  ForwardAgent yes  ForwardX11 yes  ForwardX11Trusted yes">
+<meta name="keywords" content="Insatll and configuration$ apt-get install openssh-server$ sudo subl /etc/ssh/sshd_config$ sudo service ssh restartShow guiOn serverconfig on /etc/ssh/sshd_config  X11Forwarding yes  X11DisplayOffset 10  X11UseLocalhost no  ForwardAgent yes  ForwardX11 yes  ForwardX11Trusted yes">
 
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_HK">
 <meta property="og:site_name" content="Dongda's homepage">
-<meta property="og:title" content="Posts by Tag">
-<meta property="og:url" content="http://localhost:4000/tags/">
+<meta property="og:title" content="ssh connection">
+<meta property="og:url" content="http://localhost:4000/markup/ssh-usage/">
+
+
+  <meta property="og:description" content="Insatll and configuration$ apt-get install openssh-server$ sudo subl /etc/ssh/sshd_config$ sudo service ssh restartShow guiOn serverconfig on /etc/ssh/sshd_config  X11Forwarding yes  X11DisplayOffset 10  X11UseLocalhost no  ForwardAgent yes  ForwardX11 yes  ForwardX11Trusted yes">
 
 
 
+  <meta property="og:image" content="http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg">
 
 
 
   <meta name="twitter:site" content="@dongdongbh">
-  <meta name="twitter:title" content="Posts by Tag">
-  <meta name="twitter:description" content="Dongda’s homepage, an amazing website.">
-  <meta name="twitter:url" content="http://localhost:4000/tags/">
+  <meta name="twitter:title" content="ssh connection">
+  <meta name="twitter:description" content="Insatll and configuration$ apt-get install openssh-server$ sudo subl /etc/ssh/sshd_config$ sudo service ssh restartShow guiOn serverconfig on /etc/ssh/sshd_config  X11Forwarding yes  X11DisplayOffset 10  X11UseLocalhost no  ForwardAgent yes  ForwardX11 yes  ForwardX11Trusted yes">
+  <meta name="twitter:url" content="http://localhost:4000/markup/ssh-usage/">
 
   
     <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg">
     
   
 
@@ -40,6 +46,8 @@
 
 
 
+  <meta property="article:published_time" content="2018-03-02T00:00:00+08:00">
+
 
 
 
@@ -49,7 +57,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/tags/">
+<link rel="canonical" href="http://localhost:4000/markup/ssh-usage/">
 
 
 
@@ -119,7 +127,7 @@
 <!-- end custom head snippets -->
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -292,196 +300,189 @@
   </div>
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="ssh connection">
+    <meta itemprop="description" content="Insatll and configuration$ apt-get install openssh-server$ sudo subl /etc/ssh/sshd_config$ sudo service ssh restartShow guiOn serverconfig on /etc/ssh/sshd_config  X11Forwarding yes  X11DisplayOffset 10  X11UseLocalhost no  ForwardAgent yes  ForwardX11 yes  ForwardX11Trusted yes">
+    <meta itemprop="datePublished" content="March 02, 2018">
     
-      <h1 class="page__title">Posts by Tag</h1>
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">ssh connection
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> </h4></header>
+              <ul class="toc__menu">
+  <li><a href="#show-gui">Show gui</a>
+    <ul>
+      <li><a href="#on-server">On server</a></li>
+      <li><a href="#on-client">On client</a></li>
+      <li><a href="#test">test</a></li>
+    </ul>
+  </li>
+  <li><a href="#file-transfer">File transfer</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h1 id="insatll-and-configuration">Insatll and configuration</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apt-get install openssh-server
+$ sudo subl /etc/ssh/sshd_config
+$ sudo service ssh restart
+</code></pre></div></div>
+<h2 id="show-gui">Show gui</h2>
+<h3 id="on-server">On server</h3>
+<p>config on /etc/ssh/sshd_config</p>
+<ul>
+  <li>X11Forwarding yes</li>
+  <li>X11DisplayOffset 10</li>
+  <li>X11UseLocalhost no</li>
+  <li>ForwardAgent yes</li>
+  <li>ForwardX11 yes</li>
+  <li>ForwardX11Trusted yes</li>
+</ul>
+
+<h3 id="on-client">On client</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -X remote_host(ip)
+</code></pre></div></div>
+
+<h3 id="test">test</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh -X user@host_ip
+$ xclock
+</code></pre></div></div>
+
+<h2 id="file-transfer">File transfer</h2>
+<p>cmd:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ scp &lt;file&gt; &lt;username&gt;@&lt;IP address or hostname&gt;:&lt;Destination&gt;
+$ scp -r (recursive) username@server:(remote location) (local location)
+$ scp -r (local location) username@server:(remote location)
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
     
-    <!--
-# Jekyll Group-By-Array 0.1.0
-# https://github.com/mushishi78/jekyll-group-by-array
-# © 2015 Max White <mushishi78@gmail.com>
-# MIT License
--->
-
-<!-- Initialize -->
-
-
-
-
-<!-- Map -->
-
-
-<!-- Flatten -->
-
-
-<!-- Uniq -->
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-<!-- Push to group_names -->
-
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-<!-- If not equal to previous then it must be unique as sorted -->
-
-
-
-
-
-
-<!-- group_items -->
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
-
-
-
-<!-- Collect if contains -->
-
-
-
-<!-- Push to group_items -->
+      
+      
+      <a href="http://localhost:4000/tags/#content" class="page__taxonomy-item" rel="tag">content</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#tutorial" class="page__taxonomy-item" rel="tag">tutorial</a>
+    
+    </span>
+  </p>
 
 
 
 
   
-  <h2 id="content" class="archive__subtitle">content</h2>
+
+
   
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
     
+      
+      
+      <a href="http://localhost:4000/categories/#markup" class="page__taxonomy-item" rel="tag">Markup</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-03-02T00:00:00+08:00">March 02, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?via=dongdongbh&text=ssh+connection%20http%3A%2F%2Flocalhost%3A4000%2Fmarkup%2Fssh-usage%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmarkup%2Fssh-usage%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fmarkup%2Fssh-usage%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+<!--   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmarkup%2Fssh-usage%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+  
+  <wb:share-button appkey="2832443974" title=ssh+connection addition="number" type="button"></wb:share-button>
+
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/resource/useful-resource-link/" class="pagination--pager" title="Some useful resource links
+">Previous</a>
+    
+    
+      <a href="http://localhost:4000/markup/link-tty-port-on-linux/" class="pagination--pager" title="link tty port on linux
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"
+          
+          alt="">
+      </div>
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -504,298 +505,21 @@
     $ udevadm info -a -n /dev/ttyUSB0  $(udevadm info -q path -n /dev/ttyUSB0...</p>
   </article>
 </div>
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/markup/ssh-usage/" rel="permalink">ssh connection
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Insatll and configuration
-$ apt-get install openssh-server
-$ sudo subl /etc/ssh/sshd_config
-$ sudo service ssh restart
-
-Show gui
-On server
-config on /etc/ssh...</p>
-  </article>
-</div>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/markup/markup-html-tags-and-formatting/" rel="permalink">Markup: HTML Tags and Formatting
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">A variety of common markup showing how the theme styles them.
-
-</p>
-  </article>
-</div>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/test/dongdong-site-launched/" rel="permalink">Dongdongbh, Launches Site
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Well. Finally got around to putting this old website together. Neat thing about it - powered by Jekyll and I can use Markdown to author my posts. It actually...</p>
-  </article>
-</div>
-  
-
-  
-  <h2 id="formatting" class="archive__subtitle">formatting</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/markup/markup-html-tags-and-formatting/" rel="permalink">Markup: HTML Tags and Formatting
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">A variety of common markup showing how the theme styles them.
-
-</p>
-  </article>
-</div>
-  
-
-  
-  <h2 id="git" class="archive__subtitle">git</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/git-tutorial/" rel="permalink">git tutorial
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-  a simple tutorial link
-  git tutorial
-  Chinese version
-
-
-</p>
-  </article>
-</div>
-  
-
-  
-  <h2 id="html" class="archive__subtitle">html</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/markup/markup-html-tags-and-formatting/" rel="permalink">Markup: HTML Tags and Formatting
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">A variety of common markup showing how the theme styles them.
-
-</p>
-  </article>
-</div>
-  
-
-  
-  <h2 id="markup" class="archive__subtitle">markup</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/markup/markup-html-tags-and-formatting/" rel="permalink">Markup: HTML Tags and Formatting
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">A variety of common markup showing how the theme styles them.
-
-</p>
-  </article>
-</div>
-  
-
-  
-  <h2 id="tutorial" class="archive__subtitle">tutorial</h2>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/markup/link-tty-port-on-linux/" rel="permalink">link tty port on linux
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">How to link node name with a custom name
-
-  run next cmd to see the port device
-    $ udevadm info -a -n /dev/ttyUSB0  $(udevadm info -q path -n /dev/ttyUSB0...</p>
-  </article>
-</div>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/markup/ssh-usage/" rel="permalink">ssh connection
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Insatll and configuration
-$ apt-get install openssh-server
-$ sudo subl /etc/ssh/sshd_config
-$ sudo service ssh restart
-
-Show gui
-On server
-config on /etc/ssh...</p>
-  </article>
-</div>
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"
+          
+          alt="">
+      </div>
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -820,13 +544,21 @@ config on /etc/ssh...</p>
 </p>
   </article>
 </div>
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"
+          
+          alt="">
+      </div>
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -848,12 +580,12 @@ config on /etc/ssh...</p>
 </p>
   </article>
 </div>
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
@@ -880,11 +612,13 @@ config on /etc/ssh...</p>
 </p>
   </article>
 </div>
+        
+      </div>
+    </div>
   
-
-
-  </div>
+  
 </div>
+
     </div>
 
     
@@ -938,6 +672,11 @@ config on /etc/ssh...</p>
 
 
 
+
+
+    <script async type="text/javascript" src="//apis.google.com/js/plusone.js?callback=gpcb"></script>
+<noscript>Please enable JavaScript to view the <a href="https://plus.google.com/">comments powered by Google+.</a></noscript>
+  
 
 
 

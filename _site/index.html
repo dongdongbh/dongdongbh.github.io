@@ -11,6 +11,7 @@
 
 <!-- begin _includes/seo.html --><title>Dongda's homepage</title>
 <meta name="description" content="Dongda’s homepage, an amazing website.">
+<meta name="keywords" content="Dongda’s homepage, an amazing website.">
 
 
 
@@ -51,6 +52,8 @@
 <link rel="canonical" href="http://localhost:4000/">
 
 
+
+  <link rel="next" href="http://localhost:4000/page2/">
 
 
 
@@ -139,11 +142,6 @@
             
             <li class="masthead__menu-item">
               <a href="http://localhost:4000/collection-archive/" >Collections</a>
-            </li>
-          
-            
-            <li class="masthead__menu-item">
-              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
             </li>
           
             
@@ -312,6 +310,68 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
+        <a href="http://localhost:4000/markup/link-tty-port-on-linux/" rel="permalink">link tty port on linux
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">How to link node name with a custom name
+
+  run next cmd to see the port device
+    $ udevadm info -a -n /dev/ttyUSB0  $(udevadm info -q path -n /dev/ttyUSB0...</p>
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/markup/ssh-usage/" rel="permalink">ssh connection
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Insatll and configuration
+$ apt-get install openssh-server
+$ sudo subl /etc/ssh/sshd_config
+$ sudo service ssh restart
+
+Show gui
+On server
+config on /etc/ssh...</p>
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
         <a href="http://localhost:4000/resource/useful-resource-link/" rel="permalink">Some useful resource links
 </a>
       
@@ -394,33 +454,43 @@
   </article>
 </div>
 
+
+
+<nav class="pagination">
   
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <ul>
     
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/test/dongdong-site-launched/" rel="permalink">Dongdongbh, Launches Site
-</a>
-      
-    </h2>
     
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
+    <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
     
-    <p class="archive__item-excerpt" itemprop="description">Well. Finally got around to putting this old website together. Neat thing about it - powered by Jekyll and I can use Markdown to author my posts. It actually...</p>
-  </article>
-</div>
 
+    
+    
+      <li><a href="#" class="disabled current">1</a></li>
+    
 
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+
+    
+      <li><a href="http://localhost:4000/page2/">2</a></li>
+    
+
+    
+    
+      <li><a href="http://localhost:4000/page2/">Next</a></li>
+    
+  </ul>
+</nav>
 
 
 
