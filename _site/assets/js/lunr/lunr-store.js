@@ -28,4 +28,9 @@ var store = [{
         "excerpt":"How to link node name with a custom name run next cmd to see the port device $ udevadm info -a -n /dev/ttyUSB0 $(udevadm info -q path -n /dev/ttyUSB0) Then open (or create) a file in /etc/udev/rules.d/ (named, for example, serial-symlinks.rules), and put the udev rule there. $ sudo subl...","categories": ["Markup"],
         "tags": ["content","tutorial"],
         "url": "http://localhost:4000/markup/link-tty-port-on-linux/",
+        "teaser":"http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"},{
+        "title": "Transfer files over a LAN between two Linux computers",
+        "excerpt":"netcat + tar (fast but not secure)To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:$ tar -cz . | nc -q 10 -l -p 45454On the computer receiving the contents, cd to where you want the...","categories": ["Markup"],
+        "tags": ["content","tutorial"],
+        "url": "http://localhost:4000/markup/file-transport/",
         "teaser":"http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"},]

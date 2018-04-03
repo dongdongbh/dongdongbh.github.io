@@ -9,30 +9,36 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Dongda's homepage</title>
-<meta name="description" content="Dongda’s homepage, an amazing website.">
-<meta name="keywords" content="Dongda’s homepage, an amazing website.">
+<!-- begin _includes/seo.html --><title>Transfer files over a LAN between two Linux computers - Dongda’s homepage</title>
+<meta name="description" content="netcat + tar (fast but not secure)To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:">
+<meta name="keywords" content="netcat + tar (fast but not secure)To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:">
 
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_HK">
 <meta property="og:site_name" content="Dongda's homepage">
-<meta property="og:title" content="Dongda’s homepage">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="Transfer files over a LAN between two Linux computers">
+<meta property="og:url" content="http://localhost:4000/markup/file-transport/">
+
+
+  <meta property="og:description" content="netcat + tar (fast but not secure)To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:">
 
 
 
+  <meta property="og:image" content="http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg">
 
 
 
   <meta name="twitter:site" content="@dongdongbh">
-  <meta name="twitter:title" content="Dongda’s homepage">
-  <meta name="twitter:description" content="Dongda’s homepage, an amazing website.">
-  <meta name="twitter:url" content="http://localhost:4000/">
+  <meta name="twitter:title" content="Transfer files over a LAN between two Linux computers">
+  <meta name="twitter:description" content="netcat + tar (fast but not secure)To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:">
+  <meta name="twitter:url" content="http://localhost:4000/markup/file-transport/">
 
   
     <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg">
     
   
 
@@ -40,6 +46,8 @@
 
 
 
+  <meta property="article:published_time" content="2018-03-23T00:00:00+08:00">
+
 
 
 
@@ -49,11 +57,9 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/markup/file-transport/">
 
 
-
-  <link rel="next" href="http://localhost:4000/page2/">
 
 
 
@@ -121,7 +127,7 @@
 <!-- end custom head snippets -->
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -294,48 +300,166 @@
   </div>
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Transfer files over a LAN between two Linux computers">
+    <meta itemprop="description" content="netcat + tar (fast but not secure)To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:">
+    <meta itemprop="datePublished" content="March 23, 2018">
     
-      <h1 class="page__title"></h1>
-    
-    <h3 class="archive__subtitle">Recent Posts</h3>
 
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="http://localhost:4000/markup/file-transport/" rel="permalink">Transfer files over a LAN between two Linux computers
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+        <header>
+          <h1 class="page__title" itemprop="headline">Transfer files over a LAN between two Linux computers
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
 
 
   less than 1 minute read
 </p>
-    
-    <p class="archive__item-excerpt" itemprop="description">netcat + tar (fast but not secure)
-To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:
+          
+        </header>
+      
 
-</p>
-  </article>
-</div>
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> </h4></header>
+              <ul class="toc__menu">
+  <li><a href="#netcat--tar-fast-but-not-secure">netcat + tar (fast but not secure)</a></li>
+  <li><a href="#copying-files-with-ssh">Copying Files with SSH</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h2 id="netcat--tar-fast-but-not-secure">netcat + tar (fast but not secure)</h2>
+<p>To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:</p>
+
+<p><code class="highlighter-rouge">$ tar -cz . | nc -q 10 -l -p 45454</code></p>
+
+<p>On the computer receiving the contents, cd to where you want the contents to appear and do:</p>
+
+<p><code class="highlighter-rouge">$ nc -w 10 $REMOTE_HOST 45454 | tar -xz</code></p>
+
+<p>Replace <code class="highlighter-rouge">$REMOTE_HOST</code> with <code class="highlighter-rouge">ip / hostname</code> of computer doing the sending. You can also use a different port instead of 45454.</p>
+
+<h2 id="copying-files-with-ssh">Copying Files with SSH</h2>
+<p>cmd:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ scp &lt;file&gt; &lt;username&gt;@&lt;IP address or hostname&gt;:&lt;Destination&gt;
+$ scp -r (recursive) username@server:(remote location) (local location)
+$ scp -r (local location) username@server:(remote location)
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#content" class="page__taxonomy-item" rel="tag">content</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#tutorial" class="page__taxonomy-item" rel="tag">tutorial</a>
+    
+    </span>
+  </p>
+
+
+
 
   
 
 
+  
+  
+  
 
-<div class="list__item">
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/categories/#markup" class="page__taxonomy-item" rel="tag">Markup</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-03-23T00:00:00+08:00">March 23, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?via=dongdongbh&text=Transfer+files+over+a+LAN+between+two+Linux+computers%20http%3A%2F%2Flocalhost%3A4000%2Fmarkup%2Ffile-transport%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmarkup%2Ffile-transport%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fmarkup%2Ffile-transport%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+<!--   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmarkup%2Ffile-transport%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> -->
+  
+  <wb:share-button appkey="2832443974" title=Transfer+files+over+a+LAN+between+two+Linux+computers addition="number" type="button"></wb:share-button>
+
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="http://localhost:4000/markup/link-tty-port-on-linux/" class="pagination--pager" title="link tty port on linux
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"
+          
+          alt="">
+      </div>
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -358,13 +482,21 @@ To send a directory, cd to inside the directory whose contents you want to send 
     $ udevadm info -a -n /dev/ttyUSB0  $(udevadm info -q path -n /dev/ttyUSB0...</p>
   </article>
 </div>
+        
+          
 
-  
 
 
-
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"
+          
+          alt="">
+      </div>
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -391,13 +523,21 @@ On server
 config on /etc/ssh...</p>
   </article>
 </div>
+        
+          
 
-  
 
 
-
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"
+          
+          alt="">
+      </div>
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -422,13 +562,21 @@ config on /etc/ssh...</p>
 </p>
   </article>
 </div>
+        
+          
 
-  
 
 
-
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"
+          
+          alt="">
+      </div>
     
     <h2 class="archive__item-title" itemprop="headline">
       
@@ -450,49 +598,13 @@ config on /etc/ssh...</p>
 </p>
   </article>
 </div>
-
-
-
-<nav class="pagination">
+        
+      </div>
+    </div>
   
-  <ul>
-    
-    
-    <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
-    
-
-    
-    
-      <li><a href="#" class="disabled current">1</a></li>
-    
-
-    
-    
-
-    
-    
-    
-
-    
-
-    
-    
-
-    
-      <li><a href="http://localhost:4000/page2/">2</a></li>
-    
-
-    
-    
-      <li><a href="http://localhost:4000/page2/">Next</a></li>
-    
-  </ul>
-</nav>
-
-
-
-  </div>
+  
 </div>
+
     </div>
 
     
@@ -546,6 +658,11 @@ config on /etc/ssh...</p>
 
 
 
+
+
+    <script async type="text/javascript" src="//apis.google.com/js/plusone.js?callback=gpcb"></script>
+<noscript>Please enable JavaScript to view the <a href="https://plus.google.com/">comments powered by Google+.</a></noscript>
+  
 
 
 
