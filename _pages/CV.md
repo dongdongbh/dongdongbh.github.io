@@ -47,18 +47,18 @@ Include hardware BSP development, operating system transplantation and applicati
 * 王智敏, 王欢欢, 崔敬魁, & 李东达. (2016). 四旋翼飞行器. 橡塑技术与装备, (2), 101-107.
 
 ## Research Projects:
-### Software Defined Wireless Sensor Network System                 12/2017-03/2018
++ Software Defined Wireless Sensor Network System                 12/2017-03/2018
 
-### UAV-Enabled Sensor System                                       08/2017-11/2017
++ UAV-Enabled Sensor System                                       08/2017-11/2017
 
-### [MBZIRC](http://www.mbzirc.com/challenge/2017)-2017 International Robotic Competition                   01/2017-03/2017
++ [MBZIRC](http://www.mbzirc.com/challenge/2017)-2017 International Robotic Competition                   01/2017-03/2017
 
-### Autonomous takeoff and landing of the intelligent quadrotor(Thesis)   12/2014-06/2015
++ Autonomous takeoff and landing of the intelligent quadrotor(Thesis)   12/2014-06/2015
 
-### Visual tracking gimbal system design                                08/2014-11/2014
-### Simulated Flight Control System Based on SINS                       08/2013-12/2013
-### Two-wheel self-balancing vehicle                                    11/2012-06/2013
-### AVR-based multi-function smart vehicle                          08/2012-11/2012
++ Visual tracking gimbal system design                                08/2014-11/2014
++ Simulated Flight Control System Based on SINS                       08/2013-12/2013
++ Two-wheel self-balancing vehicle                                    11/2012-06/2013
++ AVR-based multi-function smart vehicle                          08/2012-11/2012
 
 ## Professional skills
 * Familiar with the principle of inertial navigation, integrated navigation algorithm and application, can be carry out aircraft attitude calculation and control algorithm design;
