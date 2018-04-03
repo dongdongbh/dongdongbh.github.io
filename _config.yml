@@ -10,7 +10,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-HK"
 title                    : "Dongda's homepage"
-title_separator          : "-"
+title_separator          : " "
 name                     : "Dongda Li"
 description              : "Dongda's homepage, an amazing website."
 url                      : "http://dongdongbh.tech"
