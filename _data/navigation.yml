@@ -3,6 +3,6 @@ main:
   - title: "Posts"
     url: /year-archive/
   - title: "Tags"
-    url: /tag-archive/
+    url: /tags/
   - title: "About"
     url: https://mmistakes.github.io/minimal-mistakes/about/
