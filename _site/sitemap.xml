@@ -29,7 +29,8 @@
 <lastmod>2018-03-23T00:00:00+08:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/CV/</loc>
+<loc>http://localhost:4000/blog/vps/</loc>
+<lastmod>2018-04-19T00:00:00+08:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/archive-layout-with-content/</loc>
@@ -39,6 +40,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/collection-archive/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/cv/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

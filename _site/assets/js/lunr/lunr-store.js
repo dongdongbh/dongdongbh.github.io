@@ -33,4 +33,9 @@ var store = [{
         "excerpt":"netcat + tar (fast but not secure)To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:$ tar -cz . | nc -q 10 -l -p 45454On the computer receiving the contents, cd to where you want the...","categories": ["Markup"],
         "tags": ["content","tutorial"],
         "url": "http://localhost:4000/markup/file-transport/",
-        "teaser":"http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"},]
+        "teaser":"http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"},{
+        "title": "Using Google cloud to build a Virtual Private Server (VPS)",
+        "excerpt":"set up a VPS on Google cloud buy a VM on Google cloud (it has one year free trial now) choose Debian Linux and the place near to get fast access (eg, asia-east, asia-noutheast) use ssh connect VPS (you can use browser ssh or ssh key on terminal) if you...","categories": ["Blog"],
+        "tags": ["content","tutorial"],
+        "url": "http://localhost:4000/blog/vps/",
+        "teaser":null},]

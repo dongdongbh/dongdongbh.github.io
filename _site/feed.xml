@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T17:03:45+08:00</updated><id>http://localhost:4000/</id><title type="html">Dongda’s homepage</title><subtitle>Dongda's homepage, an amazing website.</subtitle><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><entry><title type="html">Transfer files over a LAN between two Linux computers</title><link href="http://localhost:4000/markup/file-transport/" rel="alternate" type="text/html" title="Transfer files over a LAN between two Linux computers" /><published>2018-03-23T00:00:00+08:00</published><updated>2018-03-23T00:00:00+08:00</updated><id>http://localhost:4000/markup/file-transport</id><content type="html" xml:base="http://localhost:4000/markup/file-transport/">&lt;h2 id=&quot;netcat--tar-fast-but-not-secure&quot;&gt;netcat + tar (fast but not secure)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-19T19:18:50+08:00</updated><id>http://localhost:4000/</id><title type="html">Dongda’s homepage</title><subtitle>Homepage of Dongda Li, an amazing website.</subtitle><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><entry><title type="html">Using Google cloud to build a Virtual Private Server (VPS)</title><link href="http://localhost:4000/blog/vps/" rel="alternate" type="text/html" title="Using Google cloud to build a Virtual Private Server (VPS)" /><published>2018-04-19T00:00:00+08:00</published><updated>2018-04-19T00:00:00+08:00</updated><id>http://localhost:4000/blog/vps</id><content type="html" xml:base="http://localhost:4000/blog/vps/">&lt;h1 id=&quot;set-up-a-vps-on-google-cloud&quot;&gt;set up a VPS on Google cloud&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;buy a VM on &lt;a href=&quot;https://cloud.google.com/&quot;&gt;Google cloud&lt;/a&gt; (it has one year free trial now)
+ choose Debian Linux and the place near to get fast access (eg, &lt;code class=&quot;highlighter-rouge&quot;&gt;asia-east&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;asia-noutheast&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;use ssh connect VPS (you can use browser ssh or ssh key on terminal)
+ if you use terminal ssh, please set up &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud&lt;/code&gt; first follow this &lt;a href=&quot;https://cloud.google.com/compute/docs/instances/connecting-to-instance?hl=zh-cn&quot;&gt;tutorial&lt;/a&gt;
+ use &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud compute ssh [username]&lt;/code&gt; to connect VPS on terminal&lt;/li&gt;
+  &lt;li&gt;configure you VPS&lt;/li&gt;
+  &lt;li&gt;configure you client&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;set-up-bbr-and-ssr&quot;&gt;set up BBR and ssr&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;set up BBR and ssr through script on VPS connected by ssh
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -i
+wget --no-check-certificate https://github.com/iyuco/scripts/raw/master/bbr.sh
+chmod +x bbr.sh
+./bbr.sh
+./shadowsocksR.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;set you Google cloud firewall to allow your ssr port in both http and https&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;set-up-linux-pc-client&quot;&gt;set up Linux PC client&lt;/h2&gt;
+
+&lt;h3 id=&quot;set-up-ssr&quot;&gt;set up ssr&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
+wget http://www.djangoz.com/ssr
+sudo mv ssr /usr/local/bin
+sudo chmod 766 /usr/local/bin/ssr
+ssr install
+ssr config
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;using-ssr-on-terminal&quot;&gt;using ssr on terminal&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt-get install privoxy&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;edit /etc/privoxy/config, below is an example
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; listen-address localhost:8118
+ forward-socks5 /127.0.0.1:1080.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo /etc/init.d/privoxy restart&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;configure terminal environment
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export http_proxy=&quot;127.0.0.1:8118&quot;
+export https_proxy=&quot;127.0.0.1:8118&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;try &lt;code class=&quot;highlighter-rouge&quot;&gt;wget http://www.google.com&lt;/code&gt; to test.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;chrome-management&quot;&gt;Chrome management&lt;/h3&gt;
+&lt;p&gt;if you want to use chrome to manage your redirection, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;Proxy SwitchyOmega&lt;/code&gt; extension.&lt;/p&gt;
+
+&lt;h2 id=&quot;set-up-other-clients&quot;&gt;set up other clients&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;IOS (wingy)&lt;/li&gt;
+  &lt;li&gt;Windows (&lt;a href=&quot;https://github.com/shadowsocksr-rm/shadowsocksr-csharp&quot;&gt;ShadowsocksR-win&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;MAC (&lt;a href=&quot;https://github.com/shadowsocks/ShadowsocksX-NG&quot;&gt;ShadowsocksX&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Android(&lt;a href=&quot;https://github.com/milkice233/shadowsocksr-android&quot;&gt;shadowsocksr-android&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Special statement: This tutorial is only for learning and research, thanks.&lt;/strong&gt;&lt;/p&gt;</content><author><name>Dongda Li</name><email>dongdongbhbh@gmail.com</email></author><category term="content" /><category term="tutorial" /><summary type="html">set up a VPS on Google cloud buy a VM on Google cloud (it has one year free trial now) choose Debian Linux and the place near to get fast access (eg, asia-east, asia-noutheast) use ssh connect VPS (you can use browser ssh or ssh key on terminal) if you use terminal ssh, please set up gcloud first follow this tutorial use gcloud compute ssh [username] to connect VPS on terminal configure you VPS configure you client</summary></entry><entry><title type="html">Transfer files over a LAN between two Linux computers</title><link href="http://localhost:4000/markup/file-transport/" rel="alternate" type="text/html" title="Transfer files over a LAN between two Linux computers" /><published>2018-03-23T00:00:00+08:00</published><updated>2018-03-23T00:00:00+08:00</updated><id>http://localhost:4000/markup/file-transport</id><content type="html" xml:base="http://localhost:4000/markup/file-transport/">&lt;h2 id=&quot;netcat--tar-fast-but-not-secure&quot;&gt;netcat + tar (fast but not secure)&lt;/h2&gt;
 &lt;p&gt;To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ tar -cz . | nc -q 10 -l -p 45454&lt;/code&gt;&lt;/p&gt;

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>link tty port on linux - Dongda’s homepage</title>
+<!-- begin _includes/seo.html --><title>link tty port on linux   Dongda’s homepage</title>
 <meta name="description" content="How to link node name with a custom name  run next cmd to see the port device    $ udevadm info -a -n /dev/ttyUSB0  $(udevadm info -q path -n /dev/ttyUSB0)        Then open (or create) a file in /etc/udev/rules.d/ (named, for example, serial-symlinks.rules), and put the udev rule there.    $ sudo subl /etc/udev/rules.d/serial-symlinks.rules        …you can write this rule:          ACTION==”add”, ATTRS{idVendor}==”0403”, ATTRS{idProduct}==”6001”, SYMLINK+=”tty-xxx”    //some attrs to lock specific USB device      ">
 <meta name="keywords" content="How to link node name with a custom name  run next cmd to see the port device    $ udevadm info -a -n /dev/ttyUSB0  $(udevadm info -q path -n /dev/ttyUSB0)        Then open (or create) a file in /etc/udev/rules.d/ (named, for example, serial-symlinks.rules), and put the udev rule there.    $ sudo subl /etc/udev/rules.d/serial-symlinks.rules        …you can write this rule:          ACTION==”add”, ATTRS{idVendor}==”0403”, ATTRS{idProduct}==”6001”, SYMLINK+=”tty-xxx”    //some attrs to lock specific USB device      ">
 
@@ -473,6 +473,35 @@ $ sudo subl /etc/udev/rules.d/serial-symlinks.rules
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/blog/vps/" rel="permalink">Using Google cloud to build a Virtual Private Server (VPS)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">set up a VPS on Google cloud
+
+  buy a VM on Google cloud (it has one year free trial now)
+ choose Debian Linux and the place near to get fast access (eg, asi...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
       <div class="archive__item-teaser">
         <img src=
           
@@ -578,42 +607,6 @@ config on /etc/ssh...</p>
 
   Ryan’s Tutorials
 
-
-</p>
-  </article>
-</div>
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "http://localhost:4000/assets/images/markup-syntax-highlighting-teaser.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/markup/markup-html-tags-and-formatting/" rel="permalink">Markup: HTML Tags and Formatting
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">A variety of common markup showing how the theme styles them.
 
 </p>
   </article>
