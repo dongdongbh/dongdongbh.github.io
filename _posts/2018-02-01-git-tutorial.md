@@ -166,7 +166,7 @@ git rebase another_branch           //re-base current branch to another branch
 git checkout another_branch                 
 git merge rebased_branch            //merge re-based branch (fast forward). to achieve a clear history
 ```
-
+## summary
 ![git transport]({{ "/assets/images/git-transport.png" | absolute_url }}) 
 {:.image-caption}
 *git transport*
