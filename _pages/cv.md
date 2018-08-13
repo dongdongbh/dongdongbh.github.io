@@ -6,7 +6,8 @@ description: "Dongda Li"
 date: 2018-04-05T11:48:41-04:00
 ---
 
-## [PDF Version](http://dongdongbh.tech/assets/pdf/cv.pdf) 
+
+##### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;"}
 
 # Li Dongda  
 __Gender:__ Male  
