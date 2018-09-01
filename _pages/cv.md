@@ -73,6 +73,10 @@ Include hardware BSP development, operating system transplantation and applicati
 * Master the C / C + +/Python language, data structure, with good code preparation habits;
 * Master micro-controller programming and debugging capabilities, with 5 years of embedded system development experience.
 
+## Language skills
+* __Chinese__: native language
+* __English__: IELTS 6.5
+
 ## Awards
 * __Champion__    [MBZIRC](https://youtu.be/Qvw5Z9baF-A?t=10s) 2017.                                                03/2017
 * __Grand Prize__  The eighth Shaanxi province outstanding graduation design              06/2015
