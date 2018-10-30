@@ -21,19 +21,16 @@ Robotic Control and Navigation, Machine Learning, Reinforcement learning
 
 ## Education
 School of Automation and Information Engineering  
-**Xi'an University of Technology**                                                                      **09/2011-06/2015**
-__B.S.__, major in __Automation__   
+__Xi'an University of Technology__                __09/2011-06/2015__  
+_B.S.__, major in __Automation__   
 __Advisor:__ Yingming YI  
 __Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
 ## Research Experience
 ### Research Assistant                                                 10/2018-Present
-
 Shenzhen Institutes of Advanced Technology  
-
-**Chinese Academy of Sciences** 
-
-Supervisors: Chengzhong Xu 
+**Chinese Academy of Sciences**  
+Supervisors: Chengzhong Xu  
 Research Area: Machine Learning, Motion Planning 
 
 ### Research Assistant                                                  08/2017-05/2018
