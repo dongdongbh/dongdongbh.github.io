@@ -21,16 +21,17 @@ Robotic Control and Navigation, Machine Learning, Reinforcement learning
 
 ## Education
 School of Automation and Information Engineering  
-__Xi'an University of Technology__     <br />    09/2011-06/2015                                  
+**Xi'an University of Technology**                                                                      **09/2011-06/2015**
 __B.S.__, major in __Automation__   
 __Advisor:__ Yingming YI  
 __Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
 ## Research Experience
-### Research Assistant                                                  10/2018-Present
+### Research Assistant                                                 10/2018-Present
 
-Shenzhen Institutes of Advanced Technology
-**Chinese Academy of Sciences**  
+Shenzhen Institutes of Advanced Technology  
+
+**Chinese Academy of Sciences** 
 
 Supervisors: Chengzhong Xu 
 Research Area: Machine Learning, Motion Planning 
@@ -49,7 +50,7 @@ Supervisor: Defu Lin
 Research Area: Unmanned Aerial Vehicle Control System, Navigation System, Data Fusion
 
 ## Work experience
-Embedded Software Engineer                                      07/2015-06/2016   
+Embedded Software Engineer                                                                              07/2015-06/2016   
 Beijing Zhonghangzhi Technology Co., Ltd     
 Responsibilities: Design of new unmanned helicopter flight control software.
 Include hardware BSP development, operating system transplantation and application, navigation algorithm design, etc. 
@@ -62,16 +63,16 @@ Include hardware BSP development, operating system transplantation and applicati
 ## Research Projects:
 + Software Defined Wireless Sensor Network System                 12/2017-03/2018
 
-+ UAV-Enabled Sensor System                                       08/2017-11/2017
++ UAV-Enabled Sensor System                                                          08/2017-11/2017
 
-+ [MBZIRC](http://www.mbzirc.com/challenge/2017)-2017 International Robotic Competition                   01/2017-03/2017
++ [MBZIRC](http://www.mbzirc.com/challenge/2017)-2017 International Robotic Competition                      01/2017-03/2017
 
 + Autonomous takeoff and landing of the intelligent quadrotor(Thesis)   12/2014-06/2015
 
-+ Visual tracking gimbal system design                                08/2014-11/2014
-+ Simulated Flight Control System Based on SINS                       08/2013-12/2013
-+ Two-wheel self-balancing vehicle                                    11/2012-06/2013
-+ AVR-based multi-function smart vehicle                          08/2012-11/2012
++ Visual tracking gimbal system design                                          08/2014-11/2014
++ Simulated Flight Control System Based on SINS                        08/2013-12/2013
++ Two-wheel self-balancing vehicle                                                  11/2012-06/2013
++ AVR-based multi-function smart vehicle                                      08/2012-11/2012
 
 ## Professional skills
 * Familiar with the principle of inertial navigation, integrated navigation algorithm and application, can be carry out aircraft attitude calculation and control algorithm design;
@@ -87,14 +88,14 @@ Include hardware BSP development, operating system transplantation and applicati
 * __English__: IELTS 6.5
 
 ## Awards
-* __Champion__    [MBZIRC](https://youtu.be/Qvw5Z9baF-A?t=10s) 2017.                                                03/2017
-* __Grand Prize__  The eighth Shaanxi province outstanding graduation design              06/2015
-* Second Prize  Xi'an University of Technology, 2014 Emerson "CONSIDER IT SOLVED" 08/2014
+* __Champion__    [MBZIRC](https://youtu.be/Qvw5Z9baF-A?t=10s) 2017.                                                                                                                03/2017
+* __Grand Prize__  The eighth Shaanxi province outstanding graduation design                              06/2015
+* Second Prize  Xi'an University of Technology, 2014 Emerson "CONSIDER IT SOLVED"             08/2014
 * Outstanding Officer of Automation Technology Association, Xi'an University of Technology  05/2013
-* First Prize  The 21st session of the " Innovation Prix" science and technology competition  11/2012
+* First Prize  The 21st session of the " Innovation Prix" science and technology competition   11/2012
 
 ## School Role
-__Minister__ of Xi'an University of Technology Automation Technology Association     09/2013-07/2014
+__Minister__ of Xi'an University of Technology Automation Technology Association                   09/2013-07/2014
 
 
 
