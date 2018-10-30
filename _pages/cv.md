@@ -17,7 +17,7 @@ __Tel:__ 86-18310682633
 __Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)
 
 ## Research Interests
-Robotic Control and Navigation, Robotic Network
+Robotic Control and Navigation, Machine Learning, Reinforcement learning
 
 ## Education
 School of Automation and Information Engineering  
@@ -27,7 +27,16 @@ __Advisor:__ Yingming YI
 __Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
 ## Research Experience
-### Research Assistant                                                  08/2016-Present
+### Research Assistant                                                  10/2018-Present
+
+Shenzhen Institutes of Advanced Technology
+**Chinese Academy of Sciences**  
+
+Supervisors: Chengzhong Xu 
+Research Area: Machine Learning, Motion Planning 
+
+### Research Assistant                                                  08/2017-05/2018
+
 The Department of Compute Science    
 __The University of HongKong__   
 Supervisors: Francis C.M. Lau, Yuexuan Wang and Heming Cui    
