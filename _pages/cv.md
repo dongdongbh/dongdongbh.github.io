@@ -53,8 +53,8 @@ Responsibilities: Design of new unmanned helicopter flight control software.
 Include hardware BSP development, operating system transplantation and application, navigation algorithm design, etc. 
 
 ## Publication
-* Dongda Li, Yuexuan Wang, Zhaoquan Gu, Tong Shen, Tianhao Wei, Yongqin Fu, Heming Cui, Mingli Song, Francis C. M. Lau. Adler: A Resilient, High-Performance and Energy-Efficient UAV-Enabled Sensor System. [TR-2018-01](http://www.cs.hku.hk/research/techreps/document/TR-2018-01.pdf)
-* Tong Shen, Yuexuan Wang, Zhaoquan Gu, Dongda Li, Zhen Cao, Heming Cui, Francis C.M. Lau. Alano: An Efficient Neighbor Discovery Algorithm In An Energy-Restricted Large-Scale Network. IEEE International Conference on Mobile Ad-hoc and Sensor Systems. 2018
+* **Dongda Li**, Yuexuan Wang, Zhaoquan Gu, Tong Shen, Tianhao Wei, Yongqin Fu, Heming Cui, Mingli Song, Francis C. M. Lau. Adler: A Resilient, High-Performance and Energy-Efficient UAV-Enabled Sensor System. [TR-2018-01](http://www.cs.hku.hk/research/techreps/document/TR-2018-01.pdf)
+* Tong Shen, Yuexuan Wang, Zhaoquan Gu, **Dongda Li**, Zhen Cao, Heming Cui, Francis C.M. Lau. Alano: An Efficient Neighbor Discovery Algorithm In An Energy-Restricted Large-Scale Network. IEEE International Conference on Mobile Ad-hoc and Sensor Systems. 2018
 
 
 ## Research Projects:
