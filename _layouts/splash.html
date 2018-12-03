@@ -7,6 +7,9 @@ layout: default
 {% elsif page.header.video.id and page.header.video.provider %}
   {% include page__hero_video.html %}
 {% endif %}
+{% if page.use_math %}
+  {% include mathjax_support %}
+{% endif %}
 
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
