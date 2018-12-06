@@ -507,7 +507,6 @@
     }
 
     @include breakpoint($x-large) {
-      width: 100%;
       padding-right: 0;
     }
   }
