@@ -70,7 +70,7 @@
     }
   }
 }
-
+/*
 .sidebar__right {
   margin-bottom: 1em;
 
@@ -95,6 +95,19 @@
   @include breakpoint($x-large) {
     width: $right-sidebar-width;
     margin-right: -1 * $right-sidebar-width;
+  }
+}
+*/
+
+.sidebar__right {
+  @include breakpoint($large) {
+    position: relative;
+    float: right;
+    margin-right: 0;
+  }
+
+  @include breakpoint($x-large) {
+    margin-right: 0;
   }
 }
 
