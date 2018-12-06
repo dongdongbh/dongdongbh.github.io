@@ -4,8 +4,13 @@
 
 #main {
   @include clearfix;
-  margin-left: auto;
-  margin-right: auto;
+  /*margin-left: auto;
+  margin-right: auto;*/
+
+  margin-left:  1em;
+  margin-right:  1em;
+
+
   padding-left: 1em;
   padding-right: 1em;
   -webkit-animation: $intro-transition;
@@ -502,12 +507,10 @@
   .page {
     @include breakpoint($large) {
       padding-right: 0;
-      margin-right: span(2 of 12);
     }
 
     @include breakpoint($x-large) {
       padding-right: 0;
-      margin-right: span(1 of 15);
     }
   }
 
