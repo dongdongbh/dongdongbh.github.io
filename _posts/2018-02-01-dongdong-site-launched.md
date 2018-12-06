@@ -1,5 +1,6 @@
 ---
 title: "Dongdongbh, Launches Site"
+sitemap: true
 date: 2018-02-01
 sitemap: true
 categories:
