@@ -501,25 +501,21 @@
 .wide {
   .page {
     @include breakpoint($large) {
-      width: calc(100% - #{$right-sidebar-width-narrow});
       padding-right: 0;
     }
 
     @include breakpoint($x-large) {
-      width: calc(100% - #{$right-sidebar-width});
       padding-right: 0;
     }
   }
 
   .page__related {
     @include breakpoint($large) {
-      width: calc(100% - #{$right-sidebar-width-narrow});
       padding-right: 0;
     }
 
     @include breakpoint($x-large) {
-      width: 100%;
-      width: calc(100% - #{$right-sidebar-width});
+      padding-right: 0;
     }
   }
 }
