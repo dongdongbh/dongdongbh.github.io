@@ -4,8 +4,8 @@
 
 #main {
   @include clearfix;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: auto;
+  margin-right: auto;
 
 
   padding-left: 1em;
@@ -503,10 +503,12 @@
 .wide {
   .page {
     @include breakpoint($large) {
+      width: calc(100% - #{$right-sidebar-width-narrow});
       padding-right: 0;
     }
 
     @include breakpoint($x-large) {
+      width: calc(100% - #{$right-sidebar-width});
       padding-right: 0;
     }
   }
