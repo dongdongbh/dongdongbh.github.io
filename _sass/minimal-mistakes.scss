@@ -39,12 +39,3 @@
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 
-
-@media (min-width: 80em) {
-  .sidebar__right {
-      width: 30px;
-      margin-right: 0px;
-      float: right;
-      position: sticky;
-  }
-}
