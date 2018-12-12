@@ -81,8 +81,8 @@ So lets get the demo's output size:
 $$
 \begin{equation}
 \begin{aligned}
-p&=1\\
-s&=2\\
+p=1\\
+s=2\\
 S_{input} &= 7*7*3\\
 S_{core} &= 3*3*3\\
 S_{out} &= (\frac{n+2p-f}{s}+1) * (\frac{n+2p-f}{s}+1) * C_o \\
