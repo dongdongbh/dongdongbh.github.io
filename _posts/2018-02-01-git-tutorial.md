@@ -1,5 +1,6 @@
 ---
 title: "git tutorial "
+sitemap: true
 date: 2018-02-01
 tags:
   - git
