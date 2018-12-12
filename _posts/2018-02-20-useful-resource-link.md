@@ -8,6 +8,7 @@ categories:
 tags:
   - tutorial
 toc: true
+description: Some useful resource links
 ---
 
 ## Tutorials set

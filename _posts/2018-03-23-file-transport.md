@@ -9,6 +9,7 @@ tags:
   - content
   - tutorial
 toc: true
+description: Transfer files over a LAN between two Linux computers
 ---
 
 ## netcat + tar (fast but not secure)

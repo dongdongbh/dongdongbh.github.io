@@ -1,5 +1,5 @@
 ---
-title: "CNN dimension"
+title: "Convolutional Neural Networks dimension"
 classes: wide
 date: 2018-12-01
 sitemap: true
@@ -8,7 +8,7 @@ categories:
   - Blog
 tags:
   - note
-description: CNN, channels, strides, padding
+description: CNN dimension, channels, strides, padding
 toc: true
 toc_label: "Table of Contents"
 ---
