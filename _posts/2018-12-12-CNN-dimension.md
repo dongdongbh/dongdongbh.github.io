@@ -11,16 +11,6 @@ tags:
 description: CNN, channels, strides, padding
 ---
 
----
-math: true
-category: Knowlege
-path: '/Knowlege/:id'
-title: 'CNN dimension'
-type: 'TIPS'
-
-layout: nil
----
-
 ## CNN dimension
 
 ### **convolution operation**: share the convolution core
