@@ -9,9 +9,9 @@ categories:
 tags:
   - note
 description: CNN, channels, strides, padding
+toc: true
+toc_label: "Table of Contents"
 ---
-
-## CNN dimension
 
 ### **convolution operation**: share the convolution core
 
