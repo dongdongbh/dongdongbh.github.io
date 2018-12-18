@@ -22,7 +22,7 @@ Robotic Control and Navigation, Machine Learning, Reinforcement learning
 ## Education
 School of Automation and Information Engineering  
 __Xi'an University of Technology__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__09/2011-06/2015__  
-_B.S.__, major in __Automation__   
+B.S.__, major in __Automation  
 __Advisor:__ Yingming YI  
 __Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
@@ -30,24 +30,24 @@ __Specialized courses__ included automatic control theory, signal and system ana
 ### Research Assistant　　　　　　　　　　　　　　　　　　　10/2018-Present
 Shenzhen Institutes of Advanced Technology  
 **Chinese Academy of Sciences**  
-Supervisors: Chengzhong Xu  
-Research Area: Machine Learning, Motion Planning 
+**Supervisors**: Chengzhong Xu  
+**Research Area**: Reinforcement learning, Neural Combinatorial Optimization
 
 ### Research Assistant　　　　　　　　　　　　　　　　　　　08/2017-05/2018
 
 The Department of Compute Science    
 __The University of HongKong__   
-Supervisors: Francis C.M. Lau, Yuexuan Wang and Heming Cui    
-Research Area: Robotic Network, Wireless Sensor Network, Internet of Things
+**Supervisors**: [Francis C.M. Lau](https://i.cs.hku.hk/~fcmlau/), Yuexuan Wang and Heming Cui    
+**Research Area**: Robotic Network, Wireless Sensor Network, Internet of Things
 
 ### Research Assistant　　　　　　　　　　　　　　　　　　　07/2016-07/2017
 Unmanned Aerial Vehicle Autonomous Control Institute   
 __Beijing Institute of Technology__   
-Supervisor: Defu Lin   
-Research Area: Unmanned Aerial Vehicle Control System, Navigation System, Data Fusion
+**Supervisor**: Defu Lin   
+**Research Area**: Unmanned Aerial Vehicle Control System, Navigation System, Data Fusion
 
 ## Work experience
-Embedded Software Engineer　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　07/2015-06/2016   
+Flight Control Engineer　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　07/2015-06/2016  
 Beijing Zhonghangzhi Technology Co., Ltd     
 Responsibilities: Design of new unmanned helicopter flight control software.
 Include hardware BSP development, operating system transplantation and application, navigation algorithm design, etc. 
