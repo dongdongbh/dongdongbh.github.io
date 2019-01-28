@@ -30,3 +30,29 @@ $ scp <file> <username>@<IP address or hostname>:<Destination>
 $ scp -r (recursive) username@server:(remote location) (local location)
 $ scp -r (local location) username@server:(remote location)
 ```
+
+## Using sshfs
+
+install
+
+```bash
+sudo apt-get install sshfs
+```
+
+### Mounting the Remote File System
+
+format: `sshfs -o transform_symlinks -ofollow_symlinks  user@hostname: [dir]mountpoint`. e.g. :
+
+
+```bash
+sshfs –o cache=yes,allow_other user@192.168.1.200:/home/user/code home/user/code
+```
+
+for detail, ref  `man sshfs`
+
+### unmount
+
+```
+sudo umount mountpoint
+```
+
