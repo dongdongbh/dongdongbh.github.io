@@ -47,8 +47,8 @@ __Beijing Institute of Technology__
 **Research Area**: Unmanned Aerial Vehicle Control System, Navigation System, Data Fusion
 
 ## Work experience
-Flight Control Engineer　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　07/2015-06/2016  
-Beijing Zhonghangzhi Technology Co., Ltd     
+**Flight Control Engineer**　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　07/2015-06/2016  
+**Beijing Zhonghangzhi Technology Co., Ltd**     
 Responsibilities: Design of new unmanned helicopter flight control software.
 Include hardware BSP development, operating system transplantation and application, navigation algorithm design, etc. 
 
