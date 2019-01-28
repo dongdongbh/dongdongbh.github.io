@@ -58,9 +58,7 @@ where $C_o$ is the number of convolution cores(output channel).
 
 ![strides](../assets/images/cnn/stride.png)
 
-![strdes](https://img-blog.csdn.net/20180912114032978?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rzc19kc3Nzc2Q=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-
-![strides](https://img-blog.csdn.net/20180912114044409?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Rzc19kc3Nzc2Q=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![strdes](../assets/images/cnn/stride-2.png)
 
 output size:
 $$
