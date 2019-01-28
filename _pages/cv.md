@@ -27,17 +27,17 @@ __Advisor:__ Yingming YI
 __Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
 ## Research Experience
-### Research Assistant　　　　　　　　　　　　　　　　　　　10/2018-Present
+### Research Assistant　　　　　　　　　　　　　　　　　　　10/2018-01/2019
 Shenzhen Institutes of Advanced Technology  
 **Chinese Academy of Sciences**  
-**Supervisors**: Chengzhong Xu  
+**Supervisors**: [Chengzhong Xu](http://www.ece.eng.wayne.edu/~czxu/)  
 **Research Area**: Reinforcement learning, Neural Combinatorial Optimization
 
 ### Research Assistant　　　　　　　　　　　　　　　　　　　08/2017-05/2018
 
 The Department of Compute Science    
 __The University of HongKong__   
-**Supervisors**: [Francis C.M. Lau](https://i.cs.hku.hk/~fcmlau/), Yuexuan Wang and Heming Cui    
+**Supervisors**: [Francis C.M. Lau](https://i.cs.hku.hk/~fcmlau/), [Yuexuan Wang](https://i.cs.hku.hk/~amywang/) and Heming Cui    
 **Research Area**: Robotic Network, Wireless Sensor Network, Internet of Things
 
 ### Research Assistant　　　　　　　　　　　　　　　　　　　07/2016-07/2017
@@ -72,12 +72,13 @@ Include hardware BSP development, operating system transplantation and applicati
 + AVR-based multi-function smart vehicle　　　　　　　　　　　　　　　　　　　　　　　08/2012-11/2012
 
 ## Professional skills
+
 * Familiar with the principle of inertial navigation, integrated navigation algorithm and application, can be carry out aircraft attitude calculation and control algorithm design;
-* Master Matlab control system modeling and simulation capabilities;
 * Familiar with Robot operating system(ROS) programming and application;
+* Master the C / C + +/Python language, familiar with Pytorch machine learning framework;
+* Master Matlab control system modeling and simulation capabilities;
 * Master the Linux system programming;
 * Familiar with GIT and Academic Writing;
-* Master the C / C + +/Python language, data structure, with good code preparation habits;
 * Master micro-controller programming and debugging capabilities, with 5 years of embedded system development experience.
 
 ## Language skills
@@ -93,6 +94,5 @@ Include hardware BSP development, operating system transplantation and applicati
 
 ## School Role
 __Minister__ of Xi'an University of Technology Automation Technology Association　　　　　　　　09/2013-07/2014
-
 
 
