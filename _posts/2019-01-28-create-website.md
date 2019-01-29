@@ -1,5 +1,6 @@
 ---
 title: "Create your website on cloud"
+classes: wide
 sitemap: true
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
@@ -8,6 +9,7 @@ categories:
 tags:
   - tutorial
 toc: true
+toc_label: "Table of Contents"
 description: Create your website on cloud using git
 ---
 
