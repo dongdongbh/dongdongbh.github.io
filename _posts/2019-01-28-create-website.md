@@ -110,7 +110,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    
    git clone $GIT_REPO $TMP_GIT_CLONE
    cd $TMP_GIT_CLONE
-   sudo bundle exec jekyll build -s $TMP_GIT_CLONE -d $PUBLIC_WWW
+   sudo JEKYLL_ENV=production bundle exec jekyll build -s $TMP_GIT_CLONE -d $PUBLIC_WWW
    rm -Rf $TMP_GIT_CLONE
    exit
    ~~~
