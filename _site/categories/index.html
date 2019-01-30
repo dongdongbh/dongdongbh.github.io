@@ -7,7 +7,29 @@
 -->
 <html lang="en" class="no-js" xmlns:wb="http://open.weibo.com/wb">
   <head>
-    <meta charset="utf-8">
+    
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Posts by Category   Dongda’s homepage</title>
 <meta name="description" content="Homepage of Dongda Li, an amazing website.">
@@ -113,13 +135,13 @@
 
     <!-- start custom head snippets -->
 <meta property="wb:webmaster" content="ec24ee5aab20f47f" />
-<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--archive wide">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -139,7 +161,12 @@
           
             
             <li class="masthead__menu-item">
-              <a href="http://localhost:4000/tag-archive/" >Tags</a>
+              <a href="https://dongdongbh.github.io/note/" >Notes</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/cv/" >CV</a>
             </li>
           
             
@@ -294,7 +321,7 @@
 
   <div class="archive">
     
-      <h1 class="page__title">Posts by Category</h1>
+      <h1 id="page-title" class="page__title">Posts by Category</h1>
     
     <!--
 # Jekyll Group-By-Array 0.1.0
@@ -361,6 +388,12 @@
 
 <!-- Push to group_names -->
 
+
+
+
+
+
+<!-- If not equal to previous then it must be unique as sorted -->
 
 
 
@@ -530,13 +563,17 @@ To send a directory, cd to inside the directory whose contents you want to send 
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">Insatll and configuration
-$ apt-get install openssh-server
+
+  
+    $ apt-get install openssh-server
 $ sudo subl /etc/ssh/sshd_config
 $ sudo service ssh restart
 
+  
+
 Show gui
 On server
-config on /etc/ssh...</p>
+config...</p>
   </article>
 </div>
   
@@ -571,6 +608,34 @@ config on /etc/ssh...</p>
 
   
   <h2 id="resource" class="archive__subtitle">Resource</h2>
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/resource/create-website/" rel="permalink">Create your website on cloud
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Create your website on Virtual Private Server(VPS)
+
+</p>
+  </article>
+</div>
   
     
 
@@ -671,7 +736,7 @@ config on /etc/ssh...</p>
 </div>
 
 
-<div class="page__footer-copyright">&copy; 2018 Dongda Li. Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>. Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></div>
+<div class="page__footer-copyright">&copy; 2019 Dongda Li. Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>. Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></div>
       </footer>
     </div>
 

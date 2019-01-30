@@ -7,7 +7,29 @@
 -->
 <html lang="en" class="no-js" xmlns:wb="http://open.weibo.com/wb">
   <head>
-    <meta charset="utf-8">
+    
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Archive Layout with Content   Dongda’s homepage</title>
 <meta name="description" content="Homepage of Dongda Li, an amazing website.">
@@ -113,13 +135,13 @@
 
     <!-- start custom head snippets -->
 <meta property="wb:webmaster" content="ec24ee5aab20f47f" />
-<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--archive wide">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -139,7 +161,12 @@
           
             
             <li class="masthead__menu-item">
-              <a href="http://localhost:4000/tag-archive/" >Tags</a>
+              <a href="https://dongdongbh.github.io/note/" >Notes</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/cv/" >CV</a>
             </li>
           
             
@@ -294,7 +321,7 @@
 
   <div class="archive">
     
-      <h1 class="page__title">Archive Layout with Content</h1>
+      <h1 id="page-title" class="page__title">Archive Layout with Content</h1>
     
     <p>A variety of common markup showing how the theme styles them.</p>
 
@@ -504,7 +531,7 @@
 <h3 id="address-tag">Address Tag</h3>
 
 <address>
-  1 Infinite Loop<br /> Cupertino, CA 95014<br /> United States
+  <p>1 Infinite Loop<br /> Cupertino, CA 95014<br /> United States</p>
 </address>
 
 <h3 id="anchor-tag-aka-link">Anchor Tag (aka. Link)</h3>
@@ -575,303 +602,306 @@
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/404.html" rel="permalink">Page Not Found</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Page not found. Your pixels are in another canvas.
-</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/404.html" rel="permalink"&gt;Page Not Found&lt;/a&gt;
+  
+&lt;/h2&gt;
+
+&lt;p class="archive__item-excerpt" itemprop="description"&gt;Page not found. Your pixels are in another canvas.
+</code></pre></div>    </div>
+    <p>&lt;/p&gt;</p>
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/archive-layout-with-content/" rel="permalink">Archive Layout with Content</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/archive-layout-with-content/" rel="permalink"&gt;Archive Layout with Content&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/categories/" rel="permalink">Posts by Category</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/categories/" rel="permalink"&gt;Posts by Category&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/collection-archive/" rel="permalink">Posts by Collection</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/collection-archive/" rel="permalink"&gt;Posts by Collection&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/cv/" rel="permalink">Dongda Li</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/cv/" rel="permalink"&gt;Dongda Li&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/" rel="permalink"></a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">A flexible two-column Jekyll theme. Perfect for personal sites, blogs, and portfolios hosted on GitHub or your own server. Latest release v4.9.0  
-</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+
+&lt;p class="archive__item-excerpt" itemprop="description"&gt;A flexible two-column Jekyll theme. Perfect for personal sites, blogs, and portfolios hosted on GitHub or your own server. Latest release v4.9.0  
+</code></pre></div>    </div>
+    <p>&lt;/p&gt;</p>
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/" rel="permalink"></a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/lorem-ipsum/" rel="permalink">Lorem Ipsum</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/lorem-ipsum/" rel="permalink"&gt;Lorem Ipsum&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/assets/js/lunr/lunr-en.js" rel="permalink"></a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/assets/js/lunr/lunr-en.js" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/assets/js/lunr/lunr-gr.js" rel="permalink"></a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/assets/js/lunr/lunr-gr.js" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/assets/js/lunr/lunr-store.js" rel="permalink"></a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/assets/js/lunr/lunr-store.js" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/assets/css/main.css" rel="permalink"></a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/assets/css/main.css" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/page-archive/" rel="permalink">Page Archive</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/page-archive/" rel="permalink"&gt;Page Archive&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/sample-page/" rel="permalink">Sample Page</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/sample-page/" rel="permalink"&gt;Sample Page&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/sitemap/" rel="permalink">Sitemap</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/sitemap/" rel="permalink"&gt;Sitemap&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/splash-page/" rel="permalink">Splash Page</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop.
-</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/splash-page/" rel="permalink"&gt;Splash Page&lt;/a&gt;
+  
+&lt;/h2&gt;
+
+&lt;p class="archive__item-excerpt" itemprop="description"&gt;Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop.
+</code></pre></div>    </div>
+    <p>&lt;/p&gt;</p>
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/tag-archive/" rel="permalink">Posts by Tag</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/tag-archive/" rel="permalink"&gt;Posts by Tag&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/terms/" rel="permalink">Terms and Privacy Policy</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/terms/" rel="permalink"&gt;Terms and Privacy Policy&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/year-archive/" rel="permalink">Posts by Year</a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/year-archive/" rel="permalink"&gt;Posts by Year&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/page2/" rel="permalink"></a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/page2/" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/sitemap.xml" rel="permalink"></a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/sitemap.xml" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/robots.txt" rel="permalink"></a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/robots.txt" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
 <div class="list__item">
   <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/feed.xml" rel="permalink"></a>
-      
-    </h2>
-    
-    
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2 class="archive__item-title" itemprop="headline"&gt;
+  
+    &lt;a href="http://localhost:4000/feed.xml" rel="permalink"&gt;&lt;/a&gt;
+  
+&lt;/h2&gt;
+</code></pre></div>    </div>
+
   </article>
 </div>
 
@@ -912,7 +942,7 @@
 </div>
 
 
-<div class="page__footer-copyright">&copy; 2018 Dongda Li. Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>. Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></div>
+<div class="page__footer-copyright">&copy; 2019 Dongda Li. Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>. Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></div>
       </footer>
     </div>
 
