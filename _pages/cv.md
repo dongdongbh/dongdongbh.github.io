@@ -29,7 +29,7 @@ __Specialized courses__ included automatic control theory, signal and system ana
 ## Research Experience
 ### Research Assistant　　　　　　　　　　　　　　　　　　　03/2019-Present
 
-Cyberspace institute of advanced technology
+Cyberspace Institute of Advanced Technology  
 **Guangzhou University**  
 **Supervisors**: Zhaoquan Gu  
 **Research Area**: Reinforcement learning, Neural Combinatorial Optimization
