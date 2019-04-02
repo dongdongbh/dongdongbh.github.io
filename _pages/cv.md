@@ -27,7 +27,15 @@ __Advisor:__ Yingming YI
 __Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
 ## Research Experience
+### Research Assistant　　　　　　　　　　　　　　　　　　　03/2019-Present
+
+Cyberspace institute of advanced technology
+**Guangzhou University**  
+**Supervisors**: Zhaoquan Gu  
+**Research Area**: Reinforcement learning, Neural Combinatorial Optimization
+
 ### Research Assistant　　　　　　　　　　　　　　　　　　　10/2018-01/2019
+
 Shenzhen Institutes of Advanced Technology  
 **Chinese Academy of Sciences**  
 **Supervisors**: [Chengzhong Xu](http://www.ece.eng.wayne.edu/~czxu/)  
