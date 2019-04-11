@@ -17,7 +17,7 @@ __Tel:__ 86-18310682633
 __Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)
 
 ## Research Interests
-Robotic Control and Navigation, Machine Learning, Reinforcement learning
+Robotic Control and Navigation, Machine Learning
 
 ## Education
 School of Automation and Information Engineering  
@@ -32,7 +32,7 @@ __Specialized courses__ included automatic control theory, signal and system ana
 Cyberspace Institute of Advanced Technology  
 **Guangzhou University**  
 **Supervisors**: Zhaoquan Gu  
-**Research Area**: Reinforcement learning, Neural Combinatorial Optimization
+**Research Area**: Meta-learning, Neural Combinatorial Optimization
 
 ### Research Assistant　　　　　　　　　　　　　　　　　　　10/2018-01/2019
 
