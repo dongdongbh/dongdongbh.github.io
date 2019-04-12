@@ -5,13 +5,12 @@ sitemap: true
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
-
-- Resource
-  tags:
-- tutorial
-  toc: true
-    toc_label: "Table of Contents"
-    description: Enabling ssl VPN on linux, set up HUAWEI VPN on linux
+  - Resource
+tags:
+  - tutorial
+toc: true
+toc_label: "Table of Contents"
+description: Enabling ssl VPN on linux, set up HUAWEI VPN on linux
 ---
 
 ## Enabling SSL VPN on linux

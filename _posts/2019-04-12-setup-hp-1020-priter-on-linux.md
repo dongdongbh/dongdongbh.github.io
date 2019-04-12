@@ -1,20 +1,19 @@
 ---
-title: "Set up hp laserjet 1020 printer on linux"
+title: "Set up HP laserjet 1020 printer on linux"
 classes: wide
 sitemap: true
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
-
-- Resource
-  tags:
-- tutorial
-  toc: true
-    toc_label: "Table of Contents"
-    description: hp laserjet 1020 plugin problem
+  - Resource
+tags:
+  - tutorial
+toc: true
+toc_label: "Table of Contents"
+description: hp laserjet 1020 plugin problem
 ---
 
-## Set up hp laserjet 1020 printer on linux
+## Set up HP laserjet 1020 printer on linux
 
 ### Background
 
