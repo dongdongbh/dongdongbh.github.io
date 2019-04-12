@@ -1,4 +1,5 @@
-title: "Enabling ssl VPN on linux"
+---
+title: "Enabling SSL VPN on linux"
 classes: wide
 sitemap: true
 header:
@@ -11,8 +12,9 @@ categories:
   toc: true
     toc_label: "Table of Contents"
     description: Enabling ssl VPN on linux, set up HUAWEI VPN on linux
+---
 
-## Enabling ssl VPN on linux
+## Enabling SSL VPN on linux
 
 ### Why?
 
