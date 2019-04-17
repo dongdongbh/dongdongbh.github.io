@@ -32,8 +32,8 @@ Many ssl vpn software companies(such as Huawei, Sangfor etc.) do not have Linux 
 1. On Linux host add and start a bridge:
 
 ```
-ip l add qbr0 type bridge
-ip l set qbr0 up
+sudo ip l add qbr0 type bridge
+sudo ip l set qbr0 up
 ```
 
 2. Add this bridge network card(NC) to virtual machine like this![1555061415008](../assets/images/vpn_post/1555061415008.png)
@@ -47,7 +47,7 @@ ip l set qbr0 up
 5. on host open bridge's DHCP and change the route table to redirect inner ip through bridge via gateway ip `192.168.137.1`: 
 ```bash
 sudo dhclient -i qbr0
-sudo ip r add 10.0.0.0/8 via 192.168.137.1 dev qbr0
+sudo ip r add 10.5.0.0/16 via 192.168.137.1 dev qbr0
 ```
 6. Verify by  `ip r` like this, where  `172.xx.xx.xx` is my host NC ip, `192.168.122.xx` is virtual machine bridge IP for Internet, and `192.168.137.x` is for bridge VPN. Oh, my God, how complex it is!!!
 
