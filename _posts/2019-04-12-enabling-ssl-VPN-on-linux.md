@@ -44,20 +44,57 @@ sudo ip l set qbr0 up
 
    ![1555062668324](../assets/images/vpn_post/1555062668324.png)
 
-5. on host open bridge's DHCP and change the route table to redirect inner ip through bridge via gateway ip `192.168.137.1`: 
+5. on host open bridge's DHCP 
 ```bash
 sudo dhclient -i qbr0
-sudo ip r add 10.5.0.0/16 via 192.168.137.1 dev qbr0
 ```
-6. Verify by  `ip r` like this, where  `172.xx.xx.xx` is my host NC ip, `192.168.122.xx` is virtual machine bridge IP for Internet, and `192.168.137.x` is for bridge VPN. Oh, my God, how complex it is!!!
+6. and we have to change the route table to redirect our inner address to the 'qbr0' through DHCP gateway, you can simply run `sudo ip r add 10.5.0.0/16 via 192.168.137.1 dev qbr0`, but now there will have two default route, so you may encounter some trouble that con not connect the Internet, thus, we need to route table to handle this.
 
-   ![1555062945050](../assets/images/vpn_post/1555062945050.png)
+   1. create two route table by edit file `/etc/iproute2/rt_tables` 
 
-7. Enjoy it !
+      ```bash
+      #
+      # reserved values
+      #
+      255     local
+      254     main
+      253     default
+      0       unspec
+      #
+      # local
+      #
+      #1      inr.ruhep
+      1 rt1
+      2 rt2
+      ```
+
+   2. set up your route table and route rules for specific connection
+
+      ```bash
+      sudo ip route add default via 172.22.58.254 dev enp0s31f6 proto dhcp metric 100  table rt1
+      sudo ip route add 10.5.0.0/16 via 192.168.137.1 dev qbr0 table rt2
+      
+      sudo ip rule add to 10.5.0.0/16 lookup rt2
+      sudo ip rule add 0/0 lookup rt1
+      ```
+
+      your result just like this
+
+      ```
+      ip rule show
+      ip route list table rt1
+      ip route list table rt2
+      ```
+
+      ![1555488272293](../assets/images/vpn_post/route.png)
+
+7. Verify by  `ip r` like this, where  `172.xx.xx.xx` is my host NC ip, `192.168.122.xx` is virtual machine bridge IP for Internet, and `192.168.137.x` is for bridge VPN. Oh, my God, how complex it is!!!
+
+   ![route2](../assets/images/vpn_post/route2.png)
+
+8. Enjoy it !
 
    `ssh xxx@10.xx.xx.xx` 
-
-8. However, it is fucking slow on my machine. Is my network problem or configuration problem? I do not know, but maybe fast on your condition.
 
 
 
