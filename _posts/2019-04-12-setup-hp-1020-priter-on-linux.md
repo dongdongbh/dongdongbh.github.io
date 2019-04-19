@@ -12,8 +12,6 @@ toc_label: "Table of Contents"
 description: hp laserjet 1020 plugin problem
 ---
 
-## Set up HP laserjet 1020 printer on linux
-
 ### Background
 
 most Linux distributions has printer driver by default, for HP, it is  HPLIB, but there an addition plugin which is close source needed for this 1020 printer, when installing this plug-in, I counter some problems, and I will describe it later.

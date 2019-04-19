@@ -12,8 +12,6 @@ toc_label: "Table of Contents"
 description: Enabling ssl VPN on linux, set up HUAWEI VPN on linux
 ---
 
-## Enabling SSL VPN on linux
-
 ### Why?
 
 Many ssl vpn software companies(such as Huawei, Sangfor etc.) do not have Linux client,  so we need to use virtual  machine to run the windows client and bridge the network to Linux. Ref. this [post](<https://zsrkmyn.github.io/how-to-use-sangfor-sslvpn-in-linux.html>) which is in Chinese(LOL). 
