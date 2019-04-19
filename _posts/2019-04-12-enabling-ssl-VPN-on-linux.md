@@ -54,7 +54,7 @@ sudo ip l set qbr0 up
 
 6. Verify by  `ip r` like this, where  `172.xx.xx.xx` is my host NC ip, `192.168.122.xx` is virtual machine bridge IP for Internet, and `192.168.137.x` is for bridge VPN. Oh, my God, how complex it is!!!
 
-![route2](../assets/images/vpn_post/route2.png)
+	![route2](../assets/images/vpn_post/route2.png)
 
 7. Enjoy it !
 
@@ -62,4 +62,6 @@ sudo ip l set qbr0 up
 
 
 
-Thinks for reading!
+Thanks my friend [Stephen](<https://zsrkmyn.github.io/>) helped me debugging this. 
+
+Thinks for reading! 
