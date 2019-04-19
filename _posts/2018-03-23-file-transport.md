@@ -1,5 +1,5 @@
 ---
-title: "Transfer files over a LAN between two Linux computers"
+title: "Transfer files two computers"
 sitemap: true
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
@@ -12,7 +12,10 @@ toc: true
 description: Transfer files over a LAN between two Linux computers
 ---
 
-## netcat + tar (fast but not secure)
+## Linux-Linux
+
+### netcat + tar (fast but less secure)
+
 To send a directory, cd to inside the directory whose contents you want to send on the computer doing the sending and do:
 
 `$ tar -cz . | nc -q 10 -l -p 45454`
@@ -23,7 +26,7 @@ On the computer receiving the contents, cd to where you want the contents to app
 
 Replace `$REMOTE_HOST` with `ip / hostname` of computer doing the sending. You can also use a different port instead of 45454.
 
-## Copying Files with SSH
+### Copying Files with SCP
 cmd: 
 ```
 $ scp <file> <username>@<IP address or hostname>:<Destination>
@@ -31,7 +34,7 @@ $ scp -r (recursive) username@server:(remote location) (local location)
 $ scp -r (local location) username@server:(remote location)
 ```
 
-## Using sshfs
+### Using sshfs (NFS)
 
 install
 
@@ -39,7 +42,7 @@ install
 sudo apt-get install sshfs
 ```
 
-### Mounting the Remote File System
+##### Mounting the Remote File System
 
 format: `sshfs -o transform_symlinks -ofollow_symlinks  user@hostname: [dir]mountpoint`. e.g. :
 
@@ -50,9 +53,58 @@ sshfs –o cache=yes,allow_other user@192.168.1.200:/home/user/code home/user/co
 
 for detail, ref  `man sshfs`
 
-### unmount
+##### unmount
 
 ```
 sudo umount mountpoint
+```
+
+## Windows-Linux
+
+### samba server
+
+samba is very convenient tool for sharing files between win-Linux, just like NFS.
+
+##### How to set up
+
+refer [this tutorial](<https://tutorials.ubuntu.com/tutorial/install-and-configure-samba#0>)
+
+basically, 
+
+```bash
+sudo apt update
+sudo apt install samba
+
+mkdir /home/<username>/sambashare/
+
+sudo vim /etc/samba/smb.conf
+```
+
+add follow in smb.conf
+
+> ```
+> [sambashare]   # the name show on remote
+>     comment = Samba on Ubuntu
+>     path = /home/username/sambashare
+>     read only = no
+>     browsable = yes
+> ```
+
+restart samba
+
+```
+sudo service smbd restart
+```
+
+add user to samba and set passward, Username used must belong to a system account, else it won't save.
+
+```
+sudo smbpasswd -a username
+```
+
+On Windows, open up File Manager and edit the file path to:
+
+```
+\\ip-address\sambashare
 ```
 
