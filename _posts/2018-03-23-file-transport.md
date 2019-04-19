@@ -1,5 +1,5 @@
 ---
-title: "Transfer files two computers"
+title: "Transfer files between two computers"
 sitemap: true
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
@@ -9,7 +9,7 @@ tags:
   - content
   - tutorial
 toc: true
-description: Transfer files over a LAN between two Linux computers
+description: Transfer files over a LAN between two computers
 ---
 
 ## Linux-Linux
