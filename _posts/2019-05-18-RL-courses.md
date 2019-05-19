@@ -13,11 +13,10 @@ toc: true
 toc_label: "Table of Contents"
 description: Reinforcement Learning Course Notes-David Silver
 ---
-# Reinforcement Learning Course Notes-David Silver
 
 ##  Background
 
-I started learning Reinforcement Learning 2018, and I first learn it from the book <Deep Reinforcement Learning Hands-On> by Maxim Lapan, that book tells me some high level concept of Reinforcement Learning and how to implement it by Pytorch step by step. But when I dig out more about Reinforcement Learning, I find the high level intuition is not enough, so I read the [Reinforcement Learning An introduction](<http://incompleteideas.net/book/bookdraft2017nov5.pdf>) by  S.G, and following the courses [Reinforcement Learning](https://www.youtube.com/watch?v=2pWv7GOvuf0) by David Silver, I got  deeper understanding of RL.  For the code implementation of the book and course, refer [this](<https://github.com/dennybritz/reinforcement-learning>) Github repository.
+I started learning Reinforcement Learning 2018, and I first learn it from the book <Deep Reinforcement Learning Hands-On> by Maxim Lapan, that book tells me some high level concept of Reinforcement Learning and how to implement it by Pytorch step by step. But when I dig out more about Reinforcement Learning, I find the high level intuition is not enough, so I read the [Reinforcement Learning An introduction](http://incompleteideas.net/book/bookdraft2017nov5.pdf) by  S.G, and following the courses [Reinforcement Learning](https://www.youtube.com/watch?v=2pWv7GOvuf0) by David Silver, I got  deeper understanding of RL.  For the code implementation of the book and course, refer [this](https://github.com/dennybritz/reinforcement-learning) Github repository.
 
 Here is some of my notes when I taking the course, for some concepts and ideas that  are hard to understand, I add some my own explanation and intuition on this post, and I omit some simple concepts on this note, hopefully this note will also help you to start your RL tour.
 
@@ -359,14 +358,14 @@ Incremental prediction algorithms
 
   > here should notice that the TD target also has $\hat{v}(S_{t+1},\pmb{w})$, it contains w, but we **do not** calculate gradient of it, we just trust target at each time step, we only look forward, rather than look forward and backward at the same time. Otherwise it can not converge.
 
-- For $TD(\lambda)$ , the target is $\lambda-return G_t^\lambda$ 
+- For $TD(\lambda)$ , the target is $\lambda-return G_t^\lambda$  
   $$
   \begin{align}
   \Delta\pmb{w} &= \alpha (G_t^\lambda-\hat{v}(S_t,\pmb w))\Delta_w \hat{v}(S_t,w) \\
   
   \end{align}
   $$
-  for backward view of Linear $TD(\lambda)$:
+  for backward view of Linear $TD(\lambda)$:  
   $$
   \begin{align}
   \delta_t&= R_{t+1} + \gamma \hat{v}(S_{t+1},\pmb{w})-\hat{v}(S_t,\pmb{w})\\
@@ -375,9 +374,9 @@ Incremental prediction algorithms
   \end{align}
   $$
 
-  > here, unlike $E_t(s) = \gamma \lambda E_{t-1}(s) + 1(S_t=s)$ , we put $x(S_t)$ in $E_t$, so we don't need remember all previous $x(S_t)$,  note that in Linear TD, $\Delta \hat{v}(S_t,\pmb{w})$ is $x(S_t)$. 
+  > here, unlike $E_t(s) = \gamma \lambda E_{t-1}(s) + 1(S_t=s)​$ , we put $x(S_t)​$ in $E_t​$, so we don't need remember all previous $x(S_t)​$,  note that in Linear TD, $\Delta \hat{v}(S_t,\pmb{w})​$ is $x(S_t)​$. 
   >
-  > here the eligibility traces is the state features, so the most recent state(state feature) have more weight, unlike TD(0), this is update all previous states **simultaneously** and the weight of state decayed by $\lambda$.  
+  > here the eligibility traces is the state features, so the most recent state(state feature) have more weight, unlike TD(0), this is update all previous states **simultaneously** and the weight of state decayed by $\lambda​$.  
 
 #### Control with value function approximation
 
