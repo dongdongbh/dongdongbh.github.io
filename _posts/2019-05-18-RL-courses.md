@@ -9,8 +9,6 @@ tags:
   - content
   - tutorial
   - note
-toc: true
-toc_label: "Table of Contents"
 description: Reinforcement Learning Course Notes-David Silver
 ---
 
