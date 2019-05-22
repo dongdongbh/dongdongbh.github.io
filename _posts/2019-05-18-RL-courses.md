@@ -356,14 +356,14 @@ Incremental prediction algorithms
 
   > here should notice that the TD target also has $\hat{v}(S_{t+1},\pmb{w})$, it contains w, but we **do not** calculate gradient of it, we just trust target at each time step, we only look forward, rather than look forward and backward at the same time. Otherwise it can not converge.
 
-- For $TD(\lambda)$ , the target is $\lambda-return G_t^\lambda$  
+- For $TD(\lambda)$ , the target is $\lambda-return G_t^\lambda$ 
   $$
   \begin{align}
   \Delta\pmb{w} &= \alpha (G_t^\lambda-\hat{v}(S_t,\pmb w))\Delta_w \hat{v}(S_t,w) \\
   
   \end{align}
   $$
-  for backward view of Linear $TD(\lambda)$:  
+  for backward view of Linear $TD(\lambda)$:
   $$
   \begin{align}
   \delta_t&= R_{t+1} + \gamma \hat{v}(S_{t+1},\pmb{w})-\hat{v}(S_t,\pmb{w})\\
@@ -372,9 +372,9 @@ Incremental prediction algorithms
   \end{align}
   $$
 
-  > here, unlike $E_t(s) = \gamma \lambda E_{t-1}(s) + 1(S_t=s)​$ , we put $x(S_t)​$ in $E_t​$, so we don't need remember all previous $x(S_t)​$,  note that in Linear TD, $\Delta \hat{v}(S_t,\pmb{w})​$ is $x(S_t)​$. 
+  > here, unlike $E_t(s) = \gamma \lambda E_{t-1}(s) + 1(S_t=s)$ , we put $x(S_t)$ in $E_t$, so we don't need remember all previous $x(S_t)$,  note that in Linear TD, $\Delta \hat{v}(S_t,\pmb{w})$ is $x(S_t)$. 
   >
-  > here the eligibility traces is the state features, so the most recent state(state feature) have more weight, unlike TD(0), this is update all previous states **simultaneously** and the weight of state decayed by $\lambda​$.  
+  > here the eligibility traces is the state features, so the most recent state(state feature) have more weight, unlike TD(0), this is update all previous states **simultaneously** and the weight of state decayed by $\lambda$.  
 
 #### Control with value function approximation
 
@@ -697,11 +697,293 @@ For Critic, we can plug in previous used methods in value approximation, such as
   \end{align}
   $$
 
-For **continuous action space**, we use Gauss  to represent our policy, but Gauss is noisy, so it's better to use deterministic policy(by just picking the mean) to reduce noise and make it easy to converge.  Because policy is  deterministic, the gradient of policy is 1, and you only need the gradient of Q.
+For **continuous action space**, we use Gauss  to represent our policy, but Gauss is noisy, so it's better to use **deterministic policy**(by just picking the mean) to reduce noise and make it easy to converge.  This turns out the **deterministic policy gradient(DPG)** algorithm.
 
-## 8. Integrating Learning and Planning
+#### Deterministic policy gradient(off-policy)
 
-TBD.
+Deterministic policy: 
+$$
+a_t = \mu(s_t|\theta^\mu)
+$$
+Q network parametrize by $\theta^Q$ ,the distribution of states under behavior policy is $\rho^\beta$
+$$
+\begin{align}
+L(\theta^Q) &= \mathbb{E}_{s_t \sim \rho^\beta, a_t \sim \beta,r_t\sim E}[(Q(s_t,a_t|\theta^Q)-y_t)^2] \\
+y_t & = r(s_t,a_t)+\gamma Q(s_{t+1},\mu(s_{t+1})|\theta^Q)
+\end{align}
+$$
+policy network parametrize by $\theta^\mu$ 
+$$
+\begin{align}
+J(\theta^\mu) & = \mathbb{E}_{s \sim \rho^\beta}[Q(s,a| \theta^Q)|_{s=s_t,a=\mu(s_t|\theta^\mu)}] \\
+\Delta_{\theta^\mu}J &\approx \mathbb{E}_{s \sim \rho^\beta}[\Delta_{\theta_\mu} Q(s,a| \theta^Q)|_{s=s_t,a=\mu(s_t|\theta^\mu)}]  \\
+& = \mathbb{E}_{s \sim \rho^\beta}[\Delta Q(s,a| \theta^Q|_{s=s_t,a=\mu(s_t)}\Delta_{\theta_\mu}\mu(s|\theta^\mu)|s=s_t] 
+\end{align}
+$$
+to make training more stable, we use target network for both critic network and actor network, and update them by **soft update**:
+$$
+soft\; update\left\{
+\begin{aligned}
+\theta^{Q'} & \gets \tau\theta^Q+(1-\tau)\theta^{Q'}  \\
+\theta^{\mu'} &  \gets \tau\theta^\mu+(1-\tau)\theta^{\mu'}  \\
+\end{aligned}
+\right.
+$$
+and we  set $\tau$ very small to update parameters smoothly, e.g. $\tau = 0.001$.
+
+In addition, we add some noise to deterministic action when we are exploring the environment to get experience.
+$$
+\mu'(s_t) = \mu(s_t|\theta_t^\mu)+\mathcal{N}_t
+$$
+where $\mathcal{N}$ is the noise, it can be chosen to suit the environment, e.g. Ornstein-Uhlenbeck noise.
+
+## 8.Integrating Learning and Planning
+
+### Introduction
+
+model-free RL
+
+- no model
+- **Learn** value function(and or policy) from experience
+
+model-based RL
+
+- learn a model from experience
+- **plan**  value function(and or policy) from model
+
+Model $\mathcal{M} = \langle \mathcal{P}_\eta, \mathcal{R}_\eta \rangle$
+$$
+S_{t+1} \sim \mathcal{P}_\eta(s_{t+1}|s_t,A_t) \\
+R_{t+1} = \mathcal{R}_\eta(R_{t+1}|s_t,A_t)
+$$
+**Model learning** from experience $\{S_1,A_1,R_2,...,S_T\}$ bu supervised learning
+$$
+S_1, A_1 \to R_2, S_2 \\
+S_2, A_2 \to R_3, S_3 \\
+\vdots \\
+S_{T-1}, A_{T-1} \to R_T, S_T
+$$
+
+- $s,a \to r$ is a regression problem
+- $s,s \to s'$ is a density estimation problem
+
+### Planning with a model
+
+##### Sample-based planning
+
+1. sample experience from model
+2. apply model-free RL to samples
+   - Monte-Carlo control
+   - Sarsa
+   - Q-learning
+
+Performance of model-based RL is limited to optimal policy for approximate MDP
+
+### Integrated architectures
+
+Integrating learning and planning—–**Dyna**
+
+- Learning a model from real experience
+- **Learn and plan** value function (and/or policy) from **real <u>and</u> simulated experience**
+
+### Simulation-Based Search
+
+- **Forward search** select the best action by **lookahead** 
+- build a **search tree** withe the **current state** $s_t$ at the root
+- solve the **sub-MDP** starting from **now**
+
+Simulation-Based Search
+
+1. **Simulate** episodes of experience for **now** with the model
+2. Apply **model-free** RL to simulated episodes
+   - Monte-Carlo control $\to$ Monte-Carlo search
+   - Sarsa $\to$ TD search
+
+#### Sample Monte-Carlo search
+
+- Given a model $\mathcal{M}_v$ and a **simulation policy** $\pi$
+
+- For each action $a \in \mathcal{A}$ 
+
+  - Simulate K episodes from current(real) state $s_t$
+    $$
+    \{s_t,a,R_{t+1}^k,S_{t+1}^k,A_{t+1}^k,...,s_T^k\}_{k=1}^K \sim \mathcal{M}_v,\pi
+    $$
+
+  - Evaluate action by mean return(**Monte-Carlo evaluation**)
+
+  $$
+  Q(s_t,a) = \frac{1}{K}\sum_{k=1}^K G_t \overset{\text{P}}{\to} q_\pi(s_t,a)
+  $$
+
+- Select current(real) action with maximum value
+  $$
+  a_t = \underset{a \in \mathcal{A}}{\arg\max} Q(S_{t},a)
+  $$
+
+
+
+#### Monte-Carlo tree search
+
+- Given a model $\mathcal{M}_v$ 
+
+- Simulate K episodes from current(real) state $s_t$ using current simulation policy $\pi$
+  $$
+  \{s_t,A_t^k,R_{t+1}^k,S_{t+1}^k,A_{t+1}^k,...,s_T^k\}_{k=1}^K \sim \mathcal{M}_v,\pi
+  $$
+
+- Build a search tree containing visited states and actions
+
+- **Evaluate**  states Q(s,a) by mean return of episodes from s,a
+  $$
+  Q(s_t,a) = \frac{1}{N(s,a)}\sum_{k=1}^K \sum_{u=t}^T \mathbf{1}(s_u,A_u = s,a) G_u \overset{\text{P}}{\to} q_\pi(s_t,a)
+  $$
+
+- After search is finished, select current(real) action with maximum value in search tree
+  $$
+  a_t = \underset{a \in \mathcal{A}}{\arg\max} Q(S_{t},a)
+  $$
+
+- Each simulation consist of two phases(in-tree, out-of-tree)
+
+  - **Tree policy**(improves): pick actions to maximise Q(s,a)
+  - **Default policy**(fixed): pick action randomly
+
+> Here we update Q on the whole sub-tree, not only the current state. And after every episode of searching, we improve the policy based on the new update value, then start a new searching. With the searching progress, we exploit on the direction which is more promise to success since we keep updating our searching policy to that direction. In addition, we also need to explore a little bit the other direction, so we can apply MCTS with which action has the max Upper Confidence Bound(UCT) , that is idea of AlphaZero.
+
+**Temporal-Difference Search**
+
+e.g. update by Sarsa
+$$
+\Delta Q(S,A) = \alpha (R+\gamma Q(S',A') -Q(S,A))
+$$
+and you can also use a **function approximation** for **simulated** Q.
+
+**Dyna-2**
+
+- **long-term** memory(real experience)—TD learning
+- **Short-term**(working) memory(simulated experience)—TD search & TD learning
+
+## 9. Exploration and Exploitation
+
+way to exploration
+
+- random exploration
+  - use **Gaussian noise** in **continuous action space** 
+  - $\epsilon - greedy$, random on $\epsilon$ probability
+  - Softmax, select on action policy distribution
+- optimism in the face of uncertainty———prefer to explore state/actions with highest uncertainty
+  - Optimistic Initialization
+  - UCB
+  - Thompson sampling
+- Information state space
+  - Gittins indices
+  - Bayes-adaptive MDPS
+
+State-action exploration vs. parameter exploration
+
+### Multi-arm bandit
+
+Total **regret**
+$$
+\begin{align}
+L_t &= \mathbb{E}\left[\sum_{\tau=1}^t V^*-Q(a_\tau)\right] \\
+& \sum_{a \in \mathcal{A}}\mathbb{E}[N_t(a)](V^*-Q(a)) \\
+&=\sum_{a \in \mathcal{A}}\mathbb{E}[N_t(a)]\Delta a
+\end{align}
+$$
+Optimistic Initialization
+
+- initialize Q(a) to high value
+- Then act greedily
+- turns out linear regret
+
+$\epsilon - greedy$
+
+- turns out linear regret
+
+decay $\epsilon - greedy$ 
+
+- sub-linear regret(need know gaps), if you tune it very well and find it just on the gap, it is good, otherwise, it maybe bad.
+
+the regret has a low bound, it is a log bound
+
+The performance of any algorithm is determined by similarity between optimal arm and other arms
+$$
+\lim_{t \to \infty}L_t \ge \log t\sum_{a|\Delta a>0} \frac{\Delta a}{KL(\mathcal{R}^a||\mathcal{R}^{a_*})}
+$$
+
+#### **Optimism** in the Face of **Uncertainty**
+
+**Upper Confidence Bounds(UCB)**
+
+- Estimate an upper confidence $U_t(a)$ for each action value
+
+- Such that $q(a) \leq Q_t(a)+U_t(a)$ with high probability
+
+- The upper confidence depend on the number of times N(s) has been sampled
+
+- Select action maximizing Upper Confidence Bounds(UCB)
+  $$
+  A_t =\underset{a \in \mathcal{A}}{\arg\max} [Q(S_{t},a)+U_t(a)]
+  $$
+
+*Theorem(Hoeffding's Inequality)*
+
+> let $x_1,...,X_t$ be i.i.d. random variables in[0,1], and let $\overline{X}  = \frac{1}{\tau}\sum_{\tau=1}^tX_\tau$ be the sample mean. Then
+> $$
+> \mathbb{P}[\mathbb{E}[X]> \overline{X}_t+u] \leq e^{-2tu^2}
+> $$
+
+we apply the Hoeffding's Inequality to rewards of the bandit conditioned on selecting action a
+$$
+\mathbb{P}[ Q(a)> Q(a)+U_t(a)] \leq e^{-2N_t(a)U_t(a)^2}
+$$
+
+- Pack a probability p that true value exceeds UCB
+
+- Then solve for $U_t(a)$
+  $$
+  \begin{align}
+  e^{-2N_t(a)U_t(a)^2} = p \\ \\
+  U_t(a)=\sqrt{\frac{-\log p}{2N_t(a)}}
+  \end{align}
+  $$
+
+- Reduce p as we observe more rewards, e.g. $p = t^{-4}$
+  $$
+  U_t(a)=\sqrt{\frac{2\log t}{N_t(a)}}
+  $$
+
+- Make sure we select optimal action as $t \to \infty$
+
+This leads to the **UCB1 algorithm**
+$$
+A_t =\underset{a \in \mathcal{A}}{\arg\max} \left[Q(S_{t},a)+\sqrt{\frac{2\log t}{N_t(a)}}\right]
+$$
+The UCB algorithm achieves logarithmic asymptotic total regret
+$$
+\lim_{t\to\infty}L_t \leq 8\log t\sum_{a|\Delta>0}\Delta a
+$$
+Bayesian Bandits
+
+Probability matching—Thompson sampling—optimal for one sample, but may not good for MDP. 
+
+#### Solving Information State Space Bandits—MDP
+
+define MDP on information state space
+
+### MDP
+
+UCB
+$$
+A_t =\underset{a \in \mathcal{A}}{\arg\max} [Q(S_{t},a)+U_t(S_t,a)]
+$$
+R-Max algorithm
+
+## 10. Case Study: RL in Classic Games
+
+TBA.
 
 
 
