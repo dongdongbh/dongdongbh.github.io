@@ -12,7 +12,41 @@ tags:
 description: Reinforcement Learning Course Notes-David Silver
 ---
 
-##  Background
+#### Table of contents
+
+[Background
+](#background)
+
+1. [1.Introduction
+    ](#1introduction)
+
+2. [2.MDP
+    ](#2mdp)
+3. [3. Planning by Dynamic Programming
+    ](#3planningbydynamicprogramming)
+
+4. [4. model-free prediction
+    ](#4modelfreeprediction)
+
+5. [5 Model-free control
+    ](#5modelfreecontrol)
+
+6. [6 Value function approximation 
+    ](#6valuefunctionapproximation)
+
+7. [7 Policy gradient methods
+    ](#7policygradientmethods)
+
+8. [8.Integrating Learning and Planning
+    ](#8integratinglearningandplanning)
+
+9. [9. Exploration and Exploitation
+   ](#9explorationandexploitation)
+
+10. [10. Case Study: RL in Classic Games
+    ](#10casestudyrlinclassicgames)
+
+## Background
 
 I started learning Reinforcement Learning 2018, and I first learn it from the book "Deep Reinforcement Learning Hands-On" by Maxim Lapan, that book tells me some high level concept of Reinforcement Learning and how to implement it by Pytorch step by step. But when I dig out more about Reinforcement Learning, I find the high level intuition is not enough, so I read the [Reinforcement Learning An introduction](<http://incompleteideas.net/book/bookdraft2017nov5.pdf>) by  S.G, and following the courses [Reinforcement Learning](<https://www.youtube.com/watch?v=2pWv7GOvuf0>) by David Silver, I got  deeper understanding of RL.  For the code implementation of the book and course, refer [this](<https://github.com/dennybritz/reinforcement-learning) Github repository.
 
