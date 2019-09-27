@@ -14,7 +14,7 @@ description: For research beginner
 
 Recently, A friend of mine told me that he learned a lot of things from my posts and Github. I'm so happy that people can benefit from my posts, which encourages me keep updating my site.
 
-In this post, I want to share my views about how to be a good researcher.
+In this post, I want to share my views about how to be a good researcher. 
 
 ## What is a good research work?
 
