@@ -1,5 +1,5 @@
 ---
-title: " To be a good researcher"
+title: "For research beginner"
 classes: wide
 sitemap: true
 header:
@@ -9,10 +9,8 @@ tags:
   - mindful
 toc: true
 toc_label: "Table of Contents"
-description: To be a good researcher
+description: For research beginner
 ---
-
-# To be a good researcher?
 
 Recently, A friend of mine told me that he learned a lot of things from my posts and Github. I'm so happy that people can benefit from my posts, which encourages me keep updating my site.
 
