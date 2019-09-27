@@ -137,14 +137,22 @@ git reset --hard origin/master          //use this two command to replace the lo
 git commit --amend 						//modify commit message
 ```
 
-## diff
+## diff & patch
 ```
 git diff [options] [<commit>] [--] [<path>…​]
 $ git diff            //diff not staged file with last commit
 $ git diff --cached   //diff for staged file with last commit
+$ git diff [branch]  //show diff with other branch
 
-$ git diff --name-only
+
+$ git diff --name-only //only show file name of diff
 $ git diff --shortstat
+
+
+
+git diff from-commit to-commit > output-file
+
+git apply patch.diff
 ```
 
 ## subtree 
