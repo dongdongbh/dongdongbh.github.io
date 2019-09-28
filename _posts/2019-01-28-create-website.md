@@ -97,7 +97,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    }
    ```
 
-4. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) or Cerbit to do it.
+4. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) or [Certbot](<https://certbot.eff.org/lets-encrypt/debianstretch-nginx>) to do it.
 
 5. setup your git server repository for your site. e.g. `/srv/git/website.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
