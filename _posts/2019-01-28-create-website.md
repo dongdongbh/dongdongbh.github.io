@@ -115,6 +115,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    GIT_REPO=/srv/git/website.git
    TMP_GIT_CLONE=/tmp/mysite
    PUBLIC_WWW=/var/www/mysite
+   mkdir $TMP_GIT_CLONE
    
    git clone $GIT_REPO $TMP_GIT_CLONE
    cd $TMP_GIT_CLONE
