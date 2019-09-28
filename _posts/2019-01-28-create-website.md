@@ -104,7 +104,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    ```bash
    sudo chgrp -R [remote user name] /srv/git(the dir)
    
-   sudo chmod -R g+rws /srv/git(the dir)
+   sudo chmod -R g+rw /srv/git(the dir)
    ```
 
 1. find(or create) file `post-receive` in dir `/srv/git/website.git/hooks'` and fill following lines:
