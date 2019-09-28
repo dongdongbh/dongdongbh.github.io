@@ -123,7 +123,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit
    ~~~
 
-2. make sure you VPS port 80&443 are opened;
+2. make sure you VPS port 80&443 are opened; 
 
 3. In site directory on your local computer:
 
