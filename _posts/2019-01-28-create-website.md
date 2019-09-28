@@ -97,11 +97,17 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    }
    ```
 
-4. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) to do it.
+4. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) or Cerbit to do it.
 
 5. setup your git server repository for your site. e.g. `/srv/git/website.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
-6. find(or create) file `post-receive` in dir `/srv/git/website.git/hooks'` and fill following lines:
+   ```bash
+   sudo chgrp -R [remote user name] /srv/git(the dir)
+   
+   sudo chmod -R g+rws /srv/git(the dir)
+   ```
+
+1. find(or create) file `post-receive` in dir `/srv/git/website.git/hooks'` and fill following lines:
 
    ~~~bash
    #!/bin/sh
@@ -117,9 +123,9 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit
    ~~~
 
-7. make sure you VPS port 80&443 are opened;
+2. make sure you VPS port 80&443 are opened;
 
-8. In site directory on your local computer:
+3. In site directory on your local computer:
 
    ```bash
    git remote add server user_name@dongdongbh.tech:/srv/git/website.git
