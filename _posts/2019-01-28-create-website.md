@@ -26,7 +26,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
 
 1. ssh login your server(assume the system of your server is Linux);
 
-2. install [Jekyll](https://jekyllrb.com/docs/), Git, [Nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/);
+2. install Ruby(use [rbenv](<https://github.com/rbenv/rbenv>) to install) [Jekyll](https://jekyllrb.com/docs/), Git, [Nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/);
 
 3. setup Nginx in `/etc/nginx/sites-enabled/default`, write:
 
