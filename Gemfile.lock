@@ -257,7 +257,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  minimal-mistakes-jekyll
+  minimal-mistakes-jekyll (= 4.16.5)
   nokogiri (>= 1.8.5)
 
 BUNDLED WITH
