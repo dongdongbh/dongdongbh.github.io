@@ -17,7 +17,7 @@ description: Create your website on cloud using git
 
 We host our website on cloud VPS, our website based on Jekyll, so we can simply write our pages by Markdown. For the convenience of updating our site, we build Git server on VPS to auto publish it.
 
-### Requirements 
+### Requirements
 
 * a VPS (e.g. google cloud VM instance)
 * a domain name (e.g. dongdongbh.tech)
