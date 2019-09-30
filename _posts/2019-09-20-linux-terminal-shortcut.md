@@ -59,7 +59,7 @@ Alt+. previous command argument
 14. Ctrl+u Cut everything **before the cursor**
 15. Ctrl+xx Toggle between first and current position
 16. Ctrl+l **Clear the terminal**
-17. Ctrl+c Cancel the command
+17. Ctrl+c Cancel the command 
 18. Ctrl+r **Search** command in history - type the search term
 19. Ctrl+j End the search at current history entry
 20. Ctrl+g Cancel the search and restore original line
