@@ -17,7 +17,7 @@ description: Create your website on cloud using git
 
 We host our website on cloud VPS, our website based on Jekyll, so we can simply write our pages by Markdown. For the convenience of updating our site, we build Git server on VPS to auto publish it.
 
-### Requirements
+### Requirements 
 
 * a VPS (e.g. google cloud VM instance)
 * a domain name (e.g. dongdongbh.tech)
@@ -26,7 +26,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
 
 1. ssh login your server(assume the system of your server is Linux);
 
-2. install Ruby(use [rbenv](<https://github.com/rbenv/rbenv>) to install) [Jekyll](https://jekyllrb.com/docs/), Git, [Nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/);
+2. install Ruby,  [Jekyll](https://jekyllrb.com/docs/), Git, [Nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/);
 
 3. setup Nginx in `/etc/nginx/sites-enabled/default`, write:
 
