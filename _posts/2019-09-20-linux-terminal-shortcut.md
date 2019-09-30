@@ -63,7 +63,7 @@ Alt+. previous command argument
 18. Ctrl+r **Search** command in history - type the search term
 19. Ctrl+j End the search at current history entry
 20. Ctrl+g Cancel the search and restore original line
-21. Ctrl+n Next command from the History 
+21. Ctrl+n Next command from the History
 22. Ctrl+p previous command from the History
 
 Ref [stackoverflow](<https://stackoverflow.com/questions/9679776/how-do-i-clear-delete-the-current-line-in-terminal>)
