@@ -10,14 +10,12 @@ date: 2018-04-05T11:48:41-04:00
 ### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;color:#c14b1d;"}
 
 # Li Dongda
-__Gender:__ Male  
-__Date of birth:__ 05/08/1993  
-__E-mail:__ <18310682633@163.com>  
-__Tel:__ 86-18310682633  
+__Gender:__ Male    
+__E-mail:__ <18310682633@163.com> 
 __Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)
 
 ## Research Interests
-Robotic Control and Navigation, Machine Learning
+Robotic Control and Navigation, Reinforcement learning
 
 ## Education
 School of Automation and Information Engineering  
@@ -32,7 +30,7 @@ __Specialized courses__ included automatic control theory, signal and system ana
 Cyberspace Institute of Advanced Technology  
 **Guangzhou University**  
 **Supervisors**: Zhaoquan Gu  
-**Research Area**: Meta-learning, Neural Combinatorial Optimization
+**Research Area**: Reinforcement learning, Neural Combinatorial Optimization, Meta-learning
 
 ### Research Assistant　　　　　　　　　　　　　　　　　　　10/2018-01/2019
 
