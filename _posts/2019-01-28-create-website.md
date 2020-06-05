@@ -123,7 +123,13 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit
    ~~~
 
-   and `sudo chmod 775 post-receive  ` 
+   and run
+
+   ```
+   sudo chmod 775 post-receive
+   mkdir /var/www/mysite
+   sudo chown -R $(whoami) /var/www/mysite
+   ```
 
 7. make sure you VPS port 80&443 are opened;
 
