@@ -78,3 +78,9 @@ function pretty_csv {
 }
 ```
 
+## Check disk usage
+
+```bash
+sudo du -ah --max-depth=1  / | sort -hr
+```
+

@@ -123,9 +123,11 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit
    ~~~
 
-2. make sure you VPS port 80&443 are opened;
+   and `sudo chmod 775 post-receive  ` 
 
-3. In site directory on your local computer:
+7. make sure you VPS port 80&443 are opened;
+
+8. In site directory on your local computer:
 
    ```bash
    git remote add server user_name@dongdongbh.tech:/srv/git/website.git
