@@ -120,7 +120,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    cd $TMP_GIT_CLONE
    sudo JEKYLL_ENV=production bundle exec jekyll build -s $TMP_GIT_CLONE -d $PUBLIC_WWW
    rm -Rf $TMP_GIT_CLONE
-   exit 
+   exit
    ~~~
 
    and `sudo chmod 775 post-receive  ` 
