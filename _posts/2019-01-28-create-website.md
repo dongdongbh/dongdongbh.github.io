@@ -28,7 +28,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
 
 2. install Ruby,  [Jekyll](https://jekyllrb.com/docs/), bundler, Git, [Nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/);
 
-3. setup Nginx in `/etc/nginx/sites-enabled/default`, write:
+3. setup Nginx in `/etc/nginx/sites-enabled/default`, write: (note that paste to vim directly will cause align problem, so set vim as paste mode and then paste to avoid the problem–:`set paste`, to paste, and then :`:set nopaste`)
 
    ```yaml
    ##
@@ -97,7 +97,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    }
    ```
 
-4. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) or [Certbot](<https://certbot.eff.org/lets-encrypt/debianstretch-nginx>) to do it.
+4. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) or [Certbot](<https://certbot.eff.org/lets-encrypt/debianstretch-nginx>) to do it. if you use certbot, it will automatically add ssl_certificate to nginx config file, so just remove that two line in config file and let certbot add it.
 
 5. setup your git server repository for your site. e.g. `/srv/git/website.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
