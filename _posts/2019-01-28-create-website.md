@@ -110,7 +110,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
 6. find(or create) file `post-receive` in dir `/srv/git/website.git/hooks'` and fill following lines:
 
    ~~~bash
-   #!/bin/sh
+   #!/bin/bash -l
    
    GIT_REPO=/srv/git/website.git
    TMP_GIT_CLONE=/tmp/mysite
@@ -128,7 +128,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    ```
    sudo chmod 775 post-receive
    sudo mkdir /var/www/mysite
-   sudo chown -R $(whoami) /var/www/mysite
+   sudo chown -R $(whoami) /var/www/mysite 
    ```
 
 7. make sure you VPS port 80&443 are opened;
