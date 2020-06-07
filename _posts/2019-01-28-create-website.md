@@ -123,6 +123,10 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit 
    ~~~
 
+   sometimes, it will post `bundle: command not found`, I try many ways (e.g. add path), but it still not work, so I just replace bundle with exact path of the bundle found by `whereis bundle`.
+
+   
+
    and run
 
    ```
