@@ -118,7 +118,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    
    git clone $GIT_REPO $TMP_GIT_CLONE
    cd $TMP_GIT_CLONE
-   sudo JEKYLL_ENV=production bundle exec jekyll build -s $TMP_GIT_CLONE -d $PUBLIC_WWW
+   JEKYLL_ENV=production bundle exec jekyll build -s $TMP_GIT_CLONE -d $PUBLIC_WWW
    rm -Rf $TMP_GIT_CLONE
    exit
    ~~~
@@ -127,7 +127,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
 
    ```
    sudo chmod 775 post-receive
-   mkdir /var/www/mysite
+   sudo mkdir /var/www/mysite
    sudo chown -R $(whoami) /var/www/mysite
    ```
 
