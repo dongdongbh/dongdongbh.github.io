@@ -123,7 +123,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit
    ~~~
 
-   Note: You must **not** install your gem and bundle to you $home path, otherwise the post-receive will not find bundle command, I'm not sure why this happened, it seems the script can not  source `.bashrc` file, even I change `#!/bin/bash` to `#!/bin/bash -l`, anyone can tell why this happened please leave a comment, thanks.
+   Note: You must **not** install your ruby, gem and bundle to you $home path, otherwise the `post-receive` will not find bundle command, I'm not sure why this happened, it seems the script can not  source `.bashrc` file, even I change `#!/bin/bash` to `#!/bin/bash -l`, anyone can tell why this happened please leave a comment, thanks.
 
    and run
 
