@@ -43,24 +43,24 @@ Alt+. previous command argument
 
 ## Linux terminal shortcuts list
 
-1. Ctrl+a Move cursor to **start of line**
-2. Ctrl+e Move cursor to **end of line**
-3. Ctrl+b Move back one character
-4. Alt+b Move back one word
-5. Ctrl+f Move forward one character
-6. Alt+f Move forward one word
-7. Ctrl+d Delete current character
-8. Ctrl+w Cut the last word
-9. Ctrl+k Cut everything **after the cursor**
-10. Alt+d Cut word after the cursor
-11. Alt+w Cut word before the cursor
-12. Ctrl+y Paste the last deleted command
-13. Ctrl+_ Undo
-14. Ctrl+u Cut everything **before the cursor**
-15. Ctrl+xx Toggle between first and current position
-16. Ctrl+l **Clear the terminal**
-17. Ctrl+c Cancel the command 
-18. Ctrl+r **Search** command in history - type the search term
+1. **Ctrl+a** Move cursor to **start of line**
+2. **Ctrl+e** Move cursor to **end of line**
+3. **Ctrl+u** Cut everything **before the cursor**
+4. **Ctrl+k** Cut everything **after the cursor**
+5. **Ctrl+l **Clear the terminal
+6. Ctrl+r **Search** command in history - type the search term
+7. Ctrl+b Move back one character
+8. Alt+b Move back one word
+9. Ctrl+f Move forward one character
+10. Alt+f Move forward one word
+11. Ctrl+d Delete current character
+12. Ctrl+w Cut the last word
+13. Alt+d Cut word after the cursor
+14. Alt+w Cut word before the cursor
+15. Ctrl+y Paste the last deleted command
+16. Ctrl+_ Undo
+17. Ctrl+xx Toggle between first and current position
+18. Ctrl+c Cancel the command 
 19. Ctrl+j End the search at current history entry
 20. Ctrl+g Cancel the search and restore original line
 21. Ctrl+n Next command from the History
@@ -84,3 +84,4 @@ function pretty_csv {
 sudo du -ah --max-depth=1  / | sort -hr
 ```
 
+create crontab tasks with `cron -e`

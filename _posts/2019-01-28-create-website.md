@@ -107,10 +107,10 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    sudo chmod -R g+rw /srv/git(the dir)
    ```
 
-6. find(or create) file `post-receive` in dir `/srv/git/website.git/hooks'` and fill following lines:
+6. find(or create) file `post-receiv'` and fill following lines:
 
    ~~~bash
-   #!/bin/bash -l
+   #!/bin/bash 
    
    GIT_REPO=/srv/git/website.git
    TMP_GIT_CLONE=/tmp/mysite
@@ -123,9 +123,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit
    ~~~
 
-   sometimes, it will post `bundle: command not found`, I try many ways (e.g. add path), but it still not work, so I just replace bundle with exact path of the bundle found by `whereis bundle`. 
-
-   
+   Note: `#!/bin/bash ` is very important, it load full shell, and do not use `#!/bin/sh`, sh is a small shell, and it may not load  bundle to path.
 
    and run
 
