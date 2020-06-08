@@ -107,7 +107,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    sudo chmod -R g+rw /srv/git(the dir)
    ```
 
-6. find(or create) file `post-receiv'` and fill following lines:
+6. find(or create) file `post-receive'` and fill following lines:
 
    ~~~bash
    #!/bin/bash 
@@ -123,7 +123,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit
    ~~~
 
-   Note: `#!/bin/bash ` is very important, it load full shell, and do not use `#!/bin/sh`, sh is a small shell, and it may not load  bundle to path.     
+   Note: You must **not** install your gem and bundle to you $home path, otherwise the post-receive will not find bundle command, I'm not sure why this happened, it seems the script can not  source `.bashrc` file, even I change `#!/bin/bash` to `#!/bin/bash -l`, anyone can tell why this happened please leave a comment, thanks.
 
    and run
 
