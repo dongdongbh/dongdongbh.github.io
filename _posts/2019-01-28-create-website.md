@@ -123,7 +123,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit
    ~~~
 
-   Note: `#!/bin/bash ` is very important, it load full shell, and do not use `#!/bin/sh`, sh is a small shell, and it may not load  bundle to path.  
+   Note: `#!/bin/bash ` is very important, it load full shell, and do not use `#!/bin/sh`, sh is a small shell, and it may not load  bundle to path.   
 
    and run
 
