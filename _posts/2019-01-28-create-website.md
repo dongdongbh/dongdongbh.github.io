@@ -28,7 +28,14 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
 
 2. install Ruby,  [Jekyll](https://jekyllrb.com/docs/), bundler, Git, [Nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/);
 
-3. setup Nginx in `/etc/nginx/sites-enabled/default`, write: (note that paste to vim directly will cause align problem, so set vim as paste mode and then paste to avoid the problem–:`set paste`, to paste, and then :`:set nopaste`)
+3. ```
+   cd /etc/nginx/sites-available/
+   sudo rm default
+   sudo touch /etc/nginx/sites-available/mysite.conf
+   sudo ln -s /etc/nginx/sites-available/mysite.conf /etc/nginx/sites-enabled/mysite.conf
+   ```
+
+4. setup Nginx in `/etc/nginx/sites-available/mysite.conf`, write: (note that paste to vim directly will cause align problem, so set vim as paste mode and then paste to avoid the problem–:`set paste`, to paste, and then :`:set nopaste`)
 
    ```yaml
    ##
@@ -97,17 +104,19 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    }
    ```
 
-4. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) or [Certbot](<https://certbot.eff.org/lets-encrypt/debianstretch-nginx>) to do it. if you use certbot, it will automatically add ssl_certificate to nginx config file, so just remove that two line in config file and let certbot add it.
+5. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) or [Certbot](<https://certbot.eff.org/lets-encrypt/debianstretch-nginx>) to do it. if you use certbot, it will automatically add ssl_certificate to nginx config file, so just remove that two line in config file and let certbot add it.
 
-5. setup your git server repository for your site. e.g. `/srv/git/website.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
+6. setup your git server repository for your site. e.g. `/srv/git/website.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
    ```bash
-   sudo chgrp -R [remote user name] /srv/git(the dir)
+   sudo chgrp -R $(whoami) /srv/git(the dir)
    
    sudo chmod -R g+rw /srv/git(the dir)
+   cd /srv/git/website.git
+   git init --bare
    ```
 
-6. find(or create) file `post-receive'` and fill following lines:
+7. find(or create) file `post-receive'` and fill following lines:
 
    ~~~bash
    #!/bin/bash 
@@ -123,19 +132,24 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    exit
    ~~~
 
-   Note: You must **not** install your ruby, gem and bundle to you $home path, otherwise the `post-receive` will not find bundle command, I'm not sure why this happened, it seems the script can not  source `.bashrc` file, even I change `#!/bin/bash` to `#!/bin/bash -l`, anyone can tell why this happened please leave a comment, thanks.
+   ```bash
+   sudo chmod 755 post-receive
+   sudo chgrp $(whoami) post-receive
+   sudo chown $(whoami) post-receive
+   ```
+
+   Note: You must **not** install your ruby, gem and bundle to <u>your $home path</u>, otherwise the `post-receive` will not find bundle command, I'm not sure why this happened, it seems the script can not  source `.bashrc` file, even I change `#!/bin/bash` to `#!/bin/bash -l`, anyone can tell why this happened please leave a comment, thanks.
 
    and run
 
    ```
-   sudo chmod 775 post-receive
    sudo mkdir /var/www/mysite
    sudo chown -R $(whoami) /var/www/mysite
    ```
 
-7. make sure you VPS port 80&443 are opened;
+8. make sure you VPS port 80&443 are opened;
 
-8. In site directory on your local computer:
+9. In site directory on your local computer:
 
    ```bash
    git remote add server user_name@dongdongbh.tech:/srv/git/website.git
