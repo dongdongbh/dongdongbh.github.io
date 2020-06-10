@@ -9,7 +9,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-expose Intranet machine to outside
+description: expose Intranet machine to outside
 ---
 
 ## Background

@@ -142,7 +142,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
 
    and run
 
-   ```
+   ```bash
    sudo mkdir /var/www/mysite
    sudo chown -R $(whoami) /var/www/mysite
    ```
