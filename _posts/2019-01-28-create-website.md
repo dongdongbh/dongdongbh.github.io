@@ -35,7 +35,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
    sudo ln -s /etc/nginx/sites-available/mysite.conf /etc/nginx/sites-enabled/mysite.conf
    ```
 
-4. setup Nginx in `/etc/nginx/sites-available/mysite.conf`, write: (note that paste to vim directly will cause align problem, so set vim as paste mode and then paste to avoid the problem–:`set paste`, to paste, and then :`:set nopaste`)
+4. setup Nginx in `/etc/nginx/sites-available/mysite.conf`, write: (note that paste to vim directly will cause align problem, so set vim as paste mode and then paste to avoid the problem–:`set paste`, to paste, and then :`:set nopaste`). [here](<https://www.linode.com/docs/web-servers/nginx/how-to-configure-nginx/>) is a good nginx configuration tutorial.
 
    ```yaml
    ##

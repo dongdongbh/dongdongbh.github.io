@@ -43,9 +43,11 @@ then `sudo service nginx restart`, and visit your file system on `youdomian.com:
 
 **[h5ai](<https://larsjung.de/h5ai/>)** is a modern file indexer for HTTP web servers with focus on your files.
 
-1. install php
+1. install php, check by `php -v` 
 
 2. in `/etc/nginx/sites-enabled/default`  change to
+
+    check `fastcgi_pass` in `/etc/php5/fpm/pool.d/www.conf`
 
    ```
    server {			# my file server
@@ -55,7 +57,7 @@ then `sudo service nginx restart`, and visit your file system on `youdomian.com:
    	index index.html /_h5ai/public/index.php;
    	
    	location ~ \.php$ {
-       		fastcgi_pass	unix:/var/run/php/php-fpm.sock;
+       		fastcgi_pass	unix:/run/php/php7.4-fpm.sock;
    			include         fastcgi_params;
        		fastcgi_param   SCRIPT_FILENAME    $document_root$fastcgi_script_name;
        		fastcgi_param   SCRIPT_NAME        $fastcgi_script_name;
@@ -67,7 +69,7 @@ then `sudo service nginx restart`, and visit your file system on `youdomian.com:
 
 #### add password to folder
 
-1. add password to your folder, use `httpd-tools`, you can install it by `sudo apt install httpd-tools`, 
+1. add password to your folder, use `httpd-tools`, you can install it by `sudo apt install apache2-utils`,  
 
 create password, the name is the user name for password.
 
@@ -92,7 +94,7 @@ location /private {
 
 #### Download and upload
 
-If you want to build you own cloud driver, Seafile, Kodexplorer, owncloud are good choices.
+If you want to build you own cloud driver, Seafile, Kodexplorer, owncloud, nextlcoud are good choices.
 
 You can build a **ftp** (e.g. vsftpd, sftp) for file upload and download. By doing so, you can download and upload your files by ftp, and view it on nginx hosted web.
 
@@ -100,7 +102,7 @@ If you want to use nginx it self, it can be done by [this](<https://www.yanxurui
 
 **Aria2** is a good offline download tool, and it enables you use web to manage you download processes. After you download the video files, you can view it on h5ai.
 
-Seafile is heavy, and  it makes my server down, lol. If you install, please use docker, otherwise it will be realy hard, you man face many unknown problems.
+for cloud, I tried Seafile, but is hard to install on Debian and unstable for my server, I try it  with scrip, manually install and docker, all failed or unstable. Finally, I installed owncloud with docker, and succeeded. 
 
 #### local development
 
