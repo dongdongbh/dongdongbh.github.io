@@ -34,9 +34,9 @@ $ scp -r (recursive) username@server:(remote location) (local location)
 $ scp -r (local location) username@server:(remote location)
 ```
 
-### Using sshfs (NFS)
+### Using sshfs 
 
-install
+on client, install
 
 ```bash
 sudo apt-get install sshfs
@@ -58,6 +58,10 @@ for detail, ref  `man sshfs`
 ```
 sudo umount mountpoint
 ```
+
+is your want many user to visit your shared folder, you may use NFS. Ref [this](<https://www.howtoforge.com/tutorial/how-to-configure-a-nfs-server-and-mount-nfs-shares-on-ubuntu-18.04/>) for detail.
+
+
 
 ## Windows-Linux
 
