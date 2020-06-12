@@ -269,4 +269,5 @@ In AriaNG web, go `AriaNg Setting->RPC tab`, setup RPC
 
 
 
-After finished all of this, I found that the server downloading is really fast, but it's very slow for me to download files from server. So i thinks this things are useless, but it's good to know how to do it. lol.
+After finished all of this, I found that the server downloading is really fast, but it's very slow for me to download files from server. So i thinks off-line download is useless, but it's good to know how to do it. lol.
+
