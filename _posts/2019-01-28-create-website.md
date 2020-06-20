@@ -26,13 +26,12 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
 
 1. ssh login your server(assume the system of your server is Linux);
 
-2. install Ruby,  [Jekyll](https://jekyllrb.com/docs/), bundler, Git, [Nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/);
-
-3. ```
-   cd /etc/nginx/sites-available/
-   sudo rm default
-   sudo touch /etc/nginx/sites-available/mysite.conf
-   sudo ln -s /etc/nginx/sites-available/mysite.conf /etc/nginx/sites-enabled/mysite.conf
+2. install Ruby,  [Jekyll](https://jekyllrb.com/docs/), bundler, Git, [Nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/);   Here is a good [ngnix video startup tutorial](<https://www.youtube.com/watch?v=lWjZSgXu5VU&t=10469s>). 
+3. ```bash
+cd /etc/nginx/sites-available/
+sudo rm default
+sudo touch /etc/nginx/sites-available/mysite.conf
+sudo ln -s /etc/nginx/sites-available/mysite.conf /etc/nginx/sites-enabled/mysite.conf
    ```
 why using `sites-available` and `sites-enabled`? ii is useful when you want stop a site but not delete the config file, you just delete the soft link in `sites-enabled`.
 

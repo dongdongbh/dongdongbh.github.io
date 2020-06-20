@@ -37,7 +37,7 @@ server {			# my file server
 }
 ```
 
-then `sudo service nginx restart`, and visit your file system on `youdomian.com:xxx`
+then `sudo service reload nginx`, and visit your file system on `youdomian.com:xxx`
 
 ### with _h5ai
 
@@ -89,7 +89,7 @@ location /private {
         }
 ```
 
-3. `sudo service nginx restart`
+3. `sudo service reload nginx`
 4. enjoy!
 
 with this server, you can host a git server on cloud, and auto clone you repository to you file web. 
@@ -260,14 +260,9 @@ server {
 ```
 
 ```
-sudo service nginx restart
+sudo service reload nginx
 ```
 
 Then you can visit it by `ip:port`, and you can also add ssl to Nginx config.
 
-In AriaNG web, go `AriaNg Setting->RPC tab`, setup RPC
-
-
-
-After finished all of this, I found that the server downloading is really fast, but it's very slow for me to download files from server. So i thinks off-line download is useless, but it's good to know how to do it. lol.
-
+In AriaNG web, go `AriaNg Setting->RPC tab`, setup RPC. 
