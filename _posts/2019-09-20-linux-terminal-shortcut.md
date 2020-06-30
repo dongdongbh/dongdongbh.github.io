@@ -34,7 +34,7 @@ command_1; command_2; command_3
 
 !\$: the $ of previous command argument
 
-Alt+. previous command argument
+<kbd>Alt</kbd>+<kbd>.</kbd> previous command argument
 
 #### Check for Spelling of Words in Linux
 
@@ -43,28 +43,28 @@ Alt+. previous command argument
 
 ## Linux terminal shortcuts list
 
-1. **Ctrl+a** Move cursor to **start of line**
-2. **Ctrl+e** Move cursor to **end of line**
-3. **Ctrl+u** Cut everything **before the cursor**
-4. **Ctrl+k** Cut everything **after the cursor**
-5. **Ctrl+l **Clear the terminal
-6. Ctrl+r **Search** command in history - type the search term
-7. Ctrl+b Move back one character
-8. Alt+b Move back one word
-9. Ctrl+f Move forward one character
-10. Alt+f Move forward one word
-11. Ctrl+d Delete current character
-12. Ctrl+w Cut the last word
-13. Alt+d Cut word after the cursor
-14. Alt+w Cut word before the cursor
-15. Ctrl+y Paste the last deleted command
-16. Ctrl+_ Undo
-17. Ctrl+xx Toggle between first and current position
-18. Ctrl+c Cancel the command 
-19. Ctrl+j End the search at current history entry
-20. Ctrl+g Cancel the search and restore original line
-21. Ctrl+n Next command from the History
-22. Ctrl+p previous command from the History
+1. **<kbd>Ctrl</kbd>+<kbd>a</kbd>** Move cursor to **start of line**
+2. **<kbd>Ctrl</kbd>+<kbd>e</kbd>** Move cursor to **end of line**
+3. **<kbd>Ctrl</kbd>+<kbd>u</kbd>** Cut everything **before the cursor**
+4. **<kbd>Ctrl</kbd>+<kbd>k</kbd>** Cut everything **after the cursor**
+5. **<kbd>Ctrl</kbd>+<kbd>i</kbd> ** Clear the terminal
+6. <kbd>Ctrl</kbd>+<kbd>r</kbd> **Search** command in history - type the search term
+7. <kbd>Ctrl</kbd>+<kbd>b</kbd> Move back one character
+8. <kbd>Alt</kbd>++<kbd>b</kbd> Move back one word
+9. <kbd>Ctrl</kbd>+<kbd>f</kbd> Move forward one character
+10. <kbd>Alt</kbd>++<kbd>f</kbd> Move forward one word
+11. <kbd>Ctrl</kbd>+<kbd>d</kbd> Delete current character
+12. <kbd>Ctrl</kbd>+<kbd>w</kbd> Cut the last word
+13. <kbd>Alt</kbd>++<kbd>d</kbd> Cut word after the cursor
+14. <kbd>Alt</kbd>++<kbd>w</kbd> Cut word before the cursor
+15. <kbd>Ctrl</kbd>+<kbd>y</kbd> Paste the last deleted command
+16. <kbd>Ctrl</kbd>+<kbd>_</kbd> Undo
+17. <kbd>Ctrl</kbd>+<kbd>x</kbd>x Toggle between first and current position
+18. <kbd>Ctrl</kbd>+<kbd>c</kbd> Cancel the command 
+19. <kbd>Ctrl</kbd>+<kbd>j</kbd> End the search at current history entry
+20. <kbd>Ctrl</kbd>+<kbd>g</kbd> Cancel the search and restore original line
+21. <kbd>Ctrl</kbd>+<kbd>n</kbd> Next command from the History
+22. <kbd>Ctrl</kbd>+<kbd>p</kbd> previous command from the History
 
 Ref [stackoverflow](<https://stackoverflow.com/questions/9679776/how-do-i-clear-delete-the-current-line-in-terminal>)
 
