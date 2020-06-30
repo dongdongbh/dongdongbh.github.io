@@ -47,7 +47,7 @@ command_1; command_2; command_3
 2. **<kbd>Ctrl</kbd>+<kbd>e</kbd>** Move cursor to **end of line**
 3. **<kbd>Ctrl</kbd>+<kbd>u</kbd>** Cut everything **before the cursor**
 4. **<kbd>Ctrl</kbd>+<kbd>k</kbd>** Cut everything **after the cursor**
-5. **<kbd>Ctrl</kbd>+<kbd>i</kbd> ** Clear the terminal
+5. **<kbd>Ctrl</kbd>+<kbd>i</kbd>** Clear the terminal
 6. <kbd>Ctrl</kbd>+<kbd>r</kbd> **Search** command in history - type the search term
 7. <kbd>Ctrl</kbd>+<kbd>b</kbd> Move back one character
 8. <kbd>Alt</kbd>++<kbd>b</kbd> Move back one word
