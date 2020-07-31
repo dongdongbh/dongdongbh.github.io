@@ -32,7 +32,7 @@ command_1; command_2; command_3
 
 !! the last command
 
-!\$: the $ of previous command argument
+!n : the n of previous command argument
 
 <kbd>Alt</kbd>+<kbd>.</kbd> previous command argument
 
@@ -76,6 +76,13 @@ add this to .bashrc, and then just `pretty_csv xxx.csv`
 function pretty_csv {
     column -t -s, -n "$@" | less -F -S -X -K
 }
+```
+
+## pretty print code in paper with `enscript`
+
+```bash
+sudo apt install enscript
+enscript -2rj --highlight=python --color=1 -o minpack.ps minpack.py
 ```
 
 ## Check disk usage
