@@ -32,9 +32,26 @@ command_1; command_2; command_3
 
 !! the last command
 
-!n : the n of previous command argument
+!:n : the n of previous command argument. e.g. !:0 is the last command, and !:-1 is the first argument of last command
 
-<kbd>Alt</kbd>+<kbd>.</kbd> previous command argument
+<kbd>Alt</kbd>+<kbd>.</kbd>  the last argument of any of the previous commands.
+
+<kbd>Esc</kbd> +<kbd> .</kbd>  last argument of the last command.
+
+```
+!^      first argument
+!$      last argument
+!*      all arguments
+!:2     second argument
+
+!:2-3   second to third arguments
+!:2-$   second to last arguments
+!:2*    second to last arguments
+!:2-    second to next to last arguments
+
+!:0     the command
+!!      repeat the previous line
+```
 
 #### Check for Spelling of Words in Linux
 
