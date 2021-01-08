@@ -10,7 +10,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: Create your website on cloud using git
+description: Create your website on cloud using git, Nginx, Netdata, SSL, Certbot
 ---
 
 ## Create your website on Virtual Private Server(VPS)
@@ -156,3 +156,81 @@ why using `sites-available` and `sites-enabled`? ii is useful when you want stop
    ```
 
    then you can use git to update your website, when push your local updates to your server, your site will automatically update. 
+
+### Monitoring website by Netdata
+
+[Netdata](https://learn.netdata.cloud/docs/get) is an open source tool designed to collect real-time metrics, such as CPU usage, disk activity, bandwidth usage, website visits, etc., and then display them in live, easy-to-interpret charts.
+
+#### Install Netdata
+
+```
+bash <(curl -Ss https://my-netdata.io/kickstart.sh)
+```
+
+#### Host by Nginx
+
+1. Configure Netdata application to listen only on `localhost` instead of every interface.
+
+   ```
+   sudo sed -i -e "s/# bind to = \*/bind to = 127.0.0.1/" /etc/netdata/netdata.conf
+   ```
+
+   ```
+   sudo systemctl restart netdata
+   ```
+
+2. Generate credentials for basic access authentication,(`net-user` username, `net-pass` password).
+
+   ```
+   echo "net-user:$(openssl passwd -crypt net-pass)" | sudo tee /etc/nginx/passwd
+   ```
+
+3. create a new web host config file `/etc/nginx/sites-available/netdata.conf`
+
+   ```
+   upstream backend {
+       server 127.0.0.1:19999;
+       keepalive 64;
+   }
+   
+   server {
+     listen [::]:443 ssl; # managed by Certbot
+     listen 443 ssl; # managed by Certbot
+     ssl_certificate   cert/xxxxxxxxxxxx.pem;
+     ssl_certificate_key  cert/xxxxxxxxxxxx.key;
+     ssl_session_timeout 5m;
+   
+     auth_basic "Protected";
+     auth_basic_user_file /etc/nginx/passwd;
+   
+     # the virtual host name of this 
+     server_name netdata.example.com;
+   
+      location / {
+           # proxy_set_header X-Forwarded-Proto https;
+           proxy_set_header X-Forwarded-Host $host;
+           proxy_set_header X-Forwarded-Server $host;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+           proxy_pass http://backend;
+           proxy_http_version 1.1;
+           proxy_pass_request_headers on;
+           proxy_set_header Connection "keep-alive";
+           proxy_store off;
+       }
+   }
+   ```
+
+4. Enable this specific configuration.
+
+   ```
+   sudo ln -s /etc/nginx/sites-available/netdata /etc/nginx/sites-enabled/
+   ```
+
+5. Reload `nginx` configuration.
+
+   ```
+   sudo systemctl reload nginx
+   ```
+
+   
+
