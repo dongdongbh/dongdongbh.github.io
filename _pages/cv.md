@@ -81,7 +81,7 @@ Include hardware BSP development, operating system transplantation and applicati
 
 * Familiar with the principle of inertial navigation, integrated navigation algorithm and application, can be carry out aircraft attitude calculation and control algorithm design;
 * Familiar with Robot operating system(ROS) programming and application;
-* Master the C / C + +/Python language, familiar with Pytorch machine learning framework;
+* Master the C / C + +/Python/Wolfram language, familiar with Pytorch machine learning framework;
 * Master Matlab control system modeling and simulation capabilities;
 * Master the Linux system programming;
 * Familiar with GIT and Academic Writing;
@@ -97,6 +97,10 @@ Include hardware BSP development, operating system transplantation and applicati
 * Second Prize  Xi'an University of Technology, 2014 Emerson "CONSIDER IT SOLVED"　　　　　　　08/2014
 * Outstanding Officer of Automation Technology Association, Xi'an University of Technology　　　　　05/2013
 * First Prize  The 21st session of the " Innovation Prix" science and technology competition　　　　　11/2012
+
+## Hobbies
+
+Reading, body building, swimming, cooking
 
 ## School Role
 __Minister__ of Xi'an University of Technology Automation Technology Association　　　　　　　　09/2013-07/2014
