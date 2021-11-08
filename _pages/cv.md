@@ -20,9 +20,9 @@ Robotic Control and Navigation, Reinforcement learning
 ## Education
 School of Automation and Information Engineering  
 __Xi'an University of Technology__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__09/2011-06/2015__  
-B.S.__, major in __Automation  
-__Advisor:__ Yingming YI  
-__Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
+**B.S., major in <u>Automation</u>**  
+**Advisor**: <u>Yingming YI</u>  
+Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
 ## Research Experience
 ### Research Assistant　　　　　　　　　　　　　　　　　　　03/2019-Present
@@ -60,7 +60,7 @@ __Beijing Institute of Technology__
 
 
 ## Research Projects:
-+ Research on Collaborative Analysis and Autonomous Decision Technology for Intelligent Manufacturing Big Data. National Key R&D Program of China (No.2018YFB1004003). 																											           05/2018-04/2021
++ Research on Collaborative Analysis and Autonomous Decision Technology for Intelligent Manufacturing Big Data. National Key R&D Program of China (No.2018YFB1004003). 　　　　　　　　　　　　　　　　　　　　　　　　　　　　           05/2018-04/2021
 + Software Defined Wireless Sensor Network System　　　　　　　　　　　　　　　　　　12/2017-03/2018
 + UAV-Enabled Sensor System　　　　　　　　　　　　　　　　　　　　　　　　　　　　  08/2017-11/2017
 + [MBZIRC](http://www.mbzirc.com/challenge/2017)-2017 International Robotic Competition　　　　　　　　　　　　　　　　　　　  01/2017-03/2017
