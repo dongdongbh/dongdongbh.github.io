@@ -53,10 +53,10 @@ __Beijing Institute of Technology__
 **Research Area**: Unmanned Aerial Vehicle Control System, Navigation System, Data Fusion
 
 ## Publication
-* **Dongda Li**, Zhaoquan Gu, Yuexuan Wang, Changwei Ren, Francis C.M. Lau, One model packs thousands of items with Recurrent Conditional Query Learning, Knowledge-Based Systems, 2021, 107683, ISSN 0950-7051,
-* Zhaoquan Gu, **Dongda Li**, Nadra Guizani, Xiaojiang Du, Zhihong Tian. An Aerial Computing Assisted Architecture for Large-Scale Sensor Networks. IEEE Communications Magazine. In press.
-* **Dongda Li**, Yuexuan Wang, Zhaoquan Gu, Tong Shen, Tianhao Wei, Yongqin Fu, Heming Cui, Mingli Song, Francis C. M. Lau. Adler: A Resilient, High-Performance and Energy-Efficient UAV-Enabled Sensor System. [TR-2018-01](http://www.cs.hku.hk/research/techreps/document/TR-2018-01.pdf)
-* Tong Shen, Yuexuan Wang, Zhaoquan Gu, **Dongda Li**, Zhen Cao, Heming Cui, Francis C.M. Lau. Alano: An Efficient Neighbor Discovery Algorithm In An Energy-Restricted Large-Scale Network. IEEE International Conference on Mobile Ad-hoc and Sensor Systems. 2018
+* **Dongda Li**, Zhaoquan Gu, Yuexuan Wang, Changwei Ren, and Francis C.M. Lau. One model packs thousands of items with recurrent conditional query learning. *Knowledge-Based Systems*, 235:107683, 2022. ISSN 0950-7051.
+* Zhaoquan, Gu, **Dongda Li**, Nadra Guizani, Xiaojiang Du, and Zhihong Tian. "An Aerial-Computing-Assisted Architecture for Large-Scale Sensor Networks." *IEEE Wireless Communications* 28, no. 5 (2021): 43-49.
+* **Dongda Li**, Yuexuan Wang, Zhaoquan Gu, Tong Shen, Tianhao Wei, Yongqin Fu, Heming Cui, Mingli Song, Francis C. M. Lau. Adler: A Resilient, High-Performance and Energy-Efficient UAV-Enabled Sensor System. *[TR-2018-01](http://www.cs.hku.hk/research/techreps/document/TR-2018-01.pdf)*
+* Tong Shen, Yuexuan Wang, Zhaoquan Gu, **Dongda Li**, Zhen Cao, Heming Cui, Francis C.M. Lau. Alano: An Efficient Neighbor Discovery Algorithm In An Energy-Restricted Large-Scale Network. *IEEE International Conference on Mobile Ad-hoc and Sensor Systems*. 2018
 
 
 ## Research Projects:
@@ -80,7 +80,7 @@ __Beijing Institute of Technology__
 * Familiar with GIT and Academic Writing;
 
 ## Language skills
-* __Chinese__: native language
+* __Chinese__: Native language
 * __English__: IELTS 7.0
 
 ## Awards
@@ -93,6 +93,5 @@ __Beijing Institute of Technology__
 ## Hobbies
 
 Reading, body building, swimming, cooking
-
 
 
