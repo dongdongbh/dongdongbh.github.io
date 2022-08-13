@@ -65,7 +65,7 @@ Then `sudo service reload nginx`, and visit your file system on `youdomian.com:x
    }
    ```
 
-3. and you can also add your ssl to this server
+3. And you can also add your ssl to this server
 
 #### Add password to folder
 
