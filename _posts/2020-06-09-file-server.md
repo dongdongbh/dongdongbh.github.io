@@ -71,7 +71,7 @@ Then `sudo service reload nginx`, and visit your file system on `youdomian.com:x
 
 1. add password to your folder, use `httpd-tools`, you can install it by `sudo apt install apache2-utils`,  
 
-create password, the name is the user name for password.
+Create password, the name is the user name for password.
 
 ```
 htpasswd -c /etc/nginx/passwd name
