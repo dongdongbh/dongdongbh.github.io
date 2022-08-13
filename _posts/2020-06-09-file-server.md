@@ -43,7 +43,7 @@ Then `sudo service reload nginx`, and visit your file system on `youdomian.com:x
 
 **[h5ai](<https://larsjung.de/h5ai/>)** is a modern file indexer for HTTP web servers with focus on your files.
 
-1. install php, check by `php -v` 
+1. Install php, check by `php -v` 
 
 2. in `/etc/nginx/sites-enabled/default`  change to
 
