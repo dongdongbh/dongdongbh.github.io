@@ -9,7 +9,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: Set up web file server, h5ai, Aria2 with nginx on debian 9 VPS.
+description: Set up web file server, h5ai, Aria2 with nginx on debian VPS.
 ---
 
 ## Background
