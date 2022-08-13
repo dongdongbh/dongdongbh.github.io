@@ -37,7 +37,7 @@ server {			# my file server
 }
 ```
 
-then `sudo service reload nginx`, and visit your file system on `youdomian.com:xxx`
+Then `sudo service reload nginx`, and visit your file system on `youdomian.com:xxx`
 
 ### with _h5ai
 
