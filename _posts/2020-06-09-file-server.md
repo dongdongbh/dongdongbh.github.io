@@ -20,7 +20,7 @@ Set up web file server, [h5ai](<https://larsjung.de/h5ai/>), [Aria2](https://ari
 
 ### Basic setting
 
-in `/etc/nginx/sites-enabled/default` add
+In `/etc/nginx/sites-enabled/default` add
 
 ```yaml
 server {			# my file server
