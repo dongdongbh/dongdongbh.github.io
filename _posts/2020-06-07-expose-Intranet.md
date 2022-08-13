@@ -1,5 +1,5 @@
 ---
-title: "expose Intranet machine to outside by frp"
+title: "Expose Intranet machine to outside by frp"
 classes: wide
 sitemap: true
 categories:
@@ -9,7 +9,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: expose Intranet machine to outside
+description: Expose Intranet machine to outside
 ---
 
 ## Background

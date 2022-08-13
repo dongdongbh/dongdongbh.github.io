@@ -1,5 +1,5 @@
 ---
-title: "set up file server on vps by nginx"
+title: "Set up file server on vps by nginx"
 classes: wide
 sitemap: true
 categories:
@@ -9,7 +9,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: set up web file server, h5ai, Aria2 with nginx on debian 9 VPS.
+description: Set up web file server, h5ai, Aria2 with nginx on debian 9 VPS.
 ---
 
 ## Background
@@ -22,7 +22,7 @@ Set up web file server, [h5ai](<https://larsjung.de/h5ai/>), [Aria2](https://ari
 
 in `/etc/nginx/sites-enabled/default` add
 
-```
+```yaml
 server {			# my file server
 	listen xxxx; 	# your file server port
 	server_name localhost;
@@ -49,7 +49,7 @@ then `sudo service reload nginx`, and visit your file system on `youdomian.com:x
 
    check `fastcgi_pass` in `/etc/php5/fpm/pool.d/www.conf`
 
-   ```
+   ```yaml
    server {			# my file server
    	listen xxxx; 	# your file server port
    	server_name localhost;
@@ -135,13 +135,13 @@ This avoid many *scp* operations.
 
 for ssfs
 
-```
+```bash
 sshfs  user@192.168.1.200:/home/user/share home/user/remote
 ```
 
 unmount by 
 
-```
+```bash
 sudo umount mountpoint
 ```
 
@@ -151,20 +151,20 @@ some of this part are referred from [this post](<https://gist.github.com/GAS85/7
 
 #### Install Aria2
 
-```
+```bash
 sudo apt-get install aria2
 ```
 
 #### Set up aria2
 
-```
+```bash
 mkdir ~/.aria2
 vim ~/.aria2/aria2.conf
 ```
 
 add
 
-```
+```yaml
 dir=/home/user_name/aria2/download
 
 file-allocation=trunc
@@ -244,7 +244,7 @@ sudo ln -s /etc/nginx/sites-available/aria.conf /etc/nginx/sites-enabled/aria.co
 
 then edit `aria.conf`
 
-```
+```bash
 server {
 
 	listen 443 ssl; # managed by Certbot
@@ -319,7 +319,7 @@ In AriaNG web, go `AriaNg Setting->RPC tab`, setup RPC. Set port to 443, and fil
 
 2. reload daemon 
 
-   ```
+   ```bash
    sudo systemctl daemon-reload
    ```
 
@@ -331,7 +331,7 @@ In AriaNG web, go `AriaNg Setting->RPC tab`, setup RPC. Set port to 443, and fil
 
    check if start correctly by
 
-   ```
+   ```bash
    systemctl status aria2.service
    ```
 
