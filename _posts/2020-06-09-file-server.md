@@ -45,7 +45,7 @@ Then `sudo service reload nginx`, and visit your file system on `youdomian.com:x
 
 1. Install php, check by `php -v` 
 
-2. in `/etc/nginx/sites-enabled/default`  change to
+2. In `/etc/nginx/sites-enabled/default`  change to
 
    check `fastcgi_pass` in `/etc/php5/fpm/pool.d/www.conf`
 
