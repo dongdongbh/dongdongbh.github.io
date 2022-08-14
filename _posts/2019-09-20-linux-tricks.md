@@ -5,6 +5,7 @@ sitemap: true
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
+  - Blog
 tags:
   - tutorial
 toc: true
@@ -85,7 +86,7 @@ command_1; command_2; command_3
 
 Ref [stackoverflow](<https://stackoverflow.com/questions/9679776/how-do-i-clear-delete-the-current-line-in-terminal>)
 
-## pretty view csv file in terminal
+## Pretty view csv file in terminal
 
 add this to .bashrc, and then just `pretty_csv xxx.csv`
 
@@ -95,7 +96,7 @@ function pretty_csv {
 }
 ```
 
-## pretty print code in paper with `enscript`
+## Pretty print code in paper with `enscript`
 
 ```bash
 sudo apt install enscript
