@@ -5,7 +5,6 @@ sitemap: true
 header:
   teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
-  - Blog
 tags:
   - tutorial
 toc: true
