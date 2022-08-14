@@ -4,9 +4,13 @@
 {%- endif -%}
 {%- assign seo_url = seo_url | default: site.github.url -%}
 
+<<<<<<< HEAD
 {% if site.title_separator %}
   {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 {% endif %}
+=======
+{% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
+>>>>>>> b1
 
 {%- if page.title -%}
   {%- assign seo_title = page.title | append: " " | append: title_separator | append: " " | append: site.title -%}
@@ -16,6 +20,7 @@
   {%- assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once -%}
 {%- endif -%}
 
+<<<<<<< HEAD
 {%- assign canonical_url = page.url | replace: "index.html", "" | absolute_url %}
 
 {%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
@@ -24,12 +29,27 @@
 {%- endif -%}
 
 {%- assign author = page.author | default: page.authors[0] | default: site:author -%}
+=======
+{% if page.canonical_url %}
+  {%- assign canonical_url = page.canonical_url %}
+{% else %}
+  {%- assign canonical_url = page.url | replace: "index.html", "" | absolute_url %}
+{% endif %}
+
+{%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
+{%- if seo_description -%}
+  {%- assign seo_description = seo_description | markdownify | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | escape_once | strip -%}
+{%- endif -%}
+
+{%- assign author = page.author | default: page.authors[0] | default: site.author -%}
+>>>>>>> b1
 {%- assign author = site.data.authors[author] | default: author -%}
 
 {%- if author.twitter -%}
   {%- assign author_twitter = author.twitter | replace: "@", "" -%}
 {%- endif -%}
 
+<<<<<<< HEAD
 {%- assign page_large_image = page.header.og_image | default: page.header.overlay_image | default: page.header.image -%}
 {%- unless page_large_image contains '://' -%}
   {%- assign page_large_image = page_large_image | absolute_url -%}
@@ -46,6 +66,15 @@
 {%- unless site_og_image contains '://' -%}
   {%- assign site_og_image = site_og_image | absolute_url -%}
 {%- endunless -%}
+=======
+{%- assign page_large_image = page.header.og_image | default: page.header.overlay_image | default: page.header.image | absolute_url -%}
+{%- assign page_large_image = page_large_image | escape -%}
+
+{%- assign page_teaser_image = page.header.teaser | default: site.og_image | absolute_url -%}
+{%- assign page_teaser_image = page_teaser_image | escape -%}
+
+{%- assign site_og_image = site.og_image | absolute_url -%}
+>>>>>>> b1
 {%- assign site_og_image = site_og_image | escape -%}
 
 {%- if page.date -%}
@@ -57,13 +86,18 @@
 <title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
 <<<<<<< HEAD
-<meta name="keywords" content="{{ post.tags}}">
-=======
 <meta name="keywords" content="{{ seo_description }}">
->>>>>>> 4994b14d6b6bdc36a83d611cf87036e09ecaf82a
 
 {% if author.name %}
   <meta name="author" content="{{ author.name | default: author }}">
+=======
+
+{% if author.name %}
+  <meta name="author" content="{{ author.name | default: author }}">
+  {% if og_type == "article" %}
+  <meta property="article:author" content="{{ author.name | default: author }}">
+  {% endif %}
+>>>>>>> b1
 {% endif %}
 
 <meta property="og:type" content="{{ og_type }}">
@@ -72,7 +106,11 @@
 <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 <meta property="og:url" content="{{ canonical_url }}">
 
+<<<<<<< HEAD
 {% if page.excerpt %}
+=======
+{% if seo_description %}
+>>>>>>> b1
   <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
 
@@ -130,6 +168,7 @@
   <link rel="next" href="{{ paginator.next_page_path | absolute_url }}">
 {% endif %}
 
+<<<<<<< HEAD
 {% if site.og_image %}
   <script type="application/ld+json">
     {
@@ -152,13 +191,33 @@
     }
   </script>
 {% endif %}
+=======
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    {% if site.social.type == "Organization" %}
+      "@type": "Organization",
+      "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
+      "logo": {{ site_og_image | jsonify }}{% endif %}
+    {% else %}
+      "@type": "Person",
+      "name": {{ site.social.name | default: site.name | jsonify }},
+      "url": {{ '/' | absolute_url |jsonify }}{% if site.social.links %},
+      "sameAs": {{ site.social.links | jsonify }}{% endif %}
+    {% endif %}
+  }
+</script>
+>>>>>>> b1
 
 {% if site.google_site_verification %}
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
 {% endif %}
+<<<<<<< HEAD
 {% if site.baidu-site-verification %}
   <meta name="baidu-site-verification" content="{{ site.baidu-site-verification }}" />
 {% endif %}
+=======
+>>>>>>> b1
 {% if site.bing_site_verification %}
   <meta name="msvalidate.01" content="{{ site.bing_site_verification }}">
 {% endif %}
@@ -168,7 +227,15 @@
 {% if site.yandex_site_verification %}
   <meta name="yandex-verification" content="{{ site.yandex_site_verification }}">
 {% endif %}
+<<<<<<< HEAD
 {% if site.naver-site-verification %}
   <meta name="naver-site-verification" content="{{ site.naver-site-verification }}">
+=======
+{% if site.naver_site_verification %}
+  <meta name="naver-site-verification" content="{{ site.naver_site_verification }}">
+{% endif %}
+{% if site.baidu_site_verification %}
+  <meta name="baidu-site-verification" content="{{ site.baidu_site_verification }}">
+>>>>>>> b1
 {% endif %}
 <!-- end _includes/seo.html -->

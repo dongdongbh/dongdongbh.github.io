@@ -1,0 +1,11 @@
+<!--
+  <li>
+<<<<<<< HEAD
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+=======
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+>>>>>>> b1
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
