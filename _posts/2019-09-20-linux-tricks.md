@@ -11,10 +11,11 @@ toc: true
 toc_label: "Table of Contents"
 description: Linux terminal shortcuts list
 ---
+
 ## Tricks on Linux command line
 `cd -`: back to  the last working directory
 
-#### Running multiple commands
+### Running multiple commands
 
 * Running multiple commands in one single command
 
@@ -28,7 +29,7 @@ command_1; command_2; command_3
   command_1 && command_2
   ```
 
-#### Previous commands and arguments
+### Previous commands and arguments
 
 !! the last command
 
@@ -53,9 +54,10 @@ command_1; command_2; command_3
 !!      repeat the previous line
 ```
 
-#### Check for Spelling of Words in Linux
+### Check for Spelling of Words in Linux
 
 `look docum`
+
 
 
 ## Linux terminal shortcuts list
