@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-HK"
@@ -113,7 +113,7 @@ author:
   tumblr           :
   twitter          : # "dongdongbh"
   vine             :
-  weibo            : "513485234"
+  weibo            : # "513485234"
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
