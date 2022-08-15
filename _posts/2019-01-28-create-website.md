@@ -113,7 +113,7 @@ With  [Jekyll](https://jekyllrb.com/docs/), Rubygems and bundler, you can set up
 
 Refer [this post](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04) for setup ruby, gem and bundler.
 
-then build the site with
+then build the site on local machine with
 
 ```
 JEKYLL_ENV=production bundle exec jekyll build
