@@ -107,7 +107,7 @@ why using `sites-available` and `sites-enabled`? ii is useful when you want stop
 
 5. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) or [Certbot](<https://certbot.eff.org/lets-encrypt/debianstretch-nginx>) to do it. if you use certbot, it will automatically add ssl_certificate to nginx config file, so just remove that two line in config file and let certbot add it.
 
-### Local development and host on remote
+### Build locally and deploy on remote
 
 With  [Jekyll](https://jekyllrb.com/docs/), Rubygems and bundler, you can set up a local development environment.
 
@@ -116,10 +116,37 @@ Refer [this post](https://www.digitalocean.com/community/tutorials/how-to-instal
 then build the site with
 
 ```
-production bundle exec jekyll build -s . -d $PUBLIC_WWW
+JEKYLL_ENV=production bundle exec jekyll build
 ```
 
 upload the files in `$PUBLIC_WWW` to host machine `/var/www/mysite`  which nginx pointing.
+
+On host machine, setup your git server repository for your site. e.g. `deploy_site.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
+
+find(or create) file `hooks/post-receive'` and fill following lines:
+
+```bash
+#!/bin/bash 
+
+GIT_REPO=/srv/git/deploy_site.git
+PUBLIC_WWW=/var/www/mysite
+
+cd $PUBLIC_WWW  
+unset GIT_DIR
+git pull $GIT_REPO
+exit
+```
+
+on local machine
+
+```
+cd _site
+git init 
+git add .
+git commit -m 'nil'
+git remote add origin user_name@dongdongbh.tech:/srv/git/deploy_site.git
+git push origin master
+```
 
 ### Remote development  with git `post-receive`
 
