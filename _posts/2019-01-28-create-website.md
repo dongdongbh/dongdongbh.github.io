@@ -139,13 +139,32 @@ exit
 
 on local machine
 
-```
+```bash
 cd _site
 git init 
 git add .
 git commit -m 'nil'
 git remote add origin user_name@dongdongbh.tech:/srv/git/deploy_site.git
 git push origin master
+```
+
+set pre-push git hook to automatically deploy to host by 
+
+```bash
+cd .git/hooks
+vim pre-push
+```
+
+add
+
+```bash
+JEKYLL_ENV=production bundle exec jekyll build
+cd _site
+git add .
+git add .
+git commit -m 'nil'
+git push origin master
+cd ..
 ```
 
 ### Remote development  with git `post-receive`
