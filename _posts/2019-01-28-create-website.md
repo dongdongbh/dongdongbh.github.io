@@ -109,67 +109,86 @@ why using `sites-available` and `sites-enabled`? ii is useful when you want stop
 
 ### Build locally and deploy on remote
 
-With  [Jekyll](https://jekyllrb.com/docs/), Rubygems and bundler, you can set up a local development environment.
+1. With  [Jekyll](https://jekyllrb.com/docs/), Rubygems and bundler, you can set up a local development environment.
 
-Refer [this post](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04) for setup ruby, gem and bundler.
+   Refer [this post](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04) for setup ruby, gem and bundler.
 
-then build the site on local machine with
+   then build the site on local machine with
 
-```
-JEKYLL_ENV=production bundle exec jekyll build
-```
+   ```
+   JEKYLL_ENV=production bundle exec jekyll build
+   ```
 
-upload the files in `$PUBLIC_WWW` to host machine `/var/www/mysite`  which nginx pointing.
+   upload the files in `$PUBLIC_WWW` to host machine `/var/www/mysite`  which nginx pointing.
 
-On host machine, setup your git server repository for your site. e.g. `deploy_site.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
+   You can check your site by 
 
-find(or create) file `hooks/post-receive'` and fill following lines:
+   ```
+   bundle exec jekyll serve
+   ```
 
-```bash
-#!/bin/bash 
+   then visit it on `http://127.0.0.1:4000`.
 
-GIT_REPO=/srv/git/deploy_site.git
-PUBLIC_WWW=/var/www/mysite
+2. Setup remote git repository 
 
-cd $PUBLIC_WWW  
-unset GIT_DIR
-git pull $GIT_REPO
-exit
-```
+   On host machine, setup your git server repository for your site. e.g. `deploy_site.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
-on local machine
+   find(or create) file `hooks/post-receive'` and fill following lines:
+   
+   ```bash
+   #!/bin/bash 
+   
+   GIT_REPO=/srv/git/deploy_site.git
+   PUBLIC_WWW=/var/www/mysite
+   
+   cd $PUBLIC_WWW  
+   unset GIT_DIR
+   git pull $GIT_REPO
+   exit
+   ```
 
-```bash
-cd _site
-git init 
-git add .
-git commit -m 'nil'
-git remote add origin user_name@dongdongbh.tech:/srv/git/deploy_site.git
-git push origin master
-```
 
-set pre-push git hook to automatically deploy to host by 
+3. Setup CI flow
 
-```bash
-cd .git/hooks
-vim pre-push
-```
+   On local machine
 
-add
+   ```bash
+   cd _site
+   git init 
+   git add .
+   git commit -m 'nil'
+   git remote add origin user_name@dongdongbh.tech:/srv/git/deploy_site.git
+   git push origin master
+   ```
 
-```bash
-JEKYLL_ENV=production bundle exec jekyll build
-cd _site
-git add .
-git add .
-git commit -m 'nil'
-git push origin master
-cd ..
-```
+   set pre-push git hook to automatically deploy to host by 
+
+   ```bash
+   cd .git/hooks
+   vim pre-push
+   ```
+
+   add
+
+   ```bash
+   #!/bin/bash 
+   
+   JEKYLL_ENV=production bundle exec jekyll build
+   cd _site
+   git add .
+   git add .
+   git commit -m 'nil'
+   git push origin master
+   cd ..
+   ```
+
+   then every time push the updates to github with `git push origin`, the script run before it, which build and deploy the site to host.
 
 ### Remote development  with git `post-receive`
 
-6. setup your git server repository for your site. e.g. `/srv/git/website.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
+Another way is push all your develop files to remote and build on it. In this method, you must install all ruby gem bundle on your remote machine (not recommended).
+
+1. setup your git server repository for your site. e.g. `/srv/git/website.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
    ```bash
    sudo chgrp -R $(whoami) /srv/git(the dir)
@@ -179,7 +198,7 @@ cd ..
    git init --bare
    ```
 
-7. find(or create) file `post-receive'` and fill following lines:
+2. find(or create) file `post-receive'` and fill following lines:
 
    ~~~bash
    #!/bin/bash 
@@ -210,9 +229,9 @@ cd ..
    sudo chown -R $(whoami) /var/www/mysite
    ```
 
-8. make sure you VPS port 80&443 are opened;
+3. make sure you VPS port 80&443 are opened;
 
-9. In site directory on your local computer:
+4. In site directory on your local computer:
 
    ```bash
    git remote add server user_name@dongdongbh.tech:/srv/git/website.git
