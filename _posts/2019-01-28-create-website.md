@@ -27,6 +27,7 @@ We host our website on cloud VPS, our website based on Jekyll, so we can simply 
 1. ssh login your server(assume the system of your server is Linux);
 
 2. install Ruby,  [Jekyll](https://jekyllrb.com/docs/), bundler, Git, [Nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/);   Here is a good [ngnix video startup tutorial](<https://www.youtube.com/watch?v=lWjZSgXu5VU&t=10469s>). 
+
 3. ```bash
 cd /etc/nginx/sites-available/
 sudo rm default
@@ -105,6 +106,22 @@ why using `sites-available` and `sites-enabled`? ii is useful when you want stop
    ```
 
 5. For https SSL Encrypt, you can use a free SSL provider [Let’s Encrypt](<https://letsencrypt.org/getting-started/>) or [Certbot](<https://certbot.eff.org/lets-encrypt/debianstretch-nginx>) to do it. if you use certbot, it will automatically add ssl_certificate to nginx config file, so just remove that two line in config file and let certbot add it.
+
+### Local development and host on remote
+
+With  [Jekyll](https://jekyllrb.com/docs/), Rubygems and bundler, you can set up a local development environment.
+
+Refer [this post](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04) for setup ruby, gem and bundler.
+
+then build the site with
+
+```
+production bundle exec jekyll build -s . -d $PUBLIC_WWW
+```
+
+upload the files in `$PUBLIC_WWW` to host machine `/var/www/mysite`  which nginx pointing.
+
+### Remote development  with git `post-receive`
 
 6. setup your git server repository for your site. e.g. `/srv/git/website.git`. For details, ref [Setting Up Git Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)
 
