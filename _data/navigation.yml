@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "Posts"
-    url: /year-archive/
-  # - title: "Tags"
-  #   url: /tag-archive/
+  # - title: "Posts"
+  #   url: /year-archive/
+  - title: "Tags"
+    url: /tags/
   - title: "Notes"
     url: https://dongdongbh.github.io/note/
   - title: "CV"

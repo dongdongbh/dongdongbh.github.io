@@ -39,7 +39,7 @@ server {			# my file server
 
 Then `sudo service reload nginx`, and visit your file system on `youdomian.com:xxx`
 
-### With _h5ai
+### With `_h5ai`
 
 **[h5ai](<https://larsjung.de/h5ai/>)** is a modern file indexer for HTTP web servers with focus on your files.
 

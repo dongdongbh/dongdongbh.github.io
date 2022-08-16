@@ -2,8 +2,6 @@
 title: "For research beginner"
 classes: wide
 sitemap: true
-header:
-  teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
 tags:
   - mindful

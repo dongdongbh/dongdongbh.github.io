@@ -1,8 +1,6 @@
 ---
 title: "link tty port on linux"
 sitemap: true
-header:
-  teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
   - Markup
 tags:

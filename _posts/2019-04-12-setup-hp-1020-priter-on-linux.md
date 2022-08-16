@@ -2,8 +2,6 @@
 title: "Set up HP laserjet 1020 printer on linux"
 classes: wide
 sitemap: true
-header:
-  teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
 tags:
   - tutorial

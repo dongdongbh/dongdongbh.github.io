@@ -3,8 +3,6 @@
 title: "Reinforcement Learning Course Notes-David Silver"
 classes: wide
 sitemap: true
-header:
-  teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 tags:
   - content
   - tutorial

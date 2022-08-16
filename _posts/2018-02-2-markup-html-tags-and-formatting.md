@@ -1,8 +1,6 @@
 ---
 title: "Markup: HTML Tags and Formatting"
 sitemap: true
-header:
-  teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
   - Markup
 tags:

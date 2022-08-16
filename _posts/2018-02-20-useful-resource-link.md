@@ -1,8 +1,6 @@
 ---
 title: "Some useful resource links"
 sitemap: true
-header:
-  teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
   - Resource
 tags:

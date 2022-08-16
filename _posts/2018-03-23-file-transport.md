@@ -1,8 +1,6 @@
 ---
 title: "Transfer files between two computers"
 sitemap: true
-header:
-  teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
   - Markup
 tags:

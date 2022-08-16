@@ -2,8 +2,6 @@
 title: "Linux tricks"
 classes: wide
 sitemap: true
-header:
-  teaser: "assets/images/markup-syntax-highlighting-teaser.jpg"
 categories:
 tags:
   - tutorial
