@@ -168,7 +168,7 @@ git push origin master                  //push to the project repositoryA
 ```
 ## merge and rebase
 ```
-git merge --squash another_branch       //merge anther branch but delete the commits on that branch
+git merge --squash another_branch       //merge another branch but delete the commits on that branch
 git commit -m "xxxxxx"              //add commit to this merge work
 
 
@@ -176,7 +176,15 @@ git rebase another_branch           //re-base current branch to another branch
 git checkout another_branch                 
 git merge rebased_branch            //merge re-based branch (fast forward). to achieve a clear history
 ```
+## change history tree
+
+```bash
+git commit --amend --no-edit // add changes to last commit without new commit
+git rebase -i // modify commit history interactively
+```
+
 ## summary
+
 ![git transport]({{ "/assets/images/git-transport.png" | absolute_url }}) 
 {:.image-caption}
 *git transport*
