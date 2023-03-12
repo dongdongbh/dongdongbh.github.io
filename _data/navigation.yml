@@ -6,7 +6,5 @@ main:
     url: /tags/
   - title: "Notes"
     url: https://dongdongbh.github.io/note/
-  - title: "CV"
-    url: /cv/
   - title: "About"
     url: /About/
