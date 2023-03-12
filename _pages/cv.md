@@ -3,11 +3,11 @@ title: "Dongda Li"
 layout: splash
 permalink: /cv/
 description: "Dongda Li"
-date: 2018-04-05T11:48:41-04:00
+date: 2023-08-01T11:48:41-04:00
 ---
 
 
-### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;color:#c14b1d;"}
+<!-- ### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;color:#c14b1d;"} -->
 
 # Li Dongda
 __Gender:__ Male    
@@ -18,14 +18,31 @@ __Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)
 Robotic Control and Navigation, Reinforcement learning
 
 ## Education
-School of Automation and Information Engineering  
+
+School of Information Studies
+Electrical Engineering and Computer Science
+__Syracuse University__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__08/2023-present__  
+**PhD, major in <u>Computer Science</u>**  
+
 __Xi'an University of Technology__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__09/2011-06/2015__  
 **B.S., major in <u>Automation</u>**  
 **Advisor**: <u>Yingming YI</u>  
 Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
+## Work Experience
+### Robotic Engineer　　　　　　　　　　　　　　　　　　　09/2022-07/2023
+
+**Goertek Inc. (Shanghai)**  
+**Department**: Algorithm group, R&D Department
+**Duty**: Robotic perception and control, planning. SLAM, system identification, trajectory planning.
+
+### Robotic Engineer　　　　　　　　　　　　　　　　　　　07/2015-06/2016
+**Beijing Zhonghangzhi Inc.**  
+**Department**: Control group, R&D Department
+**Duty**: Robotic navigation and control
+
 ## Research Experience
-### Research Assistant　　　　　　　　　　　　　　　　　　　03/2019-Present
+### Research Assistant　　　　　　　　　　　　　　　　　　　03/2019-08/2022
 
 Cyberspace Institute of Advanced Technology  
 **Guangzhou University**  
@@ -69,6 +86,10 @@ __Beijing Institute of Technology__
 + Simulated Flight Control System Based on SINS　　　　　　　　　　　　　　　　　　　    08/2013-12/2013
 + Two-wheel self-balancing vehicle　　　　　　　　　　　　　　　　　　　　　　　　　　  11/2012-06/2013
 + AVR-based multi-function smart vehicle　　　　　　　　　　　　　　　　　　　　　　　  08/2012-11/2012
+
+## Professional Services
+* Reviewer, IEEE Journal on Selected Areas in Communications (JSAC) 2022;
+* Reviewer, IEEE International Conference on Intelligent Robots and Systems (IROS) 2020;
 
 ## Professional skills
 
