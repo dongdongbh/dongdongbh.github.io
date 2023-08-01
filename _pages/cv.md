@@ -19,9 +19,11 @@ Robotic Control and Navigation, Reinforcement learning
 
 ## Education
 
-School of Information Studies
-Electrical Engineering and Computer Science
 __Syracuse University__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__08/2023-present__  
+
+School of Information Studies
+
+Electrical Engineering and Computer Science
 **PhD, major in <u>Computer Science</u>**  
 
 __Xi'an University of Technology__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__09/2011-06/2015__  
