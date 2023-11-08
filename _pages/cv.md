@@ -11,8 +11,9 @@ date: 2023-08-01T11:48:41-04:00
 
 # Li Dongda
 __Gender:__ Male    
-__E-mail:__ <18310682633@163.com>  
+__E-mail:__ <dli160@syr.edu>  
 __Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)
+__Scholar:__ [Google scholar](https://scholar.google.com/citations?user=rIFpsA0AAAAJ&hl=en&oi=ao)
 
 ## Research Interests
 Robotic Control and Navigation, Reinforcement learning
