@@ -21,11 +21,11 @@ Robotic System, Reinforcement learning and Optimization
 
 ## Education
 
-__Syracuse University__                                                                         __08/2023-present__  
+__Syracuse University__      <span style="float:right;">__08/2023-present__</span>  
 Department of Electrical Engineering and Computer Science<br>
 **PhD, major in <u>Computer Science</u>**
 
-__Xi'an University of Technology__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__09/2011-06/2015__  
+__Xi'an University of Technology__　　　　　　　　　<span style="float:right;">__09/2011-06/2015__</span>  
 **B.S., major in <u>Automation</u>**  
 **Advisor**: <u>Yingming YI</u>  
 Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
