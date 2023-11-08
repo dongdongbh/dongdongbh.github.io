@@ -10,9 +10,9 @@ date: 2023-08-01T11:48:41-04:00
 <!-- ### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;color:#c14b1d;"} -->
 
 # Li Dongda
-__Gender:__ Male    
-__E-mail:__ <dli160@syr.edu>  
-__Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)
+__Gender:__ Male<br>
+__E-mail:__ <dli160@syr.edu><br>
+__Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)<br>
 __Scholar:__ [Google scholar](https://scholar.google.com/citations?user=rIFpsA0AAAAJ&hl=en&oi=ao)
 
 ## Research Interests
@@ -22,8 +22,8 @@ Robotic Control and Navigation, Reinforcement learning
 ## Education
 
 __Syracuse University__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　           __08/2023-present__  
-Department of Electrical Engineering and Computer Science
-**PhD, major in <u>Computer Science</u>**  
+Department of Electrical Engineering and Computer Science<br>
+**PhD, major in <u>Computer Science</u>**
 
 __Xi'an University of Technology__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__09/2011-06/2015__  
 **B.S., major in <u>Automation</u>**  
