@@ -13,7 +13,6 @@ date: 2023-08-01T11:48:41-04:00
 __Gender:__ Male    
 __E-mail:__ <dli160@syr.edu>  
 __Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)
-
 __Scholar:__ [Google scholar](https://scholar.google.com/citations?user=rIFpsA0AAAAJ&hl=en&oi=ao)
 
 ## Research Interests
@@ -24,6 +23,7 @@ Robotic Control and Navigation, Reinforcement learning
 __Syracuse University__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__08/2023-present__  
 
 Department of Electrical Engineering and Computer Science
+
 **PhD, major in <u>Computer Science</u>**  
 
 __Xi'an University of Technology__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　__09/2011-06/2015__  
