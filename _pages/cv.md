@@ -17,11 +17,11 @@ __Scholar:__ [Google scholar](https://scholar.google.com/citations?user=rIFpsA0A
 
 ## Research Interests
 
-Robotic Control and Navigation, Reinforcement learning
+Robotic System, Reinforcement learning and Optimization
 
 ## Education
 
-__Syracuse University__　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　           __08/2023-present__  
+__Syracuse University__                                                                         __08/2023-present__  
 Department of Electrical Engineering and Computer Science<br>
 **PhD, major in <u>Computer Science</u>**
 
