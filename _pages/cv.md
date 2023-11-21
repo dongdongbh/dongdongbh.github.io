@@ -78,7 +78,8 @@ __Beijing Institute of Technology__
 
 
 ## Research Projects:
-+ Research on Collaborative Analysis and Autonomous Decision Technology for Intelligent Manufacturing Big Data. National Key R&D Program of China (No.2018YFB1004003). 　　　　　　　　　　　　　　　　　　　　　　　　　　　　           <span style="float:right;">__05/2018-04/2021__</span>  
++ Research on Collaborative Analysis and Autonomous Decision Technology for Intelligent Manufacturing Big Data. 
+National Key R&D Program of China (No.2018YFB1004003). 　　　　　　 　　　           <span style="float:right;">__05/2018-04/2021__</span>  
 + Software Defined Wireless Sensor Network System　　　　　　　　　　　　　　　　　　<span style="float:right;">__12/2017-03/2018__</span>  
 + UAV-Enabled Sensor System　　　　　　　　　　　　　　　　　　　　　　　　　　　　  <span style="float:right;">__08/2017-11/2017__</span>  
 + [MBZIRC](http://www.mbzirc.com/challenge/2017)-2017 International Robotic Competition　<span style="float:right;">__01/2017-03/2017__</span>  
