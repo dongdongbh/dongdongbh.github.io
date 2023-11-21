@@ -89,9 +89,12 @@ National Key R&D Program of China (No.2018YFB1004003). 　　　　　　 　　
 + Two-wheel self-balancing vehicle　　　　　　　　　　　　　　　　　　　　　　　　　 　<span style="float:right;">__11/2012-06/2013__</span>  
 + AVR-based multi-function smart vehicle　　　　　　　　　　　　　　　　　　　　　　 　<span style="float:right;">__08/2012-11/2012__</span>  
 
-## Professional Services
-* Reviewer, IEEE Journal on Selected Areas in Communications (JSAC) 2022;
-* Reviewer, IEEE International Conference on Intelligent Robots and Systems (IROS) 2020;
+##Professional and Volunteer Experience
+- **Reviewer**, IEEE Journal on Selected Areas in Communications (JSAC), 2022
+- **Reviewer**, IEEE International Conference on Intelligent Robots and Systems (IROS), 2020
+- **Volunteer Translator (English to Chinese)**, CS285 Deep Reinforcement Learning by Sergey Levine
+  - Translated complex technical content, making the video course accessible to a Chinese-speaking audience.
+  - Collaborated with a team to ensure the accuracy and clarity of translations.
 
 ## Professional skills
 
