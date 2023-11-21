@@ -93,8 +93,6 @@ National Key R&D Program of China (No.2018YFB1004003). 　　　　　　 　　
 - **Reviewer**, IEEE Journal on Selected Areas in Communications (JSAC), 2022
 - **Reviewer**, IEEE International Conference on Intelligent Robots and Systems (IROS), 2020
 - **Volunteer Translator (English to Chinese)**, [CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) by [Sergey Levine](https://people.eecs.berkeley.edu/~svlevine/)
-  - Translated complex technical content, making the video course accessible to a Chinese-speaking audience.
-  - Collaborated with a team to ensure the accuracy and clarity of translations.
 
 ## Professional skills
 
