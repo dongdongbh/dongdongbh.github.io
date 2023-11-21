@@ -17,7 +17,7 @@ __Scholar:__ [Google scholar](https://scholar.google.com/citations?user=rIFpsA0A
 
 ## Research Interests
 
-Robotic System, Reinforcement learning and Optimization
+Robotic System, Reinforcement Learning and Optimization
 
 ## Education
 
