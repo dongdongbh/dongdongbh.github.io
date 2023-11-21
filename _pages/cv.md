@@ -28,7 +28,7 @@ Department of Electrical Engineering and Computer Science<br>
 ### Xi'an University of Technology　　　　　　　　　<span style="float:right;">__09/2011-06/2015__</span>  
 **B.S., major in <u>Automation</u>**  
 **Advisor**: <u>Yingming YI</u>  
-Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
+__Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
 ## Work Experience
 ### Robotic Engineer　　　　　<span style="float:right;">__09/2022-07/2023__</span>  
