@@ -21,11 +21,11 @@ Robotic System, Reinforcement Learning and Optimization
 
 ## Education
 
-__Syracuse University__      <span style="float:right;">__08/2023-present__</span>  
+### Syracuse University      <span style="float:right;">__08/2023-present__</span>  
 Department of Electrical Engineering and Computer Science<br>
 **PhD, major in <u>Computer Science</u>**
 
-__Xi'an University of Technology__　　　　　　　　　<span style="float:right;">__09/2011-06/2015__</span>  
+### Xi'an University of Technology　　　　　　　　　<span style="float:right;">__09/2011-06/2015__</span>  
 **B.S., major in <u>Automation</u>**  
 **Advisor**: <u>Yingming YI</u>  
 Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
@@ -89,7 +89,7 @@ National Key R&D Program of China (No.2018YFB1004003). 　　　　　　 　　
 + Two-wheel self-balancing vehicle　　　　　　　　　　　　　　　　　　　　　　　　　 　<span style="float:right;">__11/2012-06/2013__</span>  
 + AVR-based multi-function smart vehicle　　　　　　　　　　　　　　　　　　　　　　 　<span style="float:right;">__08/2012-11/2012__</span>  
 
-##Professional and Volunteer Experience
+## Professional and Volunteer Experience
 - **Reviewer**, IEEE Journal on Selected Areas in Communications (JSAC), 2022
 - **Reviewer**, IEEE International Conference on Intelligent Robots and Systems (IROS), 2020
 - **Volunteer Translator (English to Chinese)**, CS285 Deep Reinforcement Learning by Sergey Levine
