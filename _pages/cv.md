@@ -54,7 +54,7 @@ Cyberspace Institute of Advanced Technology
 
 Shenzhen Institutes of Advanced Technology  
 **Chinese Academy of Sciences**  
-**Supervisors**: [Chengzhong Xu](http://www.ece.eng.wayne.edu/~czxu/)  
+**Supervisors**: [Chengzhong Xu](https://www.fst.um.edu.mo/personal/czxu/)  
 **Research Area**: Reinforcement learning, Neural Combinatorial Optimization
 
 ### Research Assistant　　　　　　　　　　　　　　　　　　　<span style="float:right;">__08/2017-05/2018__</span>  
