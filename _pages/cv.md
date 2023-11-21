@@ -82,7 +82,7 @@ __Beijing Institute of Technology__
 National Key R&D Program of China (No.2018YFB1004003). 　　　　　　 　　　           <span style="float:right;">__05/2018-04/2021__</span>  
 + Software Defined Wireless Sensor Network System　　　　　　　　　　　　　　　　　　<span style="float:right;">__12/2017-03/2018__</span>  
 + UAV-Enabled Sensor System　　　　　　　　　　　　　　　　　　　　　　　　　　　　  <span style="float:right;">__08/2017-11/2017__</span>  
-+ [MBZIRC](http://www.mbzirc.com/challenge/2017)-2017 International Robotic Competition　<span style="float:right;">__01/2017-03/2017__</span>  
++ [MBZIRC](https://www.youtube.com/watch?app=desktop&v=780gnSG1nXs&ab_channel=MBZIRC)-2017 International Robotic Competition　<span style="float:right;">__01/2017-03/2017__</span>  
 + Autonomous takeoff and landing of the intelligent quadrotor(Thesis)　　　　　　　　　<span style="float:right;">__12/2014-06/2015__</span>  
 + Visual tracking gimbal system design　　　　　　　　　　　　　　　　　　　　　　　　 <span style="float:right;">__08/2014-11/2014__</span>  
 + Simulated Flight Control System Based on SINS　　　　　　　　　　　　　　　　　　　  <span style="float:right;">__08/2013-12/2013__</span>  
@@ -96,9 +96,9 @@ National Key R&D Program of China (No.2018YFB1004003). 　　　　　　 　　
 ## Professional skills
 
 * Familiar with statistic learning theory and practice;
-* Familiar with the principle of inertial navigation, integrated navigation algorithm and application;
+* Familiar with the control, navigation, SLAM, motion planning algorithm ands application;
 * Familiar with Robot operating system(ROS) programming and application;
-* Master the C / C + +/Python language, data structure, with good code preparation habits;
+* Master the C/C++ /Python /Pytorch, data structure, with good code preparation habits;
 * Master the Linux system programming;
 * Familiar with GIT and Academic Writing;
 
