@@ -34,12 +34,12 @@ Specialized courses__ included automatic control theory, signal and system analy
 ### Robotic Engineer　　　　　<span style="float:right;">__09/2022-07/2023__</span>  
 
 **Goertek Inc. (Shanghai)**  
-**Department**: Algorithm group, R&D Department
+**Department**: Algorithm group, R&D Department<br>
 **Duty**: Robotic perception and control, planning. SLAM, system identification, trajectory planning.
 
 ### Robotic Engineer　　　　　　　　　　　　　　　　　　　<span style="float:right;">__07/2015-06/2016__</span>  
 **Beijing Zhonghangzhi Inc.**  
-**Department**: Control group, R&D Department
+**Department**: Control group, R&D Department<br>
 **Duty**: Robotic navigation and control
 
 ## Research Experience
