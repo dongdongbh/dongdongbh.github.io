@@ -6,6 +6,8 @@ gem "minimal-mistakes-jekyll", :git => "https://github.com/mmistakes/minimal-mis
 
 gem "webrick", "~> 1.7"
 
+gem 'faraday-retry'
+
 group :jekyll_plugins do
   gem "jekyll-admin"
   gem "github-pages"
