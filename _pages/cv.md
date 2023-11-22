@@ -9,6 +9,7 @@ date: 2023-08-01T11:48:41-04:00
 
 <!-- ### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;color:#c14b1d;"} -->
 
+
 # Dongda Li 
 __Gender:__ Male<br>
 __E-mail:__ <dli160@syr.edu><br>
@@ -35,7 +36,7 @@ __Specialized courses__ included automatic control theory, signal and system ana
 
 **Goertek Inc. (Shanghai)**  
 **Department**: Algorithm group, R&D Department<br>
-**Duty**: Robotic perception and control, planning. SLAM, system identification, trajectory planning.
+**Duty**: Robotic perception and control, planning, SLAM, system identification, trajectory planning.
 
 ### Robotic Engineer　　　　　　　　　　　　　　　　　　　<span style="float:right;">__07/2015-06/2016__</span>  
 **Beijing Zhonghangzhi Inc.**  
