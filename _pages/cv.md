@@ -9,7 +9,7 @@ date: 2023-08-01T11:48:41-04:00
 
 <!-- ### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;color:#c14b1d;"} -->
 
-
+<br>
 # Dongda Li 
 __Gender:__ Male<br>
 __E-mail:__ <dli160@syr.edu><br>
