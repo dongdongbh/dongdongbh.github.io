@@ -32,15 +32,10 @@ Department of Electrical Engineering and Computer Science<br>
 __Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
 ## Work Experience
-### Teaching Assistant  　　　　　<span style="float:right;">__01/2023-present__</span>  
+### Teaching Assistant  　　　　　<span style="float:right;">__08/2022-present__</span>  
 **Syracuse University**  
 **Department**: Department of Electrical Engineering and Computer Science<br>
-**Course**: CIS675: Design and Analysis of Algorithms<br>
-
-### Teaching Assistant 　　　　　<span style="float:right;">__08/2023-12/2023__</span>  
-**Syracuse University**  
-**Department**: Department of Electrical Engineering and Computer Science<br>
-**Course**: CPS181: Introduction to Computing<br>
+**Course**: CPS181: Introduction to Computing; CIS675: Design and Analysis of Algorithms<br>
 
 ### Robotic Engineer　　　　　<span style="float:right;">__09/2022-07/2023__</span>  
 **Goertek Inc. (Shanghai)**  
