@@ -9,7 +9,6 @@ date: 2023-08-01T11:48:41-04:00
 
 <!-- ### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;color:#c14b1d;"} -->
 
-<br>
 <div style="display: flex; align-items: center; justify-content: start;">
     <div style="flex-grow: 1; flex-basis: 0; padding-right: 20px;">
         <h1>Dongda Li</h1>
