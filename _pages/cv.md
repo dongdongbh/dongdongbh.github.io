@@ -10,9 +10,18 @@ date: 2023-08-01T11:48:41-04:00
 <!-- ### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;color:#c14b1d;"} -->
 
 <br>
-| ![Dongda Li](../assets/images/profile.jpg) | 
-|:--:| 
-| **Dongda Li** <br> Male <br> [dli160@syr.edu](mailto:dli160@syr.edu) <br> [Website](https://dongdongbh.tech) <br> [Google Scholar](https://scholar.google.com/citations?user=rIFpsA0AAAAJ&hl=en&oi=ao) |
+# Dongda Li
+<div style="display: flex; align-items: center; justify-content: start;">
+    <div style="flex-grow: 1; flex-basis: 0; padding-right: 20px;">
+        Gender: Male<br>
+        E-mail: <a href="mailto:dli160@syr.edu">dli160@syr.edu</a><br>
+        Website: <a href="https://dongdongbh.tech">https://dongdongbh.tech</a><br>
+        Scholar: <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&hl=en&oi=ao">Google scholar</a><br>
+    </div>
+    <div style="flex-shrink: 0;">
+        <img src="../assets/images/profile.jpg" alt="Dongda Li" style="width: 150px; height: auto;">
+    </div>
+</div>
 
 ## Research Interests
 
