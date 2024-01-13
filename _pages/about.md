@@ -5,7 +5,6 @@ description: "Dongda Li 李东达"
 date: 2019-12-13T11:48:41-04:00
 ---
 
-My name is Dongda Li, (‘李东达’ in Chinese), people sometimes call me Dongdong, I'm doing research on machine learning, specifically, reinforcement learning. 
+Hello! I'm Dongda Li — or 李东达, as written in Chinese. Friends and colleagues often refer to me affectionately as Dongdong. My academic pursuits are rooted in the field of machine learning, with a specific focus on reinforcement learning.
 
-My general research interest is making the machine learning algorithms usefully for general and practical applications. Recently I'm working on Neural Combinatorial Optimization (NCO), which has potential to apply in warehouse management or logistics.
-
+My research is driven by the desire to refine machine learning algorithms for broad, practical applications. Lately, my work has centered on Neural Combinatorial Optimization (NCO), an area brimming with possibilities for enhancing efficiency in sectors like warehouse management and logistics.
