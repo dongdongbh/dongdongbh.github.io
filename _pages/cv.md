@@ -39,7 +39,7 @@ Department of Electrical Engineering and Computer Science<br>
 __Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
 
 ## Work Experience
-### Teaching Assistant  　　 　　　<span style="float:right;">__08/2023-present__</span>  
+### Teaching Assistant  　　 　　<span style="float:right;">__08/2023-present__</span>  
 **Syracuse University**  
 **Department**: Department of Electrical Engineering and Computer Science<br>
 **Course**: CPS181: Introduction to Computing; CIS675: Design and Analysis of Algorithms<br>
