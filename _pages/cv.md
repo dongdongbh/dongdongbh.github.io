@@ -28,9 +28,6 @@ Statistical Learning and Autonomous Systems
 Department of Electrical Engineering and Computer Science<br>
 <<<<<<< HEAD
 **Advisor**:[Senem Velipasalar](https://ecs.syracuse.edu/faculty-staff/senem-velipasalar)<br>
-=======
-**Advisor**:[Senem Velipasalar](https://ecs.syracuse.edu/faculty-staff/senem-velipasalar)
->>>>>>> a7109be0 (cv)
 **PhD, major in <u>Computer Science</u>**
 
 ### Xi'an University of Technology　　　　　　　　　<span style="float:right;">__09/2011-06/2015__</span>  
