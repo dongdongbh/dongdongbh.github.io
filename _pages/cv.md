@@ -26,7 +26,6 @@ Statistical Learning and Autonomous Systems
 
 ### Syracuse University      <span style="float:right;">__08/2023-present__</span>  
 Department of Electrical Engineering and Computer Science<br>
-<<<<<<< HEAD
 **Advisor**:[Senem Velipasalar](https://ecs.syracuse.edu/faculty-staff/senem-velipasalar)<br>
 **PhD, major in <u>Computer Science</u>**
 
