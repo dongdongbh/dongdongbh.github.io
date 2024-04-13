@@ -20,12 +20,13 @@ __Scholar:__ [Google scholar](https://scholar.google.com/citations?user=rIFpsA0A
 
 ## Research Interests
 
-Robotic System, Reinforcement Learning and Optimization
+Statistical Learning and Autonomous Systems
 
 ## Education
 
 ### Syracuse University      <span style="float:right;">__08/2023-present__</span>  
 Department of Electrical Engineering and Computer Science<br>
+**Advisor**:[Senem Velipasalar](https://ecs.syracuse.edu/faculty-staff/senem-velipasalar)<br>
 **PhD, major in <u>Computer Science</u>**
 
 ### Xi'an University of Technology　　　　　　　　　<span style="float:right;">__09/2011-06/2015__</span>  
