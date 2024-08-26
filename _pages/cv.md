@@ -41,7 +41,7 @@ __Specialized courses__ included automatic control theory, signal and system ana
 **Course**: CPS181: Introduction to Computing; CIS675: Design and Analysis of Algorithms<br>
 
 ### Robotic Engineer　　　　　<span style="float:right;">__09/2022-07/2023__</span>  
-**Goertek Inc. (Shanghai)**  
+**Goertek Robotic Inc. (Shanghai)**  
 **Department**: Algorithm group, R&D Department<br>
 **Duty**: Robotic perception and control, planning, SLAM, system identification, trajectory planning.
 
@@ -51,19 +51,12 @@ __Specialized courses__ included automatic control theory, signal and system ana
 **Duty**: Robotic navigation and control
 
 ## Research Experience
-### Research Assistant　　　　　　　　　　　　　　　　　　　<span style="float:right;">__03/2019-08/2022__</span>  
+### Research Assistant　　　　　　　　　　　　　　　　　　　<span style="float:right;">__06/2018-08/2022__</span>  
 
 Cyberspace Institute of Advanced Technology  
 **Guangzhou University**  
 **Supervisors**: Zhaoquan Gu  
 **Research Area**: Reinforcement learning, Neural Combinatorial Optimization, Meta-learning
-
-### Research Assistant　　　　　　　　　　　　　　　　　　　<span style="float:right;">__10/2018-01/2019__</span>  
-
-Shenzhen Institutes of Advanced Technology  
-**Chinese Academy of Sciences**  
-**Supervisors**: [Chengzhong Xu](https://www.fst.um.edu.mo/personal/czxu/)  
-**Research Area**: Reinforcement learning, Neural Combinatorial Optimization
 
 ### Research Assistant　　　　　　　　　　　　　　　　　　　<span style="float:right;">__08/2017-05/2018__</span>  
 
@@ -98,6 +91,7 @@ National Key R&D Program of China (No.2018YFB1004003). 　　　　　　 　　
 + AVR-based multi-function smart vehicle　　　　　　　　　　　　　　　　　　　　　　 　<span style="float:right;">__08/2012-11/2012__</span>  
 
 ## Professional and Volunteer Experience
+- **Reviewer**, Journal of Contemporary Mathematics (CM), 2024
 - **Reviewer**, IEEE Journal on Selected Areas in Communications (JSAC), 2022
 - **Reviewer**, IEEE International Conference on Intelligent Robots and Systems (IROS), 2020
 - **Volunteer Translator (English to Chinese)**, [CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) by [Sergey Levine](https://people.eecs.berkeley.edu/~svlevine/)
