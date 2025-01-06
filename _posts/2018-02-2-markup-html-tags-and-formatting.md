@@ -1,5 +1,5 @@
 ---
-title: "Markup: HTML Tags and Formatting"
+title: "Comprehensive Markup and Styling Guide"
 sitemap: true
 categories:
   - Markup

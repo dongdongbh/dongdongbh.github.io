@@ -1,5 +1,5 @@
 ---
-title: "git tutorial "
+title: "Comprehensive Git Guide with Tutorials and Commands"
 sitemap: true
 date: 2018-02-01
 tags:
@@ -9,189 +9,196 @@ toc: true
 description: git tutorial 
 ---
 
-* [a simple tutorial link](http://rogerdudler.github.io/git-guide/index.zh.html)
-* [git tutorial](https://www.atlassian.com/git/tutorials)
-* [Chinese version](https://github.com/geeeeeeeeek/git-recipes/wiki)
 
-----------------------------------------------------------------------
-## Table of contents
-* [setup](#github-add-key)
-* [git config](#git-config)
-* [basic command](#basic-command)
-* [work with github](#work-with-github)
-* [branch](#branch)
-* [merge](#merge)
-* [UNDO](#UNDO)
-* [merge and rebase](#merge-and-rebase)
-* [subtree](#subtree)
+#### **Useful Tutorials**
+- [A Simple Git Tutorial](http://rogerdudler.github.io/git-guide/index.zh.html)  
+- [Git Tutorial by Atlassian](https://www.atlassian.com/git/tutorials)  
+- [Git Recipes (Chinese)](https://github.com/geeeeeeeeek/git-recipes/wiki)
 
+---
 
+### **Table of Contents**
+1. [GitHub Add Key](#github-add-key)  
+2. [Git Config](#git-config)  
+3. [Basic Commands](#basic-command)  
+4. [Working with GitHub](#work-with-github)  
+5. [Branch Management](#branch)  
+6. [Merging](#merge)  
+7. [Undo Changes](#UNDO)  
+8. [Merge and Rebase](#merge-and-rebase)  
+9. [Subtree Management](#subtree)  
 
-## github add key 
-add your github key file(id_rsa) to ~/.ssh/, then run following cmd in terminal:
-`chmod 400 ~/.ssh/id_rsa`
-## git config
+---
 
-### global config
+## **GitHub Add Key**
+To add your GitHub key (`id_rsa`) to `~/.ssh/`, run:  
+```bash
+chmod 400 ~/.ssh/id_rsa
 ```
-git config --global core.editor "subl -n -w"            //change vi to subl
+
+---
+
+## **Git Config**
+
+### **Global Configuration**
+```bash
+git config --global core.editor "subl -n -w" # Set Sublime Text as the default editor
 git config --global user.name "dongdongbh"
 git config --global user.email "18310682633@163.com"
 
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-// set alias to 'git lg'
+# Sets 'git lg' as an alias for a formatted log output
 ```
-### windows merge tool config
-```
-git config --global --add merge.tool kdiff3                                             //need to install kdiff3
-git config --global --add mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"        
+
+### **Windows Merge Tool Configuration**
+```bash
+git config --global --add merge.tool kdiff3
+git config --global --add mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"
 git config --global --add mergetool.kdiff3.trustExitCode false
 ```
-### ubuntu merge tool config
-```
+
+### **Ubuntu Merge Tool Configuration**
+```bash
 git config --global diff.tool kdiff3
 git config --global merge.tool kdiff3
 ```
-### revive config
-```
+
+### **View Current Configuration**
+```bash
 git-config --list
 git config --global --list
-git config --local  --list
+git config --local --list
 ```
-## basic command
-```
-git init
-git add .                   //add all files to staging area
-git add file-name
-git rm file-name
-git commit -m "init commit"         //take a commit (snapshot)
-git status -s                   //show short status
 
-git log --oneline -5                //view recent 5 commit massage
-git log --pretty=oneline            //show the vision ID
-git log --file-name             //show commits about file
-```
-## work with github
-```
-git clone                       //clone others git repository
-git clone -b <branch> <remote_repo>         //clone a single branch
+---
 
-git remote add origin https://github.com/dongdongbh/Test.git
-git remote -v                       //look up remote repository
+## **Basic Commands**
+```bash
+git init                               # Initialize a repository
+git add .                              # Add all files to the staging area
+git add <file-name>                    # Add specific file
+git rm <file-name>                     # Remove file
+git commit -m "Message"                # Take a snapshot
+git status -s                          # Show status (short format)
+
+git log --oneline -5                   # Show the last 5 commits
+git log --pretty=oneline               # Show concise commit history
+git log -- <file-name>                 # Show commits for a specific file
+```
+
+---
+
+## **Working with GitHub**
+```bash
+git clone <repo-url>                   # Clone a repository
+git clone -b <branch> <repo-url>       # Clone a specific branch
+
+git remote add origin <repo-url>
+git remote -v                          # Show remote repository details
 git pull origin master --allow-unrelated-histories
 git push origin master
 
-//push to two repository
-$git remote add all git@git.coding.net:user/project.git
-$git remote set-url --add --push all git@git.coding.net:user/project.git
-$git remote set-url --add --push all git@github.com:user/repo.git
+# Push to two repositories simultaneously
+git remote add all <repo-url-1>
+git remote set-url --add --push all <repo-url-2>
 git push all master
 
-
-git fetch --all
-```
-## branch
-```
-git branch local                    //add branch
-git checkout -b local_2                 //add branch and switch to it
-git branch                      //show branches
-
-git checkout --orphan <branchname>  //create a empty branch
-
-git checkout local                  //switch to branch
-git commit -a -m 'branch update'            //commit all tracking file
-git push origin local                   //add local branch to remote server
-
-git fetch origin                //get remote branch(that exists only on the remote, but not locally)
-git checkout --track origin/<remote_branch_name>
-
-git push origin --delete {the_remote_branch}         //delete remote branch
-git branch --set-upstream-to=origin/master master     //tracking remote master
-git branch -vv                      //check remote master
-git branch -d local_2
-git push origin :Local                  //delete Local branch from remote server
-```
-## merge
-```
-git diff                    //diff between working tree and staging area
-git diff --staged               //diff between staging area and last commit
-git checkout master         
-git merge local_2
-
-git merge origin/master             //merge with remote branch
-git mergetool
+git fetch --all                        # Fetch changes from all remotes
 ```
 
-## UNDO
+---
+
+## **Branch Management**
+```bash
+git branch <branch-name>               # Create a branch
+git checkout -b <branch-name>          # Create and switch to a branch
+git branch                             # List all branches
+
+git checkout --orphan <branch-name>    # Create an empty branch
+
+git push origin <branch-name>          # Push branch to remote
+git branch --set-upstream-to=origin/<branch-name> <local-branch-name> 
+                                        # Set upstream tracking
+
+git branch -d <branch-name>            # Delete a local branch
+git push origin --delete <branch-name> # Delete a remote branch
 ```
-git checkout -- file-name               //reset file from stage area to working tree
-git checkout hash_id -- file            //reset file from specific commit to working tree and staging area
-git reset HEAD file-name            //reset file from commit to stage area
 
-git push -f origin master			//force push local to remote, some dangerous
+---
 
-git reset --hard HEAD^              //reset the last vision
-git reset --hard    ID          //ID is vision ID, and change to the vision     
-git reset --hard origin/master          //reset to remote master
-git reset --hard origin/master          //use this two command to replace the local by remote
-
-git commit --amend 						//modify commit message
+## **Merge Operations**
+```bash
+git diff                               # Compare working tree with staging area
+git diff --staged                      # Compare staging area with last commit
+git merge <branch-name>                # Merge a branch
+git mergetool                          # Use merge tool for conflict resolution
 ```
 
-## diff & patch
+---
+
+## **Undo Changes**
+```bash
+git checkout -- <file-name>            # Reset file from staging area
+git reset HEAD <file-name>             # Reset file from commit to staging area
+git reset --hard HEAD^                 # Undo the last commit
+git reset --hard <commit-ID>           # Reset to a specific commit
+git push -f origin <branch>            # Force push (use cautiously)
+
+git commit --amend                     # Modify the last commit message
 ```
-git diff [options] [<commit>] [--] [<path>…​]
-$ git diff            //diff not staged file with last commit
-$ git diff --cached   //diff for staged file with last commit
-$ git diff [branch]  //show diff with other branch
 
+---
 
-$ git diff --name-only //only show file name of diff
-$ git diff --shortstat
+## **Diff and Patch**
+```bash
+git diff                               # Show differences not yet staged
+git diff --cached                      # Show differences in staged files
+git diff --name-only                   # Show only file names that differ
 
-
-
-git diff from-commit to-commit > output-file
-
+# Save differences to a file and apply later
+git diff <from-commit> <to-commit> > patch.diff
 git apply patch.diff
 ```
 
-## subtree 
-set remote module repositoryS as a subtree of project repositoryA
+---
 
-```
-git remote add xxx(remote submodule repositoryS) github_remote_address
-git subtree add --prefix=local_dir xxx master 
-git subtree pull --prefix=local_dir xxx master      //pull from remote module repositoryS
-git subtree push --prefix=local_dir xxx master      //push to remote module repositoryS
-git push origin master                  //push to the project repositoryA
-```
-## merge and rebase
-```
-git merge --squash another_branch       //merge another branch but delete the commits on that branch
-git commit -m "xxxxxx"              //add commit to this merge work
-
-
-git rebase another_branch           //re-base current branch to another branch  
-git checkout another_branch                 
-git merge rebased_branch            //merge re-based branch (fast forward). to achieve a clear history
-```
-## change history tree
-
+## **Subtree Management**
 ```bash
-git commit --amend --no-edit // add changes to last commit without new commit
-git rebase -i // modify commit history interactively
+git remote add <remote-name> <repo-url>
+git subtree add --prefix=<local-dir> <remote-name> <branch-name>
+git subtree pull --prefix=<local-dir> <remote-name> <branch-name>
+git subtree push --prefix=<local-dir> <remote-name> <branch-name>
 ```
 
-## summary
+---
 
-![git transport]({{ "/assets/images/git-transport.png" | absolute_url }}) 
-{:.image-caption}
-*git transport*
+## **Merge and Rebase**
+```bash
+git merge --squash <branch-name>       # Merge without retaining commits
+git rebase <branch-name>               # Rebase current branch onto another
+git checkout <branch-name>
+git merge <re-based-branch>            # Merge after rebase (clean history)
+```
 
-![command list]({{ "assets/images/git cmd.png" | absolute_url }}) 
-{:.image-caption}
-*command list*
+---
 
-## copy right
-The document is wrote by Dongda. All rights reserved.
+## **Change History Tree**
+```bash
+git commit --amend --no-edit           # Add changes to the last commit
+git rebase -i                          # Modify commit history interactively
+```
+
+---
+
+## **Summary**
+
+- **Git Transport:**  
+  ![git transport]({{ "/assets/images/git-transport.png" | absolute_url }}){:.image-caption}  
+
+- **Command List:**  
+  ![command list]({{ "assets/images/git cmd.png" | absolute_url }}){:.image-caption}  
+
+---
+
+## **Copy Right**
+This document is written by **Dongda**. All rights reserved.
