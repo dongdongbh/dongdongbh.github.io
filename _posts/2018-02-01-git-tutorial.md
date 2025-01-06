@@ -1,6 +1,7 @@
 ---
 title: "Comprehensive Git Guide with Tutorials and Commands"
 sitemap: true
+classes: wide
 date: 2018-02-01
 tags:
   - git

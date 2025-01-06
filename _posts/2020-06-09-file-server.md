@@ -1,5 +1,5 @@
 ---
-title: "Comprehensive Guide to Setting Up a Web File Server with h5ai, Aria2, and Nginx on Linux"
+title: "Setting Up a File Server on VPS with Nginx"
 classes: wide
 sitemap: true
 categories:
@@ -15,62 +15,57 @@ description: Set up web file server, h5ai, Aria2 with nginx on debian VPS.
 
 ---
 
-## Background
-
-This guide explains how to set up a web file server using [h5ai](https://larsjung.de/h5ai/), [Aria2](https://aria2.github.io/), and Nginx on Debian 9. It includes step-by-step instructions for creating an efficient file server with additional features like directory indexing, secure access, and file downloading/uploading.
+This guide provides a detailed walkthrough to set up a web file server using **Nginx**, **h5ai**, **Aria2**, and **AriaNG** on a Debian-based VPS. Additionally, it explains how to enhance functionality with SSL and local development options.
 
 ---
 
-## Step-by-Step Setup
+## Background
 
-### Basic Nginx Configuration
+Learn to host a file server with [h5ai](https://larsjung.de/h5ai/), manage downloads using [Aria2](https://aria2.github.io/), and set up configurations via **Nginx** on a Debian 9 VPS.
 
-1. Open the Nginx configuration file:
+---
 
-   ```bash
-   sudo vim /etc/nginx/sites-enabled/default
-   ```
+## How to
 
-2. Add the following configuration:
+### 1. Basic Nginx Configuration
 
-   ```nginx
-   server { 
-       listen xxxx;  # Replace xxxx with your desired port number
+Update the Nginx configuration to host your file server:
+
+1. Open `/etc/nginx/sites-enabled/default` and add:
+   ```yaml
+   server {
+       listen xxxx; # Replace xxxx with your desired port
        server_name localhost;
        root /home/bh/share;
 
        location / {
-           autoindex on;              # Enable directory listing
-           autoindex_exact_size on;   # Show exact file sizes
-           autoindex_localtime on;    # Show file modification times
+           autoindex on;           # Enable directory listing
+           autoindex_exact_size on; # Show file sizes
+           autoindex_localtime on; # Show local time for files
        }
    }
    ```
 
-3. Reload Nginx to apply the changes:
-
+2. Reload Nginx:
    ```bash
    sudo service nginx reload
    ```
 
-4. Access your file server at `yourdomain.com:xxxx`.
+3. Access the file server at `yourdomain.com:xxxx`.
 
 ---
 
-### Adding h5ai for Enhanced Directory Indexing
+### 2. Enhance with h5ai
 
-[h5ai](https://larsjung.de/h5ai/) is a modern file indexer for HTTP web servers, providing a polished interface.
+#### Install h5ai
 
 1. Install PHP:
-
    ```bash
    sudo apt install php
-   php -v
    ```
 
-2. Update the Nginx configuration file:
-
-   ```nginx
+2. Update the Nginx configuration in `/etc/nginx/sites-enabled/default`:
+   ```yaml
    server {
        listen xxxx;
        server_name localhost;
@@ -78,7 +73,7 @@ This guide explains how to set up a web file server using [h5ai](https://larsjun
        index index.html /_h5ai/public/index.php;
 
        location ~ \.php$ {
-           fastcgi_pass unix:/run/php/php7.4-fpm.sock;  # Adjust based on your PHP version
+           fastcgi_pass unix:/run/php/php7.4-fpm.sock; # Check your PHP socket path
            include fastcgi_params;
            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
            fastcgi_param SCRIPT_NAME $fastcgi_script_name;
@@ -87,201 +82,169 @@ This guide explains how to set up a web file server using [h5ai](https://larsjun
    ```
 
 3. Reload Nginx:
-
    ```bash
    sudo service nginx reload
    ```
 
-4. Add SSL for secure access by updating the server block with SSL configurations.
-
 ---
 
-### Securing Directories with Password Protection
+### 3. Add Folder Password Protection
 
-1. Install `httpd-tools`:
+Protect specific folders with HTTP authentication:
 
+1. Install `apache2-utils`:
    ```bash
    sudo apt install apache2-utils
    ```
 
-2. Create a password file:
-
+2. Create a password file and user:
    ```bash
-   htpasswd -c /etc/nginx/passwd username
+   htpasswd -c /etc/nginx/passwd your-username
    ```
 
-3. Add the following block to the Nginx configuration:
-
-   ```nginx
+3. Update Nginx configuration:
+   ```yaml
    location /private {
        autoindex on;
-       autoindex_exact_size off;
-       autoindex_localtime on;
        auth_basic "Restricted Access";
        auth_basic_user_file /etc/nginx/passwd;
    }
    ```
 
 4. Reload Nginx:
-
    ```bash
    sudo service nginx reload
    ```
 
-Now, access to `/private` requires authentication.
-
 ---
 
-### Adding File Upload/Download and Cloud Features
+### 4. Integrate Aria2 and AriaNG
 
-For a full-featured cloud server, consider tools like:
+#### Install Aria2
+```bash
+sudo apt install aria2
+```
 
-- **Seafile**, **Kodexplorer**, **OwnCloud**, or **NextCloud**.
-- **FTP Options**: Set up `vsftpd` or `sftp` for file transfers.
-
-For Nginx-based file upload and download, refer to [this guide](https://www.yanxurui.cc/posts/server/2017-03-21-NGINX-as-a-file-server/).
-
----
-
-### Setting Up Aria2 + AriaNg + Nginx
-
-#### Installing Aria2
-
-1. Install Aria2:
-
-   ```bash
-   sudo apt install aria2
-   ```
-
-2. Configure Aria2:
-
+#### Configure Aria2
+1. Create configuration files:
    ```bash
    mkdir ~/.aria2
    vim ~/.aria2/aria2.conf
    ```
 
-   Add the following:
-
-   ```ini
-   dir=/home/username/aria2/download
-   file-allocation=trunc
-   continue=true
-   daemon=true
+2. Add the following:
+   ```yaml
+   dir=/home/your-username/aria2/download
    enable-rpc=true
-   rpc-allow-origin-all=true
    rpc-listen-all=true
    rpc-listen-port=6800
-   rpc-secret=<your_rpc_password>
+   rpc-secret=your_rpc_password
+   file-allocation=none
+   continue=true
+   max-concurrent-downloads=10
    ```
-
-3. Start Aria2:
-
+3. Run Aria2:
    ```bash
-   aria2c --conf-path="/home/username/.aria2/aria2.conf"
+   aria2c --conf-path="/home/your-username/.aria2/aria2.conf"
    ```
 
 ---
 
-#### Adding AriaNg as a Frontend
+#### Install and Configure AriaNG
 
-1. Download AriaNg:
+1. Download [AriaNG](https://github.com/mayswind/AriaNg/releases).
+2. Place files in `/home/your-username/aria2/AriaNG`.
 
-   ```bash
-   wget -P /home/username/aria2/AriaNg https://github.com/mayswind/AriaNg/releases/latest/download/AriaNg.zip
-   unzip AriaNg.zip -d /home/username/aria2/AriaNg
-   ```
+---
 
-2. Configure Nginx:
+#### Configure Nginx for Aria2
 
-   ```bash
-   sudo vim /etc/nginx/sites-available/aria.conf
-   ```
-
-   Add:
-
-   ```nginx
+1. Create a new Nginx configuration in `/etc/nginx/sites-available/aria.conf`:
+   ```yaml
    server {
        listen 443 ssl;
-       server_name yourdomain.com;
+       server_name your-domain.com;
 
-       root /home/username/aria2/AriaNg;
+       root /home/your-username/aria2/AriaNG;
 
        location ^~ /jsonrpc {
            proxy_pass http://127.0.0.1:6800/jsonrpc;
-           proxy_set_header X-Real-IP $remote_addr;
            proxy_set_header Host $http_host;
+           proxy_set_header X-Real-IP $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
        }
 
-       ssl_certificate /path/to/fullchain.pem;  # Managed by Certbot
+       ssl_certificate /path/to/fullchain.pem; # Adjust paths
        ssl_certificate_key /path/to/privkey.pem;
    }
    ```
 
-3. Enable the configuration and reload Nginx:
-
+2. Enable the configuration:
    ```bash
-   sudo ln -s /etc/nginx/sites-available/aria.conf /etc/nginx/sites-enabled/aria.conf
+   sudo ln -s /etc/nginx/sites-available/aria.conf /etc/nginx/sites-enabled/
    sudo service nginx reload
    ```
 
-4. Access AriaNg at `https://yourdomain.com`.
+3. Visit the web interface and configure RPC settings in AriaNG.
 
 ---
 
-### Running Aria2 as a Systemd Service
+### 5. Set Up SSL with Certbot
 
-1. Create a service file:
+1. Install Certbot:
+   ```bash
+   sudo apt install certbot
+   ```
 
+2. Obtain and configure an SSL certificate:
+   ```bash
+   sudo certbot --nginx
+   ```
+
+3. Update Nginx configurations to use SSL.
+
+---
+
+### 6. Run Aria2 as a Daemon
+
+1. Create a systemd service:
    ```bash
    sudo vim /etc/systemd/system/aria2.service
    ```
-
-   Add:
-
-   ```ini
+2. Add:
+   ```bash
    [Unit]
-   Description=Aria2c Download Manager
+   Description=Aria2c download manager
    After=network.target
 
    [Service]
-   User=username
-   ExecStart=/usr/bin/aria2c --conf-path=/home/username/.aria2/aria2.conf
+   User=your-username
+   ExecStart=/usr/bin/aria2c --conf-path=/home/your-username/.aria2/aria2.conf
    Restart=on-failure
 
    [Install]
    WantedBy=multi-user.target
    ```
-
-2. Enable and start the service:
-
+3. Enable and start the service:
    ```bash
-   sudo systemctl daemon-reload
-   sudo systemctl start aria2.service
    sudo systemctl enable aria2.service
+   sudo systemctl start aria2.service
    ```
 
 ---
 
-### Enhancing Development Workflow with Samba, SSHFS, or NFS
+### 7. Local Development Options
 
-For local development:
-
-- **Samba**: Ideal for Linux-Windows file sharing.
-- **NFS**: Best for Linux-to-Linux setups.
-- **SSHFS**: Mount remote directories over SSH:
-
+1. Use **samba** or **NFS** for local file sharing.
+2. For SSHFS:
    ```bash
-   sshfs user@remote:/path/to/share /local/mount/point
+   sshfs user@host:/path/to/share /local/mount/point
    ```
-
    Unmount with:
-
    ```bash
    sudo umount /local/mount/point
    ```
 
 ---
 
-### Conclusion
-
-This guide walks you through setting up a robust web file server with modern directory indexing, secure file management, and download/upload capabilities. Tools like h5ai and Aria2 provide seamless functionality, while Nginx ensures scalability and performance. Explore further enhancements to suit your needs!
+By following this guide, you can successfully set up a secure, functional file server, integrate powerful tools like Aria2 and AriaNG, and enable seamless file management both locally and remotely.
