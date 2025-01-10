@@ -32,23 +32,18 @@ HPC clusters are shared environments where multiple users run diverse tasks. Thi
 
 ---
 
-### **Why Use Singularity Instead of Docker for HPC?**
+### **Why Use Singularity for HPC?**
 
-At first, I assumed **Docker** would work perfectly for HPC. I built a Docker image, set up a user inside it, and configured my environment. However, when I tried to run it on the cluster, I encountered these issues:
+Containers solve many problems in HPC environments:
+1. **Dependency Conflicts**: Applications often require specific libraries that may not be installed on the cluster.
+2. **No Root Privileges**: Most HPC users lack `sudo` access, making it hard to install system-level software.
+3. **Reproducibility**: Containers ensure the environment is consistent across systems.
 
-1. **Root Privileges**:  
-   Docker containers require root privileges to run. This is a security risk for shared HPC systems and is often disabled by cluster administrators.
-
-2. **Isolation vs Integration**:  
-   Docker isolates the container from the host system, which is great for production environments but problematic for HPC. Singularity, on the other hand:
-   - **Integrates** with the host system.
-   - By default, mounts the host’s home directory and environment variables into the container.
-   - Makes it easy to access your files and host-level tools (e.g., Conda environments).
-
-3. **Designed for HPC**:  
-   Singularity was specifically designed for HPC. It:
-   - Runs without requiring elevated privileges.
-   - Provides seamless access to host resources, including GPUs and shared filesystems.
+**Why not Docker?**
+Docker isolates the container from the host and requires root privileges to run, which makes it unsuitable for shared HPC systems. **Singularity**, on the other hand:
+- Integrates seamlessly with the host system (e.g., mounts home directories by default).
+- Runs without root privileges, making it safer and compatible with shared environments.
+- Allows easy access to host-level resources like GPUs, shared filesystems, and user-installed environments (e.g., Conda).
 
 ### **Key Difference Between Docker and Singularity**
 
@@ -71,23 +66,38 @@ For example:
 
 ---
 
-### **Step-by-Step Guide to Using Singularity**
+### **Step-by-Step Guide: From Docker to Singularity**
 
-#### **1. Build a Docker Container**
-Start with a Docker image and install required `sudo` packages:
+#### **1. Save a Running Docker Container as an Image**
+1. **Run and Configure the Docker Container**:
+   Start a Docker container:
+   ```bash
+   docker run -it nvidia/cuda:11.8.0-base-ubuntu20.04 bash
+   ```
+   Inside the container, install system-level dependencies:
+   ```bash
+   apt-get update && apt-get install -y libjpeg-dev python3 python3-pip
+   pip install torch torchvision
+   ```
+
+2. **Save the Running Container as a Docker Image**:
+   Get the container ID:
+   ```bash
+   docker ps
+   ```
+   Commit the running container:
+   ```bash
+   docker commit <container_id> cuda_image
+   ```
+
+
+#### **2. Convert the Docker Image to a Singularity SIF File**
+Use Singularity to convert the Docker image:
 ```bash
-docker pull nvidia/cuda:11.8.0-base-ubuntu20.04
-docker run -it nvidia/cuda:11.8.0-base-ubuntu20.04 bash
+singularity build cuda_image.sif docker-daemon://cuda_image:latest
 ```
-Inside the Docker container:
-```bash
-apt-get update && apt-get install -y libjpeg-dev python3 python3-pip
-pip install torch torchvision
-```
-Save the image locally:
-```bash
-docker save cuda_image -o cuda_image.tar
-```
+
+---
 
 #### **2. Convert Docker Image to Singularity**
 Convert the Docker image to a Singularity SIF file:
@@ -107,10 +117,28 @@ singularity exec --bind /home/user:/home/user cuda_image.sif bash -c "
 
 ---
 
-### **Managing Tasks with HTCondor**
+### **Running Tasks with HTCondor**
 
-#### **1. HTCondor Submit File**
-Write a submission file for your task:
+#### **1. Wrapper Script**
+The wrapper script is executed for each task submission. Ensure it uses the proper shebang:
+```bash
+#!/usr/bin/bash
+
+# Load Conda and activate the environment
+export PATH="/home/user/miniconda3/bin:$PATH"
+source /home/user/miniconda3/etc/profile.d/conda.sh
+conda activate my_env
+
+# Run the Singularity container and execute the Python script
+singularity exec --bind /home/user:/home/user cuda_image.sif bash -c "
+  source /home/user/miniconda3/etc/profile.d/conda.sh &&
+  conda activate my_env &&
+  python /home/user/code/train.py
+"
+```
+
+#### **2. HTCondor Submit File**
+Create a submission file for your task:
 ```plaintext
 executable = wrapper.sh
 output     = output/task.out
@@ -121,16 +149,9 @@ Requirements = (CUDADeviceName == "NVIDIA A100 80GB PCIe")
 queue
 ```
 
-#### **2. Wrapper Script**
-This script sets up the environment and runs the task:
+Submit the task:
 ```bash
-#!/bin/bash
-
-export PATH="/home/user/miniconda3/bin:$PATH"
-source /home/user/miniconda3/etc/profile.d/conda.sh
-conda activate my_env
-
-singularity exec --bind /home/user:/home/user cuda_image.sif python /home/user/code/train.py
+condor_submit task.sub
 ```
 
 #### **3. Monitor Jobs**
@@ -165,27 +186,33 @@ Submit the job:
 ```bash
 sbatch task.slurm
 ```
+### **Comparing HTCondor and Slurm**
+
+| Feature                | HTCondor                                | Slurm                                     |
+|------------------------|-----------------------------------------|------------------------------------------|
+| **Best Use Case**      | High-throughput, independent tasks      | Distributed, tightly coupled tasks       |
+| **GPU Support**        | Yes                                    | Yes                                      |
+| **Ease of Use**        | Simple for independent jobs             | Better for multi-node configurations     |
+| **Distributed Training**| Not optimized for communication-heavy jobs | Supports MPI, NCCL, Gloo                 |
 
 ---
 
-### **Distributed Training and InfiniBand**
+### **Distributed Training with Singularity**
 
-Distributed training requires efficient GPU-to-GPU communication, especially across nodes. Key tools include:
-1. **NCCL**: Optimized for NVIDIA GPUs.
-2. **Gloo**: General-purpose communication.
+For distributed training, tools like **NCCL**, **Gloo**, and **MPI** are critical:
+1. **NCCL**: Best for multi-GPU training on NVIDIA hardware.
+2. **Gloo**: General-purpose communication for PyTorch.
 3. **MPI**: High-performance communication for multi-node setups.
 
 **Why InfiniBand?**
-- Standard Ethernet introduces communication bottlenecks.
-- InfiniBand provides high-speed, low-latency connections, essential for scaling distributed training.
+- Standard Ethernet introduces bottlenecks in distributed training.
+- InfiniBand provides high-speed, low-latency connections for scaling training across nodes.
 
 ---
 
 ### **Conclusion**
 
-Using Singularity, Docker, HTCondor, and Slurm has made it possible to run complex tasks efficiently on HPC clusters. Singularity’s integration with the host system, combined with Conda environments and workload managers like HTCondor and Slurm, provides a scalable and reproducible workflow. For anyone exploring these tools, remember:
-- Use Singularity for `sudo`-level packages.
-- Leverage the host system for user-level tools and datasets.
+Singularity simplifies the process of running containerized tasks on HPC systems. By combining Singularity with HTCondor and Slurm, you can efficiently manage high-throughput and distributed workloads. Use Docker for building containers, but leverage Singularity for running them in HPC environments. And remember: only include system-level dependencies in the container, while keeping user-level tools and data on the host system.
 
 For more information:
 - [Singularity Documentation](https://sylabs.io/docs/)
@@ -194,4 +221,136 @@ For more information:
 - [Slurm Documentation](https://slurm.schedmd.com/documentation.html)
 
 ---
+
+
+---
+
+### **From Docker to Singularity: Setting Up and Managing Tasks with HTCondor and Slurm**
+
+When I first started using my university’s computing cluster, I realized I needed to set up environments for my tasks. My first thought was to use Docker, but I quickly learned that Docker's approach isn't compatible with HPC clusters. This led me to explore **Singularity**, a container solution specifically designed for HPC environments. In this post, I’ll explain why Singularity is better suited for HPC, how to build and convert Docker containers to Singularity, and how to manage tasks with **HTCondor** and **Slurm**.
+
+---
+
+### **Why Use Singularity for HPC?**
+
+Containers solve many problems in HPC environments:
+1. **Dependency Conflicts**: Applications often require specific libraries that may not be installed on the cluster.
+2. **No Root Privileges**: Most HPC users lack `sudo` access, making it hard to install system-level software.
+3. **Reproducibility**: Containers ensure the environment is consistent across systems.
+
+**Why not Docker?**
+Docker isolates the container from the host and requires root privileges to run, which makes it unsuitable for shared HPC systems. **Singularity**, on the other hand:
+- Integrates seamlessly with the host system (e.g., mounts home directories by default).
+- Runs without root privileges, making it safer and compatible with shared environments.
+- Allows easy access to host-level resources like GPUs, shared filesystems, and user-installed environments (e.g., Conda).
+
+**Best Practice for Singularity in HPC**:
+- Only include system-level software (requiring `sudo`) in the container.
+- Use the host for user-level tools like Conda, code, and datasets.
+
+---
+
+### **Step-by-Step Guide: From Docker to Singularity**
+
+#### **1. Save a Running Docker Container as an Image**
+1. **Run and Configure the Docker Container**:
+   Start a Docker container:
+   ```bash
+   docker run -it nvidia/cuda:11.8.0-base-ubuntu20.04 bash
+   ```
+   Inside the container, install system-level dependencies:
+   ```bash
+   apt-get update && apt-get install -y libjpeg-dev python3 python3-pip
+   pip install torch torchvision
+   ```
+
+2. **Save the Running Container as a Docker Image**:
+   Get the container ID:
+   ```bash
+   docker ps
+   ```
+   Commit the running container:
+   ```bash
+   docker commit <container_id> cuda_image
+   ```
+
+3. **Save the Docker Image to a Tar File**:
+   ```bash
+   docker save cuda_image -o cuda_image.tar
+   ```
+
+#### **2. Convert the Docker Image to a Singularity SIF File**
+Use Singularity to convert the Docker image:
+```bash
+singularity build cuda_image.sif docker-daemon://cuda_image:latest
+```
+
+---
+
+### **Running Tasks with HTCondor**
+
+#### **1. Wrapper Script**
+The wrapper script is executed for each task submission. Ensure it uses the proper shebang:
+```bash
+#!/usr/bin/bash
+
+# Load Conda and activate the environment
+export PATH="/home/user/miniconda3/bin:$PATH"
+source /home/user/miniconda3/etc/profile.d/conda.sh
+conda activate my_env
+
+# Run the Singularity container and execute the Python script
+singularity exec --bind /home/user:/home/user cuda_image.sif bash -c "
+  source /home/user/miniconda3/etc/profile.d/conda.sh &&
+  conda activate my_env &&
+  python /home/user/code/train.py
+"
+```
+
+#### **2. HTCondor Submit File**
+Create a submission file for your task:
+```plaintext
+executable = wrapper.sh
+output     = output/task.out
+error      = output/task.err
+log        = output/task.log
+request_gpus = 1
+Requirements = (CUDADeviceName == "NVIDIA A100 80GB PCIe")
+queue
+```
+
+Submit the task:
+```bash
+condor_submit task.sub
+```
+
+---
+
+### **Running Tasks with Slurm**
+
+#### **1. Slurm Script**
+For Slurm, the submission script looks like this:
+```bash
+#!/usr/bin/bash
+#SBATCH --job-name=my_task
+#SBATCH --output=task.out
+#SBATCH --error=task.err
+#SBATCH --gres=gpu:1
+
+# Run the Singularity container and execute the Python script
+singularity exec --bind /home/user:/home/user cuda_image.sif bash -c "
+  source /home/user/miniconda3/etc/profile.d/conda.sh &&
+  conda activate my_env &&
+  python /home/user/code/train.py
+"
+```
+
+Submit the job:
+```bash
+sbatch task.slurm
+```
+
+---
+
+
 
