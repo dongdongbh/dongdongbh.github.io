@@ -9,7 +9,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: Setting Up a Nebula Overlay Network with Syncthing
+description: From Docker to Singularity: Setting Up and Managing Tasks with HTCondor and Slurm
 ---
 
 
