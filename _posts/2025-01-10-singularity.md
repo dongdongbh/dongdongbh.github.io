@@ -9,7 +9,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: From Docker to Singularity: Setting Up and Managing Tasks with HTCondor and Slurm
+description: From Docker to Singularity\: Setting Up and Managing Tasks with HTCondor and Slurm
 ---
 
 
