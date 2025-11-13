@@ -8,6 +8,7 @@ gem "webrick", "~> 1.7"
 
 gem 'faraday-retry'
 gem "erb", "~> 4.0"
+gem "activesupport", "~> 7.2"
 
 group :jekyll_plugins do
   gem "jekyll-admin"
