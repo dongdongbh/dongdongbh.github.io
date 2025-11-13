@@ -443,11 +443,11 @@ TD is not guarantee converge
 
 convergence of gradient TD learning
 
-![convergence of gradient TD learning](/home/dd/.config/Typora/typora-user-images/1558081004285.png)
+> _Chart available in the [PDF notes](../assets/pdf/DS_RL.pdf); inline image removed to avoid broken local paths._
 
 Convergence of Control Algorithms
 
-![1558081180861](/home/dd/.config/Typora/typora-user-images/1558081180861.png)
+> _Refer to the PDF version for the original convergence diagram._
 
 ### Batch reinforcement learning
 

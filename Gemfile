@@ -7,6 +7,7 @@ gem "minimal-mistakes-jekyll", :git => "https://github.com/mmistakes/minimal-mis
 gem "webrick", "~> 1.7"
 
 gem 'faraday-retry'
+gem "erb", "~> 6.0"
 
 group :jekyll_plugins do
   gem "jekyll-admin"
@@ -15,4 +16,3 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "jekyll-include-cache"
 end
-

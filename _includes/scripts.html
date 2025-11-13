@@ -18,6 +18,10 @@
   {%- endcase -%}
 {% endif %}
 
+{% if page.math or page.katex or site.mathjax %}
+  {% include mathjax.html %}
+{% endif %}
+
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
 
