@@ -38,7 +38,7 @@ __Specialized courses__ included automatic control theory, signal and system ana
 ### Teaching Assistant  　　 　　<span style="float:right;">__08/2023-present__</span>  
 **Syracuse University**  
 **Department**: Department of Electrical Engineering and Computer Science<br>
-**Course**: CPS181: Introduction to Computing; CIS675: Design and Analysis of Algorithms<br>
+**Course**: CPS181: Introduction to Computing; CIS675: Design and Analysis of Algorithms CIS454: Software Implementation<br>
 
 ### Robotic Engineer　　　　　<span style="float:right;">__09/2022-07/2023__</span>  
 **Goertek Robotic Inc. (Shanghai)**  
