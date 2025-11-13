@@ -32,3 +32,6 @@ test/
 # Misc build noise
 *.log
 *.tmp
+
+# Agent instructions
+AGENTS.md
