@@ -163,7 +163,10 @@ Check GPU availability:
 ```bash
 condor_status -constraint 'CUDADeviceName == "NVIDIA A100 80GB PCIe"'
 ```
-
+Check GPU users:
+```bash
+condor_status -constraint 'CUDADeviceName == "NVIDIA A100 80GB PCIe" && State == "Claimed"' -af Name RemoteOwner
+```
 ---
 
 ### **Managing Tasks with Slurm**
