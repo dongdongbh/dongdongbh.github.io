@@ -9,6 +9,7 @@ gem "webrick", "~> 1.7"
 gem 'faraday-retry'
 gem "erb", "~> 4.0"
 gem "activesupport", "~> 7.2"
+gem 'jekyll-redirect-from'
 
 group :jekyll_plugins do
   gem "jekyll-admin"

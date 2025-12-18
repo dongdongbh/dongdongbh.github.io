@@ -1,10 +1,16 @@
 ---
 layout: archive
-title: "Page Archive"
+title: "All Pages"
 permalink: /page-archive/
 author_profile: false
 ---
 
-{% for post in site.pages %}
-  {% include archive-single.html %}
+<p>A complete listing of all content pages on this site.</p>
+
+{% assign sorted_pages = site.pages | where_exp: "page", "page.title != nil" | sort: "title" %}
+
+{% for page in sorted_pages %}
+  {% unless page.url contains '/assets/' or page.url contains '/tag-archive/' or page.url contains '/category-archive/' %}
+    {% include archive-single.html %}
+  {% endunless %}
 {% endfor %}

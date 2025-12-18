@@ -232,6 +232,8 @@ plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
   - jekyll-last-modified-at
+  - jekyll-redirect-from
+  - jekyll-sitemap
 
 # mimic GitHub Pages with --safe
 whitelist:
