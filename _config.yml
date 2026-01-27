@@ -29,6 +29,8 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : true
+after_footer_scripts:
+  - /assets/js/copy-code.js
 comments:
   provider               : "giscus" # "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
