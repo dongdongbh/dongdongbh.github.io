@@ -146,6 +146,7 @@ footer:
     - label: "X"
       icon: "fab fa-fw fa-x-twitter"
       url: "https://x.com/dongdongbh"
+      hide_label: true
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       url: "https://facebook.com/"
