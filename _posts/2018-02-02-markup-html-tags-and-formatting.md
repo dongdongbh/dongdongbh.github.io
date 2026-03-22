@@ -1,6 +1,6 @@
 ---
 title: "Comprehensive Markup and Styling Guide"
-sitemap: true
+sitemap: false
 categories:
   - Markup
 tags:

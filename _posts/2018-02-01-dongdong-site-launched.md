@@ -4,7 +4,8 @@ sitemap: true
 date: 2018-02-01
 comments: true
 categories:
-  - test
+  - Blog
+description: "How I built my personal website using Jekyll and GitHub Pages"
 tags:
   - content
 ---
