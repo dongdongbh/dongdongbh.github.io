@@ -81,6 +81,14 @@ search: false
   border-radius: 8px;
 }
 
+/* Archive pages (home, posts, tags) have no right TOC — let the feed
+   span the space the theme reserves for it, aligning with the masthead */
+@include breakpoint($large) {
+  .archive {
+    padding-right: 0;
+  }
+}
+
 /* Feed entries as soft cards */
 .list__item .archive__item {
   padding: 1em 1.25em;
