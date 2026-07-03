@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Custom skin — clean light, teal accent
+   ========================================================================== */
+
+/* Colors */
+$background-color: #ffffff !default;
+$text-color: #1a202c !default;
+$muted-text-color: #6b7280 !default;
+$primary-color: #0f766e !default;
+$border-color: #e5e7eb !default;
+$code-background-color: #f6f8fa !default;
+$code-background-color-dark: #eef2f6 !default;
+$form-background-color: #f9fafb !default;
+$footer-background-color: #f9fafb !default;
+$link-color: #0f766e !default;
+$link-color-hover: mix(#000, $link-color, 25%) !default;
+$link-color-visited: $link-color !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $link-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 85%) !default;
