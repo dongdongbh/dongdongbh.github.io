@@ -57,6 +57,12 @@ existing URLs.
   background, text, borders, and code-block syntax colors inside the custom
   skin. giscus `theme` set to `preferred_color_scheme`.
 - Feed spacing: more whitespace between entries; muted metadata line.
+- Modernization mandate (owner: current look feels dated/old-school):
+  beyond the skin swap, apply contemporary polish within the theme —
+  lighter borders, subtle card treatment on feed entries (soft radius,
+  hover elevation), a slimmer masthead, generous vertical rhythm, and
+  refined mobile spacing. No layout rewrites; all via the custom skin
+  and small SCSS overrides.
 
 ### 4. Reading experience & config cleanup
 
@@ -66,9 +72,9 @@ existing URLs.
 - Keep default single-column reading width for posts; `classes: wide`
   remains only on pages that need it (e.g., CV).
 - Remove unused `tech`/`research`/`docs` collections from `_config.yml`.
-- Out of scope: CV page redesign. Open question flagged to owner: the CV
-  lists `dli160@syr.edu` — confirm whether it should change. No edit
-  without confirmation.
+- Out of scope: CV page redesign. Owner confirmed both emails are current;
+  the CV contact line lists both `dli160@syr.edu` (academic affiliation)
+  and `dongdongbhbh@gmail.com` (permanent).
 
 ## Error handling / risks
 
