@@ -110,9 +110,13 @@ analytics:
 author:
   name             : "Dongda Li"
   avatar           :  "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Hello world!"
+  bio              : "RL/NCO → CV & VLM researcher · open-source builder"
   location         : "NY, US"
   email            : "dongdongbhbh@gmail.com"
+  links:
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=rIFpsA0AAAAJ"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -317,6 +321,7 @@ defaults:
       comments: true # true
       share: true
       related: true
+      show_date: true
   # _pages
   - scope:
       path: "_pages"
