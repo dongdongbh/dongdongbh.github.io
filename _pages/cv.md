@@ -13,7 +13,7 @@ date: 2023-08-01T11:48:41-04:00
 # Dongda Li   <span style="float:right;"><img src="../assets/images/profile.jpg" alt="Dongda Li" style="width: 300px;"></span>
 
 __Gender:__ Male<br>
-__E-mail:__ <dli160@syr.edu><br>
+__E-mail:__ <dli160@syr.edu> / <dongdongbhbh@gmail.com><br>
 __Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)<br>
 __Scholar:__ [Google scholar](https://scholar.google.com/citations?user=rIFpsA0AAAAJ&hl=en&oi=ao)
 
