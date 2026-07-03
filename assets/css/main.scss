@@ -265,4 +265,26 @@ search: false
     color: #d1d5db;
     border-color: #374151;
   }
+
+  /* Numbered blog pagination links */
+  .pagination {
+    ul li a {
+      color: #d1d5db;
+      border-color: #374151;
+
+      &:hover {
+        color: #2dd4bf;
+      }
+
+      &.current,
+      &.current.disabled {
+        color: #fff;
+        background-color: #0f766e;
+      }
+
+      &.disabled {
+        color: #4b5563;
+      }
+    }
+  }
 }
