@@ -47,3 +47,87 @@ search: false
     color: #f5f5f5;
   }
 }
+
+/* ==========================================================================
+   Modern polish (2026 refresh)
+   ========================================================================== */
+
+/* Slimmer, airier masthead */
+.masthead {
+  border-bottom: 1px solid #e5e7eb;
+}
+.masthead__inner-wrap {
+  padding: 0.6em 1em;
+}
+.site-title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Homepage intro strip */
+.home-intro {
+  margin: 0.5em 0 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #e5e7eb;
+}
+.home-intro p {
+  font-size: 1.05em;
+  line-height: 1.7;
+  max-width: 46em;
+}
+.home-intro__links .btn {
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 8px;
+}
+
+/* Feed entries as soft cards */
+.list__item .archive__item {
+  padding: 1em 1.25em;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 1.25em;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.list__item .archive__item:hover {
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+.archive__item-title {
+  margin-top: 0;
+  letter-spacing: -0.01em;
+}
+.archive__item-title a {
+  text-decoration: none;
+}
+.archive__item-excerpt {
+  color: #6b7280;
+}
+.page__meta {
+  color: #9ca3af;
+  font-size: 0.75em;
+}
+
+/* Reading rhythm on posts */
+.page__content {
+  line-height: 1.7;
+}
+.page__content p,
+.page__content li {
+  font-size: 0.95em;
+}
+.page__content h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Softer corners everywhere */
+.page__content pre,
+.page__content img,
+.notice,
+.notice--primary,
+.notice--info,
+.notice--warning,
+.notice--success,
+.notice--danger {
+  border-radius: 8px;
+}
