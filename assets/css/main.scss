@@ -131,3 +131,138 @@ search: false
 .notice--danger {
   border-radius: 8px;
 }
+
+/* ==========================================================================
+   Automatic dark mode (follows system preference)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #111827;
+    color: #d1d5db;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .page__title,
+  .archive__item-title,
+  .site-title,
+  .author__name {
+    color: #f3f4f6;
+  }
+
+  a { color: #2dd4bf; }
+  a:hover { color: #5eead4; }
+
+  /* Masthead + nav */
+  .masthead {
+    background-color: #111827;
+    border-bottom-color: #1f2937;
+  }
+  .masthead a,
+  .greedy-nav,
+  .greedy-nav a,
+  .greedy-nav .visible-links a:before {
+    background-color: #111827;
+    color: #d1d5db;
+  }
+  .greedy-nav a:hover { color: #2dd4bf; }
+  .greedy-nav .hidden-links {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  .greedy-nav .hidden-links a { background-color: #1f2937; }
+  .greedy-nav .hidden-links:before { border-color: transparent transparent #1f2937 transparent; }
+
+  /* Sidebar / author profile */
+  .author__bio,
+  .author__urls-wrapper button,
+  .sidebar,
+  .sidebar p,
+  .sidebar li {
+    color: #9ca3af;
+  }
+  .author__urls {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  .author__urls:before { border-color: transparent transparent #374151 transparent; }
+  .author__urls:after { border-color: transparent transparent #1f2937 transparent; }
+  .author__urls a { color: #d1d5db; }
+
+  /* Feed cards, borders, meta */
+  .home-intro { border-bottom-color: #1f2937; }
+  .list__item .archive__item {
+    border-color: #1f2937;
+    background-color: #151d2b;
+  }
+  .list__item .archive__item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  }
+  .archive__item-excerpt,
+  .page__meta,
+  .archive__subtitle {
+    color: #9ca3af;
+  }
+  .archive__subtitle { border-bottom-color: #1f2937; }
+  .page__content h2 { border-bottom-color: #1f2937; }
+
+  /* Code blocks */
+  .page__content pre,
+  .highlight,
+  .highlighter-rouge .highlight,
+  code.highlighter-rouge,
+  .page__content code {
+    background-color: #1f2937;
+    color: #e5e7eb;
+  }
+  .highlight .c, .highlight .c1, .highlight .cm { color: #8b949e; } /* comments */
+  .highlight .k, .highlight .kd, .highlight .kn { color: #ff7b72; } /* keywords */
+  .highlight .s, .highlight .s1, .highlight .s2 { color: #a5d6ff; } /* strings */
+  .highlight .nf, .highlight .nx { color: #d2a8ff; }                /* functions */
+  .highlight .mi, .highlight .mf { color: #79c0ff; }                /* numbers */
+
+  /* Tables */
+  .page__content table {
+    background-color: #151d2b;
+    border-color: #374151;
+  }
+  .page__content th { background-color: #1f2937; }
+  .page__content td { border-color: #374151; }
+
+  /* Notices */
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    background-color: #1f2937 !important;
+    color: #d1d5db !important;
+  }
+
+  /* Footer, search, TOC, pagination */
+  .page__footer {
+    background-color: #0d1320;
+    color: #9ca3af;
+  }
+  .page__footer footer { color: #9ca3af; }
+  .search-content { background-color: #111827; }
+  .search-content .search-input {
+    background-color: #111827;
+    color: #e5e7eb;
+  }
+  .toc {
+    background-color: #151d2b;
+    border-color: #1f2937;
+  }
+  .toc .nav__title { background-color: #0f766e; }
+  .toc .toc__menu a {
+    color: #9ca3af;
+    border-bottom-color: #1f2937;
+  }
+  .pagination--pager {
+    color: #d1d5db;
+    border-color: #374151;
+  }
+}
