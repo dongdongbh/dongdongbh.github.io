@@ -110,7 +110,7 @@ analytics:
 author:
   name             : "Dongda Li"
   avatar           :  "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "ML/CV & VLM researcher · open-source builder"
+  bio              : "ML / CV & VLM researcher<br>open-source builder"
   location         : "NY, US"
   email            : "dongdongbhbh@gmail.com"
   links:
