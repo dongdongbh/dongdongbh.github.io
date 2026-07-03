@@ -111,6 +111,14 @@ search: false
   border-bottom: 1px solid #e5e7eb;
 }
 
+/* Centered footer */
+.page__footer footer {
+  text-align: center;
+}
+.page__footer .social-icons {
+  justify-content: center;
+}
+
 /* Softer corners everywhere */
 .page__content pre,
 .page__content img,
