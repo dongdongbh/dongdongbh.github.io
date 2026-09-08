@@ -8,7 +8,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: Create your website on cloud using git, Nginx, Netdata, SSL, Certbot
+description: "Host a Jekyll website on a VPS with Git deployment, Nginx, HTTPS certificates from Certbot, and Netdata monitoring."
 ---
 
 

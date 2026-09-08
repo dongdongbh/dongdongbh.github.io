@@ -1,0 +1,81 @@
+{%- assign website_id = '/' | absolute_url | append: '#website' -%}
+{%- assign person_id = site.author.uri | append: '#person' -%}
+{%- assign webpage_id = canonical_url | append: '#webpage' -%}
+{%- assign page_schema_type = page.schema_type | default: 'WebPage' -%}
+{%- if paginator or page.layout == 'archive' or page.layout == 'tags' -%}
+  {%- assign page_schema_type = 'CollectionPage' -%}
+{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "alternateName": {{ site.author.alternate_names | jsonify }},
+      "url": {{ site.author.uri | jsonify }},
+      "image": {{ site.author.avatar | absolute_url | jsonify }},
+      "sameAs": {{ site.social.links | jsonify }}
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ website_id | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "alternateName": {{ site.masthead_title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "publisher": { "@id": {{ person_id | jsonify }} },
+      "inLanguage": {{ site.locale | replace: '_', '-' | jsonify }}
+    },
+    {
+      "@type": {{ page_schema_type | jsonify }},
+      "@id": {{ webpage_id | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ seo_title | jsonify }},
+      "description": {{ seo_description | jsonify }},
+      "isPartOf": { "@id": {{ website_id | jsonify }} },
+      "inLanguage": {{ seo_language | jsonify }}
+      {% if page_schema_type == 'ProfilePage' %},
+      "mainEntity": { "@id": {{ person_id | jsonify }} }
+      {% elsif og_type == 'article' %},
+      "mainEntity": { "@id": {{ canonical_url | append: '#article' | jsonify }} }
+      {% endif %}
+    }
+    {% if og_type == 'article' %},
+    {
+      "@type": "BlogPosting",
+      "@id": {{ canonical_url | append: '#article' | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "headline": {{ page.title | markdownify | strip_html | normalize_whitespace | jsonify }},
+      "description": {{ seo_description | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+      "author": { "@id": {{ person_id | jsonify }} },
+      "publisher": { "@id": {{ person_id | jsonify }} },
+      "mainEntityOfPage": { "@id": {{ webpage_id | jsonify }} },
+      "inLanguage": {{ seo_language | jsonify }}
+      {% if article_image %},
+      "image": {{ article_image | absolute_url | jsonify }}
+      {% endif %}
+      {% if page.videos %},
+      "video": [
+        {% for video in page.videos %}
+        {
+          "@type": "VideoObject",
+          "name": {{ video.name | jsonify }},
+          "description": {{ video.description | jsonify }},
+          "thumbnailUrl": {{ video.thumbnail | jsonify }},
+          "contentUrl": {{ video.content_url | jsonify }},
+          "uploadDate": {{ video.upload_date | date_to_xmlschema | jsonify }},
+          "duration": {{ video.duration | jsonify }},
+          "inLanguage": "en"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+      {% endif %}
+    }
+    {% endif %}
+  ]
+}
+</script>

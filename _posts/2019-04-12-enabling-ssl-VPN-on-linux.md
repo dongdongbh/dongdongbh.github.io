@@ -7,7 +7,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: Enabling ssl VPN on linux, set up HUAWEI VPN on linux
+description: "Access a Windows-only SSL VPN from Linux using a QEMU virtual machine and network bridging, with notes on Huawei and Sangfor clients."
 ---
 
 

@@ -9,7 +9,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: From Docker to Singularity-Setting Up and Managing Tasks with HTCondor and Slurm
+description: "Use Singularity containers on an HPC cluster and submit jobs with HTCondor or Slurm, with examples for moving from Docker environments."
 ---
 
 
@@ -224,5 +224,4 @@ For more information:
 - [Slurm Documentation](https://slurm.schedmd.com/documentation.html)
 
 ---
-
 

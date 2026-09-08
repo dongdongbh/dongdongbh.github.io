@@ -2,7 +2,7 @@
 title: "Dongda Li"
 layout: splash
 permalink: /cv/
-description: "Dongda Li"
+description: "Dongda Li's education, research experience, and publications in machine learning, reinforcement learning, and autonomous systems."
 date: 2023-08-01T11:48:41-04:00
 ---
 
@@ -119,5 +119,4 @@ National Key R&D Program of China (No.2018YFB1004003). 　　　　　　 　　
 ## Hobbies
 
 Reading, body building, swimming, cooking
-
 

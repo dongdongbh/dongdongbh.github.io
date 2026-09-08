@@ -7,6 +7,7 @@ tags:
   - content
   - tutorial
 toc: true
+description: "Create persistent names for Linux serial devices with udev rules, using device attributes to identify USB-to-serial adapters."
 ---
 
 This guide explains how to assign a custom name to a device node using **udev** rules. Follow the steps below to create a persistent and meaningful device name.

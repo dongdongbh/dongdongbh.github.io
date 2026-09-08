@@ -7,7 +7,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: hp laserjet 1020 plugin problem
+description: "Troubleshoot the HP LaserJet 1020 proprietary-plugin error on Linux and configure the printer with HPLIP."
 ---
 
 

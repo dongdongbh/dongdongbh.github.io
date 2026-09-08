@@ -6,7 +6,7 @@ categories:
 tags:
   - tutorial
 toc: true
-description: Some useful resource links
+description: "A collection of tutorials on Linux, Bash, regular expressions, problem solving, and graphic design."
 ---
 
 ## Tutorials set
@@ -23,5 +23,4 @@ description: Some useful resource links
 
 ## For fun
 * [Rubik's Cube Tutorial](https://ryanstutorials.net/rubiks-cube-tutorial/)
-
 

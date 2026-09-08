@@ -16,16 +16,16 @@ minimal_mistakes_skin    : "custom" # custom light skin, see _sass/minimal-mista
 
 # Site Settings
 locale                   : "en-HK"
-title                    : "Dongda's homepage"
-title_separator          : " "
+title                    : "Dongda Li"
+title_separator          : "|"
 name                     : "Dongda Li"
-description              : "Homepage of Dongda Li, an amazing website."
+description              : "Research notes and practical guides by Dongda Li on machine learning, Linux, and open-source software, including the Mindwtr GTD app."
 url                      : "https://dongdongbh.tech"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dongdongbh/dongdongbh.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Dongda's homepage"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : true
@@ -94,9 +94,12 @@ og_image                 : "/assets/images/og-default.png" # Open Graph/Twitter 
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Person
+  name                   : "Dongda Li"
   links: # An array of links to social media profiles
+    - "https://github.com/dongdongbh"
+    - "https://scholar.google.com/citations?user=rIFpsA0AAAAJ"
+    - "https://x.com/dongdongbh"
 
 # Analytics
 analytics:
@@ -109,6 +112,7 @@ analytics:
 # Site Author
 author:
   name             : "Dongda Li"
+  alternate_names  : ["李东达", "dongdongbh"]
   avatar           :  "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "ML / CV & VLM researcher<br>open-source builder"
   location         : "NY, US"
@@ -117,7 +121,7 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=rIFpsA0AAAAJ"
-  uri              :
+  uri              : "https://dongdongbh.tech/About/"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
@@ -165,6 +169,10 @@ include:
   - .well-known
   - _pages
 exclude:
+  - AGENTS.md
+  - scripts
+  - banner.js
+  - staticman.yml
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
@@ -293,6 +301,14 @@ compress_html:
 
 # Defaults
 defaults:
+  - scope:
+      path: "google666c99d8bc51b024.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "baidu_verify_CRSaXcVqvi.html"
+    values:
+      sitemap: false
   # _posts
   - scope:
       path: ""

@@ -7,11 +7,7 @@ tags:
   - mindful
 toc: true
 toc_label: "Table of Contents"
-description: For research beginner
----
-
-Here’s a revised version of your post for better flow, clarity, and grammatical correctness:
-
+description: "Notes for beginning researchers on reading papers, understanding methods, improving academic writing, and developing independent judgment."
 ---
 
 Recently, a friend of mine shared that he has learned a lot from my posts and GitHub repositories. Knowing that my work is helpful to others brings me immense joy and motivates me to continue updating my site.

@@ -7,7 +7,7 @@ tags:
   - content
   - tutorial
 toc: true
-description: Transfer files over a LAN between two computers, Efficient File Transfer Between Linux and Windows Systems.
+description: "Transfer files over a local network between Linux and Windows computers, with command-line examples and file-sharing options."
 ---
 
 

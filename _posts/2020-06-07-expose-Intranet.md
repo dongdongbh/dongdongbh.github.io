@@ -9,7 +9,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: Expose Intranet machine to outside
+description: "Use FRP and a server with a public IP address to reach a computer or web service behind a private network."
 ---
 
 

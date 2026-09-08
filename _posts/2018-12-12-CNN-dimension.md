@@ -7,7 +7,7 @@ math: true
 categories:
 tags:
   - note
-description: CNN dimension, channels, strides, padding
+description: "Calculate convolutional neural network output dimensions and understand how kernel size, channels, stride, and padding affect each layer."
 toc: true
 toc_label: "Table of Contents"
 ---
@@ -87,4 +87,3 @@ S_{out} &= (\frac{n+2p-f}{s}+1) * (\frac{n+2p-f}{s}+1) * C_o \\
 \end{aligned}
 \end{equation}
 $$
-

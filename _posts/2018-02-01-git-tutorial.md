@@ -7,7 +7,7 @@ tags:
   - git
   - tutorial
 toc: true
-description: git tutorial 
+description: "A Git command reference covering configuration, SSH keys, branches, remote repositories, and common version-control tasks."
 ---
 
 

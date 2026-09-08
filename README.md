@@ -27,6 +27,7 @@ Source for [https://dongdongbh.tech](https://dongdongbh.tech), a Jekyll site bui
 - Live preview: `bundle exec jekyll serve --livereload`
 - Production build check: `bundle exec jekyll build`
 - Sanity checks: `bundle exec jekyll doctor`
+- Generated SEO checks: `python3 scripts/check-seo.py` after a production build. CI runs this before uploading the site.
 - Math-heavy posts rely on `_includes/mathjax.html`; keep LaTeX syntax valid (`$...$` inline, `$$...$$` block) when editing.
 
 ## Deployment
@@ -42,3 +43,12 @@ Use `git push all` locally to update both GitHub and the server remote in one co
 - Posts/pages use YAML front matter with `title`, `excerpt`, `categories`, `tags`, and `toc` fields in sentence case.
 - Keep assets organized under `assets/` and `_sass/`; avoid checking in `_site/` or other generated files.
 - Update screenshots or PDFs referenced from posts whenever you change substantive visual content.
+
+## Search metadata
+
+- Give posts a specific `description`; the site uses it for search/social metadata and archive summaries. Add `excerpt` when the automatic first paragraph is unsuitable for feeds.
+- Keep established titles and permalinks. Use `last_modified_at` for a substantive content update, not a routine build.
+- The shared SEO includes generate connected `Person`, `WebSite`, `WebPage`, and `BlogPosting` data. About uses `schema_type: ProfilePage`. Use `lang` only when a page differs from the site language.
+- A `videos` entry describes an actual player on that page: `name`, `description`, `thumbnail`, `content_url`, truthful first-publication `upload_date`, and ISO 8601 `duration`. Keep these in sync with the source and poster URLs.
+- Keep utility/demo pages crawlable with `noindex: true` and `sitemap: false`. Verification files stay published; repository-only configuration and scripts do not.
+- Cloudflare adds the production robots policy. Check the live response when changing crawler access. The research and measurement plan is in [docs/seo-geo-audit.md](docs/seo-geo-audit.md).

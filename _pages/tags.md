@@ -3,4 +3,6 @@ title: "Posts by Tag"
 permalink: /tags/
 layout: tags
 author_profile: true
+sitemap: false
+noindex: true
 ---

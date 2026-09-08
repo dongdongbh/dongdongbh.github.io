@@ -7,7 +7,7 @@ tags:
   - tutorial
 toc: true
 toc_label: "Table of Contents"
-description: Linux terminal shortcuts list
+description: "A reference for Linux terminal shortcuts and shell commands, including directory navigation and running multiple commands."
 ---
 
 
