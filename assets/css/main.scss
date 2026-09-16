@@ -375,7 +375,7 @@ body {
 
 @media (min-width: 64rem) {
   .cv-section-index {
-    grid-template-columns: 0.85fr 1fr 1.5fr 0.9fr 0.65fr 0.7fr;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .cv-focus-list {

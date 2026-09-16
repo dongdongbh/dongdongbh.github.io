@@ -28,7 +28,7 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <nav class="cv-section-index" aria-label="CV sections">
 <a href="#current-research">Research</a>
 <a href="#publications-and-manuscripts">Publications</a>
-<a href="#open-source-engineering">Open Source Engineering</a>
+<a href="#engineering">Engineering</a>
 <a href="#experience">Experience</a>
 <a href="#technical-skills">Skills</a>
 <a href="#service-and-awards">Service</a>
@@ -107,11 +107,11 @@ I also study the reliability of automatic robot-policy evaluators, including rew
 <p class="cv-entry__meta">2026</p>
 </div>
 
-## Open Source Engineering
+## Product Engineering & Open Source {#engineering}
 
 ### [Mindwtr](https://github.com/dongdongbh/Mindwtr) - Founder and Lead Engineer
 
-I founded and lead development of Mindwtr, an open-source, local-first, cross-platform productivity application with **25,000+ users, ~2,000 daily active users, and 2,000+ GitHub stars**. It is available across desktop, mobile, and web; its engineering spans flexible synchronization, optional AI functionality, MCP/REST integrations for agent and automation workflows, production release pipelines, and multi-platform deployment.
+I founded Mindwtr and lead its engineering. It is an open-source, local-first, cross-platform productivity application with **25,000+ users, ~2,000 daily active users, and 2,000+ GitHub stars**. Its engineering spans desktop, mobile, and web; flexible synchronization; optional AI functionality; MCP/REST integrations for agent and automation workflows; production release infrastructure; and multi-platform deployment.
 
 ## Experience
 
