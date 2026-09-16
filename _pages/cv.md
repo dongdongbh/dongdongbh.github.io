@@ -19,7 +19,7 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
 <a href="https://github.com/dongdongbh">GitHub</a>
 <a href="https://www.linkedin.com/in/dongda-li-509334247/">LinkedIn</a>
-<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=b014968b">Download CV</a>
+<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=8d74d0a7">Download CV</a>
 </nav>
 </div>
 <img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
@@ -180,7 +180,7 @@ Robotic navigation and control.</p>
 ## Technical Skills
 
 - **Programming:** Python, C/C++, TypeScript, Rust
-- **Machine Learning:** PyTorch, Transformers, CLIP/SigLIP-family models, reinforcement learning, multimodal evaluation
+- **Machine Learning:** PyTorch, Transformers, reinforcement learning, multimodal evaluation
 - **Agentic AI Systems:** LLM tool use, agent workflows, MCP, REST APIs
 - **Systems:** Linux, CUDA-based ML workflows, Git, HPC and cluster-based experimentation
 - **Robotics:** ROS, perception, SLAM, navigation, motion planning, and control
