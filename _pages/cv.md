@@ -1,5 +1,5 @@
 ---
-title: "Dongda Li"
+title: "VLM & Multimodal AI Researcher"
 layout: splash
 permalink: /cv/
 description: "Dongda Li is a PhD researcher at Syracuse University working on vision-language models, multimodal robustness, and embodied AI evaluation."
@@ -18,7 +18,8 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <a href="mailto:dli160@syr.edu">Email</a>
 <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
 <a href="https://github.com/dongdongbh">GitHub</a>
-<a href="https://dongdongbh.tech">Website</a>
+<a href="https://www.linkedin.com/in/dongda-li-509334247/">LinkedIn</a>
+<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}">Download CV</a>
 </nav>
 </div>
 <img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
@@ -67,7 +68,7 @@ Advisor: <a href="https://ecs.syracuse.edu/faculty-staff/senem-velipasalar">Sene
 
 <div class="cv-entry cv-entry--lead">
 <div>
-<h3>PhD Researcher / Research Assistant</h3>
+<h3>PhD Researcher</h3>
 <p><strong>Syracuse University</strong>, Department of Electrical Engineering and Computer Science</p>
 </div>
 <p class="cv-entry__meta">August 2023 - present</p>
@@ -99,9 +100,9 @@ I also study the reliability of automatic robot-policy evaluators, including rew
 
 <div class="cv-entry cv-entry--featured">
 <div>
-<h3>NSF ACCESS Discover Allocation - Principal Investigator</h3>
+<h3>NSF ACCESS-CI Discover Allocation - Principal Investigator</h3>
 <p><em>Efficient Evidence Bottlenecks for Compositional Vision-Language Understanding</em></p>
-<p>Awarded an ACCESS Discover research computing allocation supporting experiments on efficient compositional vision-language models.</p>
+<p>Awarded an ACCESS-CI Discover research computing allocation supporting experiments on efficient compositional vision-language models.</p>
 </div>
 <p class="cv-entry__meta">2026</p>
 </div>
@@ -178,7 +179,7 @@ Robotic navigation and control.</p>
 
 ## Technical skills
 
-- **Programming:** Python, C/C++
+- **Programming:** Python, C/C++, TypeScript, Rust
 - **Machine learning:** PyTorch, Transformers, CLIP/SigLIP-family models, multimodal evaluation, statistical learning
 - **Agentic AI systems:** LLM tool use, agent workflows, MCP, REST APIs
 - **Systems:** Linux, CUDA-based ML workflows, Git, HPC and cluster-based experimentation

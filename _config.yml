@@ -99,6 +99,7 @@ social:
   links: # An array of links to social media profiles
     - "https://github.com/dongdongbh"
     - "https://scholar.google.com/citations?user=rIFpsA0AAAAJ"
+    - "https://www.linkedin.com/in/dongda-li-509334247/"
     - "https://x.com/dongdongbh"
 
 # Analytics
@@ -135,7 +136,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "dongda-li-509334247"
   pinterest        :
   soundcloud       :
   stackoverflow    : # "8618984/dongdongbh" # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
