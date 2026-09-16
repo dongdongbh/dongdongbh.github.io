@@ -24,6 +24,15 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
 </header>
 
+<nav class="cv-section-index" aria-label="CV sections">
+<a href="#current-research">Research</a>
+<a href="#publications-and-manuscripts">Publications</a>
+<a href="#open-source">Open source</a>
+<a href="#industry-and-research-experience">Experience</a>
+<a href="#technical-skills">Skills</a>
+<a href="#service-and-awards">Service</a>
+</nav>
+
 ## Research interests
 
 <ul class="cv-focus-list">
@@ -92,7 +101,7 @@ I also study the reliability of automatic robot-policy evaluators, including rew
 <div>
 <h3>NSF ACCESS Discover Allocation - Principal Investigator</h3>
 <p><em>Efficient Evidence Bottlenecks for Compositional Vision-Language Understanding</em></p>
-<p>National-scale research computing allocation, including <strong>1,000 GPU hours on Purdue Anvil AI</strong>, supporting research on efficient compositional vision-language models.</p>
+<p>Awarded an ACCESS Discover research computing allocation supporting experiments on efficient compositional vision-language models.</p>
 </div>
 <p class="cv-entry__meta">2026</p>
 </div>

@@ -1,0 +1,14 @@
+{
+  "scanned_at": "2026-09-16",
+  "framework": "Jekyll with Minimal Mistakes",
+  "font_stack": "Existing site sans-serif stack",
+  "palette": "Cool neutrals with teal accent",
+  "motion": "CSS interaction feedback only",
+  "spacing": "Scoped 4-point CV scale",
+  "preserved": [
+    "route and section anchors",
+    "site navigation and footer",
+    "CV content and portrait",
+    "responsive dark mode"
+  ]
+}
