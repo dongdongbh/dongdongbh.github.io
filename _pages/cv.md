@@ -109,9 +109,9 @@ I also study the reliability of automatic robot-policy evaluators, including rew
 
 ## Open Source Engineering
 
-### [Mindwtr](https://github.com/dongdongbh/Mindwtr) - Creator and Lead Maintainer
+### [Mindwtr](https://github.com/dongdongbh/Mindwtr) - Founder and Lead Engineer
 
-Mindwtr is an open-source, local-first, cross-platform productivity application with **25,000+ users, ~2,000 daily active users, and 2,000+ GitHub stars**. It is available across desktop, mobile, and web, with flexible synchronization, optional AI functionality, MCP/REST integrations for agent and automation workflows, production release pipelines, and multi-platform deployment.
+I founded and lead development of Mindwtr, an open-source, local-first, cross-platform productivity application with **25,000+ users, ~2,000 daily active users, and 2,000+ GitHub stars**. It is available across desktop, mobile, and web; its engineering spans flexible synchronization, optional AI functionality, MCP/REST integrations for agent and automation workflows, production release pipelines, and multi-platform deployment.
 
 ## Experience
 
