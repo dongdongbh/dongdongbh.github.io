@@ -19,7 +19,7 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
 <a href="https://github.com/dongdongbh">GitHub</a>
 <a href="https://www.linkedin.com/in/dongda-li-509334247/">LinkedIn</a>
-<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=8889e966">Download CV</a>
+<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=b014968b">Download CV</a>
 </nav>
 </div>
 <img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
@@ -34,15 +34,15 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <a href="#service-and-awards">Service</a>
 </nav>
 
-## Research interests
+## Research Interests
 
 <ul class="cv-focus-list">
-<li>Vision-language models</li>
-<li>Multimodal robustness</li>
-<li>Compositional reasoning</li>
-<li>Embodied AI evaluation</li>
-<li>Statistical learning</li>
-<li>Autonomous systems</li>
+<li>Vision-Language Models</li>
+<li>Multimodal Robustness</li>
+<li>Compositional Reasoning</li>
+<li>Embodied AI Evaluation</li>
+<li>Reinforcement Learning</li>
+<li>Autonomous Systems</li>
 </ul>
 
 ## Education
@@ -64,7 +64,7 @@ Advisor: <a href="https://ecs.syracuse.edu/faculty-staff/senem-velipasalar">Sene
 <p class="cv-entry__meta">September 2011 - June 2015</p>
 </div>
 
-## Current research
+## Current Research
 
 <div class="cv-entry cv-entry--lead">
 <div>
@@ -74,29 +74,29 @@ Advisor: <a href="https://ecs.syracuse.edu/faculty-staff/senem-velipasalar">Sene
 <p class="cv-entry__meta">August 2023 - present</p>
 </div>
 
-### Vision-language models and multimodal reliability
+### Vision-Language Models and Multimodal Reliability
 
 I study how multimodal models represent and use compositional information, particularly object attributes, relations, and role binding. My work analyzes CLIP, SigLIP 2, and related frozen dual encoders to identify where role information remains accessible in regional features and where it becomes inaccessible to deployed similarity scoring. I develop controlled probing and evaluation pipelines across SugarCrepe, SugarCrepe++, Winoground, synthetic spatial pairs, and real-image role-binding data, along with efficient crop-based and self-attention readouts.
 
-### Embodied AI evaluation
+### Embodied AI Evaluation
 
 I also study the reliability of automatic robot-policy evaluators, including reward models, VLM judges, and multimodal scoring systems. This work evaluates automatic methods on **5,106 real-robot episodes** against **3,284 double-blind human comparisons**, with an emphasis on human-ranking agreement, uncertainty, implementation sensitivity, and reproducibility.
 
-## Publications and manuscripts
+## Publications and Manuscripts
 
-### Manuscripts under review
+### Manuscripts Under Review
 
 1. **Dongda Li et al.** "The Readout, Not the Representation: Why Frozen Dual-Encoder Models Fail at Role Binding." *Under review at TMLR*, 2026.
 2. **Dongda Li et al.** "Do Automatic Robot-Policy Evaluators Recover the Human Ranking?" *Under review at ICLR 2027*.
 
-### Published work
+### Published Work
 
-1. **Dongda Li**, Zhaoquan Gu, Yuexuan Wang, Changwei Ren, and Francis C.M. Lau. "One Model Packs Thousands of Items with Recurrent Conditional Query Learning." *Knowledge-Based Systems*, 235:107683, 2022.
+1. **Dongda Li**, Zhaoquan Gu, Yuexuan Wang, Changwei Ren, and Francis C.M. Lau. "One Model Packs Thousands of Items with Recurrent Conditional Query Learning." *Knowledge-Based Systems*, 235:107683, 2022. Reinforcement-learning-based neural combinatorial optimization.
 2. Zhaoquan Gu, **Dongda Li**, Nadra Guizani, Xiaojiang Du, and Zhihong Tian. "An Aerial-Computing-Assisted Architecture for Large-Scale Sensor Networks." *IEEE Wireless Communications*, 28(5):43-49, 2021.
 3. **Dongda Li**, Yuexuan Wang, Zhaoquan Gu, Tong Shen, Tianhao Wei, Yongqin Fu, Heming Cui, Mingli Song, and Francis C.M. Lau. "Adler: A Resilient, High-Performance and Energy-Efficient UAV-Enabled Sensor System." [HKU Technical Report TR-2018-01](http://www.cs.hku.hk/research/techreps/document/TR-2018-01.pdf).
 4. Tong Shen, Yuexuan Wang, Zhaoquan Gu, **Dongda Li**, Zhen Cao, Heming Cui, and Francis C.M. Lau. "Alano: An Efficient Neighbor Discovery Algorithm in an Energy-Restricted Large-Scale Network." *IEEE International Conference on Mobile Ad-hoc and Sensor Systems*, 2018.
 
-## Research funding and computing allocations
+## Research Funding and Computing Allocations
 
 <div class="cv-entry cv-entry--featured">
 <div>
@@ -137,7 +137,7 @@ CPS 181 Introduction to Computing; CIS 454 Software Implementation; CIS 675 Desi
 <div>
 <h3>Guangzhou University</h3>
 <p><strong>Research Assistant</strong> &middot; Cyberspace Institute of Advanced Technology<br>
-Reinforcement learning, neural combinatorial optimization, and meta-learning.</p>
+Reinforcement learning, neural combinatorial optimization, meta-learning, and learning-based combinatorial decision making.</p>
 </div>
 <p class="cv-entry__meta">June 2018 - August 2022</p>
 </div>
@@ -169,7 +169,7 @@ Robotic navigation and control.</p>
 <p class="cv-entry__meta">July 2015 - June 2016</p>
 </div>
 
-## Selected projects
+## Selected Projects
 
 - Collaborative analysis and autonomous decision technology for intelligent manufacturing big data - National Key R&D Program of China (2018-2021).
 - Software-defined wireless sensor network system (2017-2018).
@@ -177,15 +177,15 @@ Robotic navigation and control.</p>
 - [MBZIRC 2017 International Robotics Challenge](https://www.youtube.com/watch?v=780gnSG1nXs).
 - Autonomous takeoff and landing of an intelligent quadrotor - undergraduate thesis (2014-2015).
 
-## Technical skills
+## Technical Skills
 
 - **Programming:** Python, C/C++, TypeScript, Rust
-- **Machine learning:** PyTorch, Transformers, CLIP/SigLIP-family models, multimodal evaluation, statistical learning
-- **Agentic AI systems:** LLM tool use, agent workflows, MCP, REST APIs
+- **Machine Learning:** PyTorch, Transformers, CLIP/SigLIP-family models, reinforcement learning, multimodal evaluation
+- **Agentic AI Systems:** LLM tool use, agent workflows, MCP, REST APIs
 - **Systems:** Linux, CUDA-based ML workflows, Git, HPC and cluster-based experimentation
 - **Robotics:** ROS, perception, SLAM, navigation, motion planning, and control
 
-## Service and awards
+## Service and Awards
 
 - Reviewer, Journal of Contemporary Mathematics, 2024
 - Reviewer, IEEE Journal on Selected Areas in Communications, 2022
