@@ -2,121 +2,190 @@
 title: "Dongda Li"
 layout: splash
 permalink: /cv/
-description: "Dongda Li's education, research experience, and publications in machine learning, reinforcement learning, and autonomous systems."
+description: "Dongda Li is a PhD researcher at Syracuse University working on vision-language models, multimodal robustness, and embodied AI evaluation."
 date: 2023-08-01T11:48:41-04:00
+last_modified_at: 2026-09-16T12:00:00-04:00
 ---
 
+<div class="cv-page" markdown="1">
 
-<!-- ### [__PDF Version__](../assets/pdf/cv.pdf){:style="float: right;color:#c14b1d;"} -->
+<header class="cv-hero">
+<div class="cv-hero__content">
+<h1>Dongda Li</h1>
+<p><strong>PhD researcher in vision-language models and multimodal learning</strong></p>
+<p>I am a PhD student in Computer &amp; Information Science &amp; Engineering at Syracuse University. My current research focuses on vision-language models, multimodal robustness, compositional reasoning, and reliable evaluation of multimodal systems. My previous work spans reinforcement learning, robotics, wireless sensor networks, and autonomous systems.</p>
+<nav class="cv-contact" aria-label="Professional profiles">
+<a href="mailto:dli160@syr.edu">Email</a>
+<a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
+<a href="https://github.com/dongdongbh">GitHub</a>
+<a href="https://dongdongbh.tech">Website</a>
+</nav>
+</div>
+<img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
+</header>
 
-<br>
-# Dongda Li   <span style="float:right;"><img src="../assets/images/profile.jpg" alt="Dongda Li" style="width: 300px;"></span>
+## Research interests
 
-__Gender:__ Male<br>
-__E-mail:__ <dli160@syr.edu> / <dongdongbhbh@gmail.com><br>
-__Website:__ [https://dongdongbh.tech](https://dongdongbh.tech)<br>
-__Scholar:__ [Google scholar](https://scholar.google.com/citations?user=rIFpsA0AAAAJ&hl=en&oi=ao)
-
-
-## Research Interests
-
-Statistical Learning and Autonomous Systems
+<ul class="cv-focus-list">
+<li>Vision-language models</li>
+<li>Multimodal robustness</li>
+<li>Compositional reasoning</li>
+<li>Embodied AI evaluation</li>
+<li>Statistical learning</li>
+<li>Autonomous systems</li>
+</ul>
 
 ## Education
 
-### Syracuse University      <span style="float:right;">__08/2023-present__</span>  
-Department of Electrical Engineering and Computer Science<br>
-**Advisor**:[Senem Velipasalar](https://ecs.syracuse.edu/faculty-staff/senem-velipasalar)<br>
-**PhD, major in <u>Computer Science</u>**
+<div class="cv-entry">
+<div>
+<h3>Syracuse University</h3>
+<p>PhD in Computer &amp; Information Science &amp; Engineering<br>
+Advisor: <a href="https://ecs.syracuse.edu/faculty-staff/senem-velipasalar">Senem Velipasalar</a></p>
+</div>
+<p class="cv-entry__meta">August 2023 - present<br><strong>Expected May 2028</strong></p>
+</div>
 
-### Xi'an University of Technology　　　　　　　　　<span style="float:right;">__09/2011-06/2015__</span>  
-**B.S., major in <u>Automation</u>**  
-**Advisor**: <u>Yingming YI</u>  
-__Specialized courses__ included automatic control theory, signal and system analysis, motion control technology, computer control technology, sensor technology, C++ language, embedded system, circuit theory, etc.
+<div class="cv-entry">
+<div>
+<h3>Xi'an University of Technology</h3>
+<p>B.E. in Automation</p>
+</div>
+<p class="cv-entry__meta">September 2011 - June 2015</p>
+</div>
 
-## Work Experience
-### Teaching Assistant  　　 　　<span style="float:right;">__08/2023-present__</span>  
-**Syracuse University**  
-**Department**: Department of Electrical Engineering and Computer Science<br>
-**Course**: CPS181: Introduction to Computing; CIS675: Design and Analysis of Algorithms; CIS454: Software Implementation<br>
+## Current research
 
-### Robotic Engineer　　　　　<span style="float:right;">__09/2022-07/2023__</span>  
-**Goertek Robotic Inc. (Shanghai)**  
-**Department**: Algorithm group, R&D Department<br>
-**Duty**: Robotic perception and control, planning, SLAM, system identification, trajectory planning.
+<div class="cv-entry cv-entry--lead">
+<div>
+<h3>PhD Researcher / Research Assistant</h3>
+<p><strong>Syracuse University</strong>, Department of Electrical Engineering and Computer Science</p>
+</div>
+<p class="cv-entry__meta">August 2023 - present</p>
+</div>
 
-### Robotic Engineer　　　　　　　　　　　　　　　　　　　<span style="float:right;">__07/2015-06/2016__</span>  
-**Beijing Zhonghangzhi Inc.**  
-**Department**: Control group, R&D Department<br>
-**Duty**: Robotic navigation and control
+### Vision-language models and multimodal reliability
 
-## Research Experience
-### Research Assistant　　　　　　　　　　　　　　　　　　　<span style="float:right;">__06/2018-08/2022__</span>  
+I study how multimodal models represent and use compositional information, particularly object attributes, relations, and role binding. My work analyzes CLIP, SigLIP 2, and related frozen dual encoders to identify where role information remains accessible in regional features and where it becomes inaccessible to deployed similarity scoring. I develop controlled probing and evaluation pipelines across SugarCrepe, SugarCrepe++, Winoground, synthetic spatial pairs, and real-image role-binding data, along with efficient crop-based and self-attention readouts.
 
-Cyberspace Institute of Advanced Technology  
-**Guangzhou University**  
-**Supervisors**: Zhaoquan Gu  
-**Research Area**: Reinforcement learning, Neural Combinatorial Optimization, Meta-learning
+### Embodied AI evaluation
 
-### Research Assistant　　　　　　　　　　　　　　　　　　　<span style="float:right;">__08/2017-05/2018__</span>  
+I also study the reliability of automatic robot-policy evaluators, including reward models, VLM judges, and multimodal scoring systems. This work evaluates automatic methods on **5,106 real-robot episodes** against **3,284 double-blind human comparisons**, with an emphasis on human-ranking agreement, uncertainty, implementation sensitivity, and reproducibility.
 
-The Department of Compute Science    
-__The University of HongKong__   
-**Supervisors**: [Francis C.M. Lau](https://i.cs.hku.hk/~fcmlau/), [Yuexuan Wang](https://i.cs.hku.hk/~amywang/) and Heming Cui    
-**Research Area**: Robotic Network, Wireless Sensor Network, Internet of Things
+## Publications and manuscripts
 
-### Research Assistant　　　　　　　　　　　　　　　　　　　<span style="float:right;">__07/2016-07/2017__</span>  
-Unmanned Aerial Vehicle Autonomous Control Institute   
-__Beijing Institute of Technology__   
-**Supervisor**: Defu Lin   
-**Research Area**: Unmanned Aerial Vehicle Control System, Navigation System, Data Fusion
+### Manuscripts under review
 
-## Publication
-* **Dongda Li**, Zhaoquan Gu, Yuexuan Wang, Changwei Ren, and Francis C.M. Lau. One model packs thousands of items with recurrent conditional query learning. *Knowledge-Based Systems*, 235:107683, 2022. ISSN 0950-7051.
-* Zhaoquan, Gu, **Dongda Li**, Nadra Guizani, Xiaojiang Du, and Zhihong Tian. "An Aerial-Computing-Assisted Architecture for Large-Scale Sensor Networks." *IEEE Wireless Communications* 28, no. 5 (2021): 43-49.
-* **Dongda Li**, Yuexuan Wang, Zhaoquan Gu, Tong Shen, Tianhao Wei, Yongqin Fu, Heming Cui, Mingli Song, Francis C. M. Lau. Adler: A Resilient, High-Performance and Energy-Efficient UAV-Enabled Sensor System. *[TR-2018-01](http://www.cs.hku.hk/research/techreps/document/TR-2018-01.pdf)*
-* Tong Shen, Yuexuan Wang, Zhaoquan Gu, **Dongda Li**, Zhen Cao, Heming Cui, Francis C.M. Lau. Alano: An Efficient Neighbor Discovery Algorithm In An Energy-Restricted Large-Scale Network. *IEEE International Conference on Mobile Ad-hoc and Sensor Systems*. 2018
+1. **Dongda Li et al.** "The Readout, Not the Representation: Why Frozen Dual-Encoder Models Fail at Role Binding." *Under review at TMLR*, 2026.
+2. **Dongda Li et al.** "Do Automatic Robot-Policy Evaluators Recover the Human Ranking?" *Under review at ICLR 2027*.
 
+### Published work
 
-## Research Projects:
-+ Research on Collaborative Analysis and Autonomous Decision Technology for Intelligent Manufacturing Big Data. 
-National Key R&D Program of China (No.2018YFB1004003). 　　　　　　 　　　           <span style="float:right;">__05/2018-04/2021__</span>  
-+ Software Defined Wireless Sensor Network System　　　　　　　　　　　　　　　　　　<span style="float:right;">__12/2017-03/2018__</span>  
-+ UAV-Enabled Sensor System　　　　　　　　　　　　　　　　　　　　　　　　　　　　  <span style="float:right;">__08/2017-11/2017__</span>  
-+ [MBZIRC](https://www.youtube.com/watch?app=desktop&v=780gnSG1nXs&ab_channel=MBZIRC)-2017 International Robotic Competition　<span style="float:right;">__01/2017-03/2017__</span>  
-+ Autonomous takeoff and landing of the intelligent quadrotor(Thesis)　　　　　　　　　<span style="float:right;">__12/2014-06/2015__</span>  
-+ Visual tracking gimbal system design　　　　　　　　　　　　　　　　　　　　　　　　 <span style="float:right;">__08/2014-11/2014__</span>  
-+ Simulated Flight Control System Based on SINS　　　　　　　　　　　　　　　　　　　  <span style="float:right;">__08/2013-12/2013__</span>  
-+ Two-wheel self-balancing vehicle　　　　　　　　　　　　　　　　　　　　　　　　　 　<span style="float:right;">__11/2012-06/2013__</span>  
-+ AVR-based multi-function smart vehicle　　　　　　　　　　　　　　　　　　　　　　 　<span style="float:right;">__08/2012-11/2012__</span>  
+1. **Dongda Li**, Zhaoquan Gu, Yuexuan Wang, Changwei Ren, and Francis C.M. Lau. "One Model Packs Thousands of Items with Recurrent Conditional Query Learning." *Knowledge-Based Systems*, 235:107683, 2022.
+2. Zhaoquan Gu, **Dongda Li**, Nadra Guizani, Xiaojiang Du, and Zhihong Tian. "An Aerial-Computing-Assisted Architecture for Large-Scale Sensor Networks." *IEEE Wireless Communications*, 28(5):43-49, 2021.
+3. **Dongda Li**, Yuexuan Wang, Zhaoquan Gu, Tong Shen, Tianhao Wei, Yongqin Fu, Heming Cui, Mingli Song, and Francis C.M. Lau. "Adler: A Resilient, High-Performance and Energy-Efficient UAV-Enabled Sensor System." [HKU Technical Report TR-2018-01](http://www.cs.hku.hk/research/techreps/document/TR-2018-01.pdf).
+4. Tong Shen, Yuexuan Wang, Zhaoquan Gu, **Dongda Li**, Zhen Cao, Heming Cui, and Francis C.M. Lau. "Alano: An Efficient Neighbor Discovery Algorithm in an Energy-Restricted Large-Scale Network." *IEEE International Conference on Mobile Ad-hoc and Sensor Systems*, 2018.
 
-## Professional and Volunteer Experience
-- **Reviewer**, Journal of Contemporary Mathematics (CM), 2024
-- **Reviewer**, IEEE Journal on Selected Areas in Communications (JSAC), 2022
-- **Reviewer**, IEEE International Conference on Intelligent Robots and Systems (IROS), 2020
-- **Volunteer Translator (English to Chinese)**, [CS285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) by [Sergey Levine](https://people.eecs.berkeley.edu/~svlevine/)
+## Research funding and computing allocations
 
-## Professional skills
+<div class="cv-entry cv-entry--featured">
+<div>
+<h3>NSF ACCESS Discover Allocation - Principal Investigator</h3>
+<p><em>Efficient Evidence Bottlenecks for Compositional Vision-Language Understanding</em></p>
+<p>National-scale research computing allocation, including <strong>1,000 GPU hours on Purdue Anvil AI</strong>, supporting research on efficient compositional vision-language models.</p>
+</div>
+<p class="cv-entry__meta">2026</p>
+</div>
 
-* Familiar with statistic learning theory and practice;
-* Familiar with the control, navigation, SLAM, motion planning algorithm ands application;
-* Familiar with Robot operating system(ROS) programming and application;
-* Master the C/C++ /Python /Pytorch, data structure, with good code preparation habits;
-* Master the Linux system programming;
-* Familiar with GIT and Academic Writing;
+## Open source
 
-## Language skills
-* __Chinese__: Native language
-* __English__: IELTS 7.0
+### [Mindwtr](https://github.com/dongdongbh/Mindwtr) - Creator and Lead Maintainer
 
-## Awards
-* __Champion__    [MBZIRC](https://youtu.be/Qvw5Z9baF-A?t=10s) 2017.　　　　　　　　　　　　　<span style="float:right;">__03/2017__</span>  
-* __Grand Prize__  The eighth Shaanxi province outstanding graduation design　　　　　　　　　　　　<span style="float:right;">__06/2015__</span>  
-* Second Prize  Xi'an University of Technology, 2014 Emerson "CONSIDER IT SOLVED"　　　　　　　<span style="float:right;">__08/2014__</span>  
-* Outstanding Officer of Automation Technology Association, Xi'an University of Technology　　　　　<span style="float:right;">__05/2013__</span>  
-* First Prize  The 21st session of the " Innovation Prix" science and technology competition　　　　　<span style="float:right;">__11/2012__</span>  
+Mindwtr is an open-source, local-first, cross-platform productivity application with **25,000+ users, approximately 2,000 daily active users, and 2,000+ GitHub stars**. It is available across desktop, mobile, and web, with flexible synchronization, optional AI functionality, MCP/REST automation, production release pipelines, and multi-platform deployment.
 
-## Hobbies
+## Industry and research experience
 
-Reading, body building, swimming, cooking
+<div class="cv-entry">
+<div>
+<h3>Robotics Engineer</h3>
+<p><strong>Goertek Inc. (Shanghai)</strong>, Algorithm Group, R&amp;D<br>
+Robotic perception and control, SLAM, motion planning, navigation, and trajectory planning.</p>
+</div>
+<p class="cv-entry__meta">September 2022 - July 2023</p>
+</div>
 
+<div class="cv-entry">
+<div>
+<h3>Teaching Assistant</h3>
+<p><strong>Syracuse University</strong><br>
+CPS 181 Introduction to Computing; CIS 454 Software Implementation; CIS 675 Design and Analysis of Algorithms.</p>
+</div>
+<p class="cv-entry__meta">August 2023 - present</p>
+</div>
+
+<div class="cv-entry">
+<div>
+<h3>Research Assistant</h3>
+<p><strong>Guangzhou University</strong>, Cyberspace Institute of Advanced Technology<br>
+Reinforcement learning, neural combinatorial optimization, and meta-learning.</p>
+</div>
+<p class="cv-entry__meta">June 2018 - August 2022</p>
+</div>
+
+<div class="cv-entry">
+<div>
+<h3>Research Assistant</h3>
+<p><strong>The University of Hong Kong</strong>, Department of Computer Science<br>
+Robotic networks, wireless sensor networks, and UAV-enabled sensing.</p>
+</div>
+<p class="cv-entry__meta">August 2017 - May 2018</p>
+</div>
+
+<div class="cv-entry">
+<div>
+<h3>Research Assistant</h3>
+<p><strong>Beijing Institute of Technology</strong>, UAV Autonomous Control Institute<br>
+UAV control systems, navigation, and data fusion.</p>
+</div>
+<p class="cv-entry__meta">July 2016 - July 2017</p>
+</div>
+
+<div class="cv-entry">
+<div>
+<h3>Robotics Engineer</h3>
+<p><strong>Beijing Zhonghangzhi Inc.</strong>, Control Group, R&amp;D<br>
+Robotic navigation and control.</p>
+</div>
+<p class="cv-entry__meta">July 2015 - June 2016</p>
+</div>
+
+## Selected projects
+
+- Collaborative analysis and autonomous decision technology for intelligent manufacturing big data - National Key R&D Program of China (2018-2021).
+- Software-defined wireless sensor network system (2017-2018).
+- UAV-enabled sensor system (2017).
+- [MBZIRC 2017 International Robotics Challenge](https://www.youtube.com/watch?v=780gnSG1nXs).
+- Autonomous takeoff and landing of an intelligent quadrotor - undergraduate thesis (2014-2015).
+
+## Technical skills
+
+- **Programming:** Python, C/C++
+- **Machine learning:** PyTorch, Transformers, CLIP/SigLIP-family models, multimodal evaluation, statistical learning
+- **Systems:** Linux, CUDA-based ML workflows, Git, HPC and cluster-based experimentation
+- **Robotics:** ROS, perception, SLAM, navigation, motion planning, and control
+
+## Service and awards
+
+- Reviewer, Journal of Contemporary Mathematics, 2024
+- Reviewer, IEEE Journal on Selected Areas in Communications, 2022
+- Reviewer, IEEE International Conference on Intelligent Robots and Systems, 2020
+- **Champion**, MBZIRC 2017
+- Grand Prize, Eighth Shaanxi Province Outstanding Graduation Design, 2015
+- Volunteer translator (English to Chinese), [CS 285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/)
+
+## Languages
+
+- Chinese: native
+- English: IELTS 7.0
+
+</div>
