@@ -19,7 +19,7 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
 <a href="https://github.com/dongdongbh">GitHub</a>
 <a href="https://www.linkedin.com/in/dongda-li-509334247/">LinkedIn</a>
-<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=8d74d0a7">Download CV</a>
+<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=f41d5f2e">Download CV</a>
 </nav>
 </div>
 <img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
@@ -174,7 +174,7 @@ Robotic navigation and control.</p>
 - Collaborative analysis and autonomous decision technology for intelligent manufacturing big data - National Key R&D Program of China (2018-2021).
 - Software-defined wireless sensor network system (2017-2018).
 - UAV-enabled sensor system (2017).
-- [MBZIRC 2017 International Robotics Challenge](https://www.youtube.com/watch?v=780gnSG1nXs).
+- [MBZIRC 2017 International Robotics Challenge](https://www.youtube.com/watch?v=780gnSG1nXs); core member of the champion team.
 - Autonomous takeoff and landing of an intelligent quadrotor - undergraduate thesis (2014-2015).
 
 ## Technical Skills
@@ -190,7 +190,7 @@ Robotic navigation and control.</p>
 - Reviewer, Journal of Contemporary Mathematics, 2024
 - Reviewer, IEEE Journal on Selected Areas in Communications, 2022
 - Reviewer, IEEE International Conference on Intelligent Robots and Systems, 2020
-- [**Champion, MBZIRC 2017**](https://www.youtube.com/watch?v=780gnSG1nXs)
+- [**Core member of the MBZIRC 2017 champion team**](https://www.youtube.com/watch?v=780gnSG1nXs)
 - Grand Prize, Eighth Shaanxi Province Outstanding Graduation Design, 2015
 - Volunteer translator (English to Chinese), [CS 285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/)
 
