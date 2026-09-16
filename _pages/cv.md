@@ -110,7 +110,7 @@ I also study the reliability of automatic robot-policy evaluators, including rew
 
 ### [Mindwtr](https://github.com/dongdongbh/Mindwtr) - Creator and Lead Maintainer
 
-Mindwtr is an open-source, local-first, cross-platform productivity application with **25,000+ users, approximately 2,000 daily active users, and 2,000+ GitHub stars**. It is available across desktop, mobile, and web, with flexible synchronization, optional AI functionality, MCP/REST automation, production release pipelines, and multi-platform deployment.
+Mindwtr is an open-source, local-first, cross-platform productivity application with **25,000+ users, approximately 2,000 daily active users, and 2,000+ GitHub stars**. It is available across desktop, mobile, and web, with flexible synchronization, optional AI functionality, MCP/REST integrations for agent and automation workflows, production release pipelines, and multi-platform deployment.
 
 ## Industry and research experience
 
@@ -180,6 +180,7 @@ Robotic navigation and control.</p>
 
 - **Programming:** Python, C/C++
 - **Machine learning:** PyTorch, Transformers, CLIP/SigLIP-family models, multimodal evaluation, statistical learning
+- **Agentic AI systems:** LLM tool use, agent workflows, MCP, REST APIs
 - **Systems:** Linux, CUDA-based ML workflows, Git, HPC and cluster-based experimentation
 - **Robotics:** ROS, perception, SLAM, navigation, motion planning, and control
 
