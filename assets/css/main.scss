@@ -155,12 +155,13 @@ body {
   display: inline-flex;
   min-height: 2.75rem;
   align-items: center;
-  padding-inline: var(--cv-space-md);
+  padding-inline: var(--cv-space-sm);
   border: 1px solid var(--cv-rule);
   border-radius: var(--cv-radius);
   background: transparent;
   color: var(--cv-accent);
   line-height: 1;
+  font-size: 0.95rem;
   white-space: nowrap;
   text-decoration: none;
   transition: background-color var(--cv-duration) var(--cv-ease-out),
@@ -210,12 +211,13 @@ body {
 }
 
 .cv-section-index a {
+  display: flex;
   min-width: 0;
+  align-items: center;
   padding: var(--cv-space-md) var(--cv-space-sm);
   color: var(--cv-ink);
   font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
+  line-height: 1.25;
   text-decoration-color: var(--cv-rule);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25em;
@@ -314,6 +316,13 @@ body {
   margin-top: var(--cv-space-sm);
 }
 
+.cv-focus-list li + li,
+#selected-projects + ul li + li,
+#technical-skills + ul li + li,
+#service-and-awards + ul li + li {
+  margin-top: 0;
+}
+
 #selected-projects + ul,
 #technical-skills + ul,
 #service-and-awards + ul {
@@ -349,8 +358,8 @@ body {
 
 @media (min-width: 48rem) {
   .cv-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem);
-    gap: clamp(2rem, 7vw, 5rem);
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 18rem);
+    gap: clamp(2rem, 5vw, 4rem);
     padding-block: var(--cv-space-2xl);
   }
 
@@ -366,7 +375,7 @@ body {
 
 @media (min-width: 64rem) {
   .cv-section-index {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: 0.85fr 1fr 1.5fr 0.9fr 0.65fr 0.7fr;
   }
 
   .cv-focus-list {

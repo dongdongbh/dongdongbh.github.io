@@ -12,8 +12,8 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <header class="cv-hero">
 <div class="cv-hero__content">
 <h1>Dongda Li</h1>
-<p><strong>PhD researcher in vision-language models and multimodal learning</strong></p>
-<p>I am a PhD student in Computer &amp; Information Science &amp; Engineering at Syracuse University. My current research focuses on vision-language models, multimodal robustness, compositional reasoning, and reliable evaluation of multimodal systems. My previous work spans reinforcement learning, robotics, wireless sensor networks, and autonomous systems.</p>
+<p><strong>PhD Researcher in Vision-Language Models and Multimodal Learning</strong></p>
+<p>I am a PhD student in Computer &amp; Information Science &amp; Engineering at Syracuse University, studying vision-language models, compositional reasoning, multimodal robustness, and reliable evaluation. My earlier work spans reinforcement learning, robotics, wireless sensor networks, and autonomous systems.</p>
 <nav class="cv-contact" aria-label="Professional profiles">
 <a href="mailto:dli160@syr.edu">Email</a>
 <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
@@ -28,8 +28,8 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <nav class="cv-section-index" aria-label="CV sections">
 <a href="#current-research">Research</a>
 <a href="#publications-and-manuscripts">Publications</a>
-<a href="#open-source">Open source</a>
-<a href="#industry-and-research-experience">Experience</a>
+<a href="#open-source-engineering">Open Source Engineering</a>
+<a href="#experience">Experience</a>
 <a href="#technical-skills">Skills</a>
 <a href="#service-and-awards">Service</a>
 </nav>
@@ -107,27 +107,27 @@ I also study the reliability of automatic robot-policy evaluators, including rew
 <p class="cv-entry__meta">2026</p>
 </div>
 
-## Open source
+## Open Source Engineering
 
 ### [Mindwtr](https://github.com/dongdongbh/Mindwtr) - Creator and Lead Maintainer
 
-Mindwtr is an open-source, local-first, cross-platform productivity application with **25,000+ users, approximately 2,000 daily active users, and 2,000+ GitHub stars**. It is available across desktop, mobile, and web, with flexible synchronization, optional AI functionality, MCP/REST integrations for agent and automation workflows, production release pipelines, and multi-platform deployment.
+Mindwtr is an open-source, local-first, cross-platform productivity application with **25,000+ users, ~2,000 daily active users, and 2,000+ GitHub stars**. It is available across desktop, mobile, and web, with flexible synchronization, optional AI functionality, MCP/REST integrations for agent and automation workflows, production release pipelines, and multi-platform deployment.
 
-## Industry and research experience
+## Experience
 
 <div class="cv-entry">
 <div>
-<h3>Robotics Engineer</h3>
-<p><strong>Goertek Inc. (Shanghai)</strong>, Algorithm Group, R&amp;D<br>
+<h3>Goertek Inc.</h3>
+<p><strong>Robotics Engineer</strong> &middot; Algorithm Group, R&amp;D<br>
 Robotic perception and control, SLAM, motion planning, navigation, and trajectory planning.</p>
 </div>
-<p class="cv-entry__meta">September 2022 - July 2023</p>
+<p class="cv-entry__meta">September 2022 - July 2023<br>Shanghai, China</p>
 </div>
 
 <div class="cv-entry">
 <div>
-<h3>Teaching Assistant</h3>
-<p><strong>Syracuse University</strong><br>
+<h3>Syracuse University</h3>
+<p><strong>Teaching Assistant</strong><br>
 CPS 181 Introduction to Computing; CIS 454 Software Implementation; CIS 675 Design and Analysis of Algorithms.</p>
 </div>
 <p class="cv-entry__meta">August 2023 - present</p>
@@ -135,8 +135,8 @@ CPS 181 Introduction to Computing; CIS 454 Software Implementation; CIS 675 Desi
 
 <div class="cv-entry">
 <div>
-<h3>Research Assistant</h3>
-<p><strong>Guangzhou University</strong>, Cyberspace Institute of Advanced Technology<br>
+<h3>Guangzhou University</h3>
+<p><strong>Research Assistant</strong> &middot; Cyberspace Institute of Advanced Technology<br>
 Reinforcement learning, neural combinatorial optimization, and meta-learning.</p>
 </div>
 <p class="cv-entry__meta">June 2018 - August 2022</p>
@@ -144,8 +144,8 @@ Reinforcement learning, neural combinatorial optimization, and meta-learning.</p
 
 <div class="cv-entry">
 <div>
-<h3>Research Assistant</h3>
-<p><strong>The University of Hong Kong</strong>, Department of Computer Science<br>
+<h3>The University of Hong Kong</h3>
+<p><strong>Research Assistant</strong> &middot; Department of Computer Science<br>
 Robotic networks, wireless sensor networks, and UAV-enabled sensing.</p>
 </div>
 <p class="cv-entry__meta">August 2017 - May 2018</p>
@@ -153,8 +153,8 @@ Robotic networks, wireless sensor networks, and UAV-enabled sensing.</p>
 
 <div class="cv-entry">
 <div>
-<h3>Research Assistant</h3>
-<p><strong>Beijing Institute of Technology</strong>, UAV Autonomous Control Institute<br>
+<h3>Beijing Institute of Technology</h3>
+<p><strong>Research Assistant</strong> &middot; UAV Autonomous Control Institute<br>
 UAV control systems, navigation, and data fusion.</p>
 </div>
 <p class="cv-entry__meta">July 2016 - July 2017</p>
@@ -162,8 +162,8 @@ UAV control systems, navigation, and data fusion.</p>
 
 <div class="cv-entry">
 <div>
-<h3>Robotics Engineer</h3>
-<p><strong>Beijing Zhonghangzhi Inc.</strong>, Control Group, R&amp;D<br>
+<h3>Beijing Zhonghangzhi Inc.</h3>
+<p><strong>Robotics Engineer</strong> &middot; Control Group, R&amp;D<br>
 Robotic navigation and control.</p>
 </div>
 <p class="cv-entry__meta">July 2015 - June 2016</p>
@@ -190,7 +190,7 @@ Robotic navigation and control.</p>
 - Reviewer, Journal of Contemporary Mathematics, 2024
 - Reviewer, IEEE Journal on Selected Areas in Communications, 2022
 - Reviewer, IEEE International Conference on Intelligent Robots and Systems, 2020
-- **Champion**, MBZIRC 2017
+- [**Champion, MBZIRC 2017**](https://www.youtube.com/watch?v=780gnSG1nXs)
 - Grand Prize, Eighth Shaanxi Province Outstanding Graduation Design, 2015
 - Volunteer translator (English to Chinese), [CS 285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/)
 
