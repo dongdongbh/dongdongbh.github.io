@@ -4,7 +4,7 @@ layout: splash
 permalink: /cv/
 description: "Dongda Li is a PhD researcher at Syracuse University working on vision-language models, multimodal robustness, and embodied AI evaluation."
 date: 2023-08-01T11:48:41-04:00
-last_modified_at: 2026-09-16T12:00:00-04:00
+last_modified_at: 2026-09-26T12:00:00-04:00
 ---
 
 <div class="cv-page" markdown="1">
@@ -19,7 +19,7 @@ last_modified_at: 2026-09-16T12:00:00-04:00
 <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
 <a href="https://github.com/dongdongbh">GitHub</a>
 <a href="https://www.linkedin.com/in/dongda-li-509334247/">LinkedIn</a>
-<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=f41d5f2e">Download CV</a>
+<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=9a5bb814">Download CV</a>
 </nav>
 </div>
 <img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
@@ -87,7 +87,7 @@ I also study the reliability of automatic robot-policy evaluators, including rew
 ### Manuscripts Under Review
 
 1. **Dongda Li et al.** "The Readout, Not the Representation: Why Frozen Dual-Encoder Models Fail at Role Binding." *Under review at TMLR*, 2026.
-2. **Dongda Li et al.** "Do Automatic Robot-Policy Evaluators Recover the Human Ranking?" *Under review at ICLR 2027*.
+2. **Dongda Li et al.** "Correlation Is Not Selection: Validating Automatic Evaluators for Robot Policies" *Under review at ICLR 2027*.
 
 ### Published Work
 
