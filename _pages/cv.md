@@ -4,7 +4,7 @@ layout: splash
 permalink: /cv/
 description: "Dongda Li is a PhD researcher at Syracuse University working on vision-language models, multimodal robustness, and embodied AI evaluation."
 date: 2023-08-01T11:48:41-04:00
-last_modified_at: 2026-09-26T12:00:00-04:00
+last_modified_at: 2026-10-03T12:00:00-04:00
 ---
 
 <div class="cv-page" markdown="1">
@@ -19,7 +19,7 @@ last_modified_at: 2026-09-26T12:00:00-04:00
 <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
 <a href="https://github.com/dongdongbh">GitHub</a>
 <a href="https://www.linkedin.com/in/dongda-li-509334247/">LinkedIn</a>
-<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=21daddd8">Download CV</a>
+<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=9112ed85">Download CV</a>
 </nav>
 </div>
 <img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
@@ -69,7 +69,8 @@ Advisor: <a href="https://ecs.syracuse.edu/faculty-staff/senem-velipasalar">Sene
 <div class="cv-entry cv-entry--lead">
 <div>
 <h3>PhD Researcher</h3>
-<p><strong>Syracuse University</strong>, Department of Electrical Engineering and Computer Science</p>
+<p><strong>Syracuse University</strong>, Department of Electrical Engineering and Computer Science<br>
+Affiliated with the <a href="https://instituteai.syracuse.edu/">Institute for Artificial Intelligence</a></p>
 </div>
 <p class="cv-entry__meta">August 2023 - present</p>
 </div>
@@ -111,7 +112,7 @@ I also study the reliability of automatic robot-policy evaluators, including rew
 
 ### [Mindwtr](https://github.com/dongdongbh/Mindwtr) - Founder and Lead Engineer
 
-I founded Mindwtr and lead its engineering. It is an open-source, local-first, cross-platform productivity application with **25,000+ users, ~2,000 daily active users, and 2,000+ GitHub stars**. Its engineering spans desktop, mobile, and web; flexible synchronization; optional AI functionality; MCP/REST integrations for agent and automation workflows; production release infrastructure; and multi-platform deployment.
+I founded Mindwtr and lead its engineering. It is an open-source, local-first, cross-platform productivity application with **30,000+ users, ~2,000 daily active users, and 2,000+ GitHub stars**. Its engineering spans desktop, mobile, and web; flexible synchronization; optional AI functionality; MCP/REST integrations for agent and automation workflows; production release infrastructure; and multi-platform deployment.
 
 ## Experience
 
