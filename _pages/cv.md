@@ -19,7 +19,7 @@ last_modified_at: 2026-10-03T12:00:00-04:00
 <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
 <a href="https://github.com/dongdongbh">GitHub</a>
 <a href="https://www.linkedin.com/in/dongda-li-509334247/">LinkedIn</a>
-<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=efea6114">Download CV</a>
+<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=6bb71353">Download CV</a>
 </nav>
 </div>
 <img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
@@ -112,7 +112,7 @@ I also study the reliability of automatic robot-policy evaluators, including rew
 
 ### [Mindwtr](https://github.com/dongdongbh/Mindwtr) - Founder & Principal Developer
 
-I founded Mindwtr and lead its engineering. It is an open-source, local-first, cross-platform productivity application with **30,000+ users, ~2,000 daily active users, and 2,000+ GitHub stars**. Its engineering spans desktop, mobile, and web; flexible synchronization; optional AI functionality; MCP/REST integrations for agent and automation workflows; production release infrastructure; and multi-platform deployment.
+I founded Mindwtr and own its product and engineering direction end to end. It is an open-source, local-first, cross-platform productivity application with **30,000+ users, ~2,000 daily active users, and 2,000+ GitHub stars**. I shape the roadmap from real user feedback, design and build features across desktop, mobile, and web, and manage releases and the open-source community. The engineering spans synchronization, optional AI functionality, MCP/REST integrations for agent and automation workflows, and multi-platform deployment.
 
 ## Experience
 
