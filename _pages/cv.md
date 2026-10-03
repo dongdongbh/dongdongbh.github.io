@@ -28,7 +28,7 @@ last_modified_at: 2026-10-03T12:00:00-04:00
 <nav class="cv-section-index" aria-label="CV sections">
 <a href="#current-research">Research</a>
 <a href="#publications-and-manuscripts">Publications</a>
-<a href="#engineering">Engineering</a>
+<a href="#engineering">Product</a>
 <a href="#experience">Experience</a>
 <a href="#technical-skills">Skills</a>
 <a href="#service-and-awards">Service</a>
@@ -175,7 +175,7 @@ Robotic navigation and control.</p>
 - Collaborative analysis and autonomous decision technology for intelligent manufacturing big data - National Key R&D Program of China (2018-2021).
 - Software-defined wireless sensor network system (2017-2018).
 - UAV-enabled sensor system (2017).
-- [MBZIRC 2017 International Robotics Challenge](https://www.youtube.com/watch?v=efea6114gnSG1nXs); core member of the champion team.
+- [MBZIRC 2017 International Robotics Challenge](https://www.youtube.com/watch?v=780gnSG1nXs); core member of the champion team.
 - Autonomous takeoff and landing of an intelligent quadrotor - undergraduate thesis (2014-2015).
 
 ## Technical Skills
@@ -191,7 +191,7 @@ Robotic navigation and control.</p>
 - Reviewer, Journal of Contemporary Mathematics, 2024
 - Reviewer, IEEE Journal on Selected Areas in Communications, 2022
 - Reviewer, IEEE International Conference on Intelligent Robots and Systems, 2020
-- [**Core member of the MBZIRC 2017 champion team**](https://www.youtube.com/watch?v=efea6114gnSG1nXs)
+- [**Core member of the MBZIRC 2017 champion team**](https://www.youtube.com/watch?v=780gnSG1nXs)
 - Grand Prize, Eighth Shaanxi Province Outstanding Graduation Design, 2015
 - Volunteer translator (English to Chinese), [CS 285 Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/)
 
