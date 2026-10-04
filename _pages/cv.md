@@ -4,7 +4,7 @@ layout: splash
 permalink: /cv/
 description: "Dongda Li is a PhD researcher at Syracuse University working on vision-language models, multimodal robustness, and embodied AI evaluation."
 date: 2023-08-01T11:48:41-04:00
-last_modified_at: 2026-10-03T12:00:00-04:00
+last_modified_at: 2026-10-04T12:00:00-04:00
 ---
 
 <div class="cv-page" markdown="1">
@@ -19,7 +19,7 @@ last_modified_at: 2026-10-03T12:00:00-04:00
 <a href="https://scholar.google.com/citations?user=rIFpsA0AAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
 <a href="https://github.com/dongdongbh">GitHub</a>
 <a href="https://www.linkedin.com/in/dongda-li-509334247/">LinkedIn</a>
-<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=6bb71353">Download CV</a>
+<a href="{{ '/assets/pdf/Dongda-Li-CV.pdf' | relative_url }}?v=7046e4c2">Download CV</a>
 </nav>
 </div>
 <img class="cv-hero__portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Dongda Li">
@@ -83,14 +83,7 @@ I study how multimodal models represent and use compositional information, parti
 
 I also study the reliability of automatic robot-policy evaluators, including reward models, VLM judges, and multimodal scoring systems. This work evaluates automatic methods on **5,106 real-robot episodes** against **3,284 double-blind human comparisons**, with an emphasis on human-ranking agreement, uncertainty, implementation sensitivity, and reproducibility.
 
-## Publications and Manuscripts
-
-### Manuscripts Under Review
-
-1. **Dongda Li et al.** "From Features to Scores: Tracing Role Binding in Frozen Vision–Language Dual Encoders" *Under review at TMLR*, 2026.
-2. **Dongda Li et al.** "Correlation Is Not Selection: Validating Automatic Evaluators for Robot Policies" *Under review at ICLR 2027*.
-
-### Published Work
+## Publications
 
 1. **Dongda Li**, Zhaoquan Gu, Yuexuan Wang, Changwei Ren, and Francis C.M. Lau. "One Model Packs Thousands of Items with Recurrent Conditional Query Learning." *Knowledge-Based Systems*, 235:107683, 2022. Reinforcement-learning-based neural combinatorial optimization.
 2. Zhaoquan Gu, **Dongda Li**, Nadra Guizani, Xiaojiang Du, and Zhihong Tian. "An Aerial-Computing-Assisted Architecture for Large-Scale Sensor Networks." *IEEE Wireless Communications*, 28(5):43-49, 2021.
